@@ -1,0 +1,188 @@
+# ================================================================
+# MISTER WOK — .htaccess
+# Clean static HTML site. WordPress removed April 2026.
+# Bluehost Apache / LiteSpeed compatible
+# Last updated: 2026-05-10 (GZIP text types + Cache-Control by asset type)
+# ================================================================
+
+# --- llms.txt: AI-readable, not Google-indexed (IP policy) -----
+<IfModule mod_headers.c>
+  <Files "llms.txt">
+    Header set X-Robots-Tag "noindex"
+  </Files>
+</IfModule>
+
+<IfModule mod_headers.c>
+  <Files "menu.jsonld">
+    Header set X-Robots-Tag "noindex"
+  </Files>
+</IfModule>
+
+# --- DirectoryIndex -------------------------------------------
+DirectoryIndex index.html
+
+# --- Force HTTPS + www -> non-www ----------------------------
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.misterwok\.net [NC]
+RewriteRule ^(.*)$ https://misterwok.net/$1 [R=301,L]
+
+# ================================================================
+# PHASE 1B — DEPRECATED ROOT MENU
+# /menu.html is the legacy single-branch menu. Permanent redirect to
+# the Parklands full menu (canonical 138-dish menu).
+# ================================================================
+RewriteRule ^menu\.html$ /parklands/menu.html [R=301,L]
+
+# ================================================================
+# CLEAN URL REWRITES
+# These map clean slugs -> actual .html files
+# Format: /journal/slug → /journal/actual-filename.html
+# ================================================================
+
+# ── Explicit journal post mappings ──────────────────────────────
+# Add one line per article as you publish
+
+RewriteRule ^journal/ntv-am-live/?$           /journal/ntv-am-live-mister-wok-2014.html [L]
+RewriteRule ^journal/spring-rolls-gold/?$     /journal/spring-rolls-gold-prosperity.html [L]
+RewriteRule ^journal/wok-hei-physics/?$       /journal/wok-hei-physics.html [L]
+RewriteRule ^journal/birthday-catering-guide/?$     /journal/birthday-catering-guide.html [L]
+RewriteRule ^journal/falcon-rice/?$           /journal/long-grain-aromatic-rice.html [R=301,L]
+RewriteRule ^journal/long-grain-aromatic-rice/?$  /journal/long-grain-aromatic-rice.html [L]
+RewriteRule ^journal/halal-wok-nairobi/?$     /journal/halal-wok-nairobi.html [L]
+RewriteRule ^journal/lamb-ribs/?$             /journal/ [R=302,L]
+RewriteRule ^journal/fresh-noodles/?$         /journal/ [R=302,L]
+
+# -- Fallback: generic slug -> .html (for future posts) --------
+# Only if no explicit rule matched AND file doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^journal/([a-z0-9-]+)/?$          /journal/$1.html [L]
+
+# -- Remove trailing slash (except root + journal dir) ----------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+# ================================================================
+# PERFORMANCE — GZIP COMPRESSION
+# ================================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/ld+json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp|avif|zip|gz|bz2|woff2)$ no-gzip dont-vary
+</IfModule>
+
+# ================================================================
+# BROWSER CACHING
+# ================================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html                      "access plus 0 seconds"
+  ExpiresByType text/css                       "access plus 1 year"
+  ExpiresByType application/javascript         "access plus 1 year"
+  ExpiresByType image/jpeg                     "access plus 30 days"
+  ExpiresByType image/png                      "access plus 30 days"
+  ExpiresByType image/webp                     "access plus 30 days"
+  ExpiresByType image/gif                      "access plus 30 days"
+  ExpiresByType image/avif                     "access plus 30 days"
+  ExpiresByType image/x-icon                   "access plus 30 days"
+  ExpiresByType image/svg+xml                  "access plus 30 days"
+  ExpiresByType font/woff2                     "access plus 1 year"
+  ExpiresByType font/woff                      "access plus 1 year"
+  ExpiresByType application/xml                "access plus 1 day"
+  ExpiresByType application/json               "access plus 1 day"
+  ExpiresByType application/ld+json            "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "^(robots\.txt|sitemap\.xml)$">
+    Header set Cache-Control "max-age=3600, public"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=31536000"
+  </FilesMatch>
+  <FilesMatch "\.(json|jsonld)$">
+    Header set Cache-Control "max-age=86400"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|ico|svg)$">
+    Header set Cache-Control "max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(woff2|woff)$">
+    Header set Cache-Control "max-age=31536000"
+  </FilesMatch>
+</IfModule>
+
+# ================================================================
+# SECURITY HEADERS
+# ================================================================
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Uncomment after confirming HTTPS stable for 30+ days:
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header unset Server
+  Header unset X-Powered-By
+</IfModule>
+
+ServerSignature Off
+
+# ================================================================
+# CUSTOM ERROR PAGES
+# ================================================================
+ErrorDocument 404 /404.html
+ErrorDocument 403 /index.html
+
+# ================================================================
+# PROTECT SENSITIVE FILES
+# ================================================================
+<FilesMatch "(^\.htaccess|\.htpasswd|\.env)">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+<Files xmlrpc.php>
+  Order Deny,Allow
+  Deny from all
+</Files>
+
+# ================================================================
+# MIME TYPES
+# ================================================================
+<IfModule mod_mime.c>
+  AddType image/webp            .webp
+  AddType image/avif            .avif
+  AddType font/woff2            .woff2
+  AddType font/woff             .woff
+  AddType application/json      .json
+  AddType application/ld+json   .jsonld
+  AddType application/xml       .xml
+  AddType image/svg+xml         .svg
+</IfModule>
+
+# ================================================================
+# PREVENT DIRECTORY BROWSING
+# ================================================================
+Options -Indexes
+Options -MultiViews
+
+# ================================================================
+# END MISTER WOK .htaccess
+# ================================================================

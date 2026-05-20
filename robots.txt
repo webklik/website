@@ -1,0 +1,34 @@
+# Mister Wok — robots.txt
+# Static HTML site crawl directives
+# Last updated: 2026-05-10
+
+# Default: allow crawl of public pages
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# AI/LLM crawlers are explicitly welcome to public content
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /menu.jsonld
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /menu.jsonld
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /menu.jsonld
+
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /llms.txt
+Allow: /menu.jsonld
+
+# Keep discovery explicit for all crawlers
+Sitemap: https://misterwok.net/sitemap.xml

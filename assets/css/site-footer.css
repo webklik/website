@@ -1,0 +1,165 @@
+/**
+ * Site-wide footer — Brand | Contact | Journal (3 equal columns @ 720px+)
+ * Load after page tokens; mirrors canonical hub footer with tighter vertical rhythm.
+ */
+footer {
+  background: var(--color-black, var(--bg, #0a0a0a));
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding: var(--s-6, 28px) var(--s-4, 16px) var(--s-4, 16px);
+}
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--s-5, 22px);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+@media (min-width: 720px) {
+  .footer-inner {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-5, 22px) var(--s-6, 28px);
+  }
+}
+
+.ft-brand-name {
+  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-white, var(--text, #f0e8d8));
+}
+.ft-brand-tag {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold, var(--gold, #d4af37));
+  margin-top: 4px;
+}
+.ft-desc {
+  font-size: 0.84rem;
+  color: var(--color-text-2, var(--text-2, #b8a898));
+  margin-top: var(--s-2, 10px);
+  line-height: 1.6;
+  max-width: 32ch;
+}
+.ft-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3, 12px);
+  margin-top: var(--s-4, 16px);
+}
+.ft-social a {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-2, var(--text-2, #b8a898));
+  letter-spacing: 0.04em;
+  transition: color 0.15s ease;
+}
+.ft-social a:hover {
+  color: var(--color-gold, var(--gold, #d4af37));
+}
+
+.ft-col-title {
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold, var(--gold, #d4af37));
+  margin-bottom: var(--s-3, 12px);
+  padding-bottom: var(--s-2, 8px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.ft-contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2, 8px);
+}
+.ft-contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ft-contact-branch {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-3, var(--text-3, #706558));
+  line-height: 1.2;
+}
+.ft-contact-num {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-gold, var(--gold, #d4af37));
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  transition: opacity 0.15s ease;
+}
+.ft-contact-num:hover {
+  opacity: 0.75;
+}
+.ft-contact-divider {
+  border: none;
+  border-top: 1px solid var(--color-rim, var(--rim, #2a2a2a));
+  margin: var(--s-1, 6px) 0;
+}
+.ft-contact-email {
+  font-size: 0.8rem;
+  color: var(--color-text-2, var(--text-2, #b8a898));
+  transition: color 0.15s ease;
+}
+.ft-contact-email:hover {
+  color: var(--color-gold, var(--gold, #d4af37));
+}
+
+.ft-journal-strip {
+  display: flex;
+  flex-direction: column;
+}
+.ft-journal-strip a {
+  font-size: 0.82rem;
+  color: var(--color-text-2, var(--text-2, #b8a898));
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: color 0.15s ease, padding-left 0.15s ease;
+}
+.ft-journal-strip a:last-child {
+  border-bottom: none;
+}
+.ft-journal-strip a:hover {
+  color: var(--color-gold, var(--gold, #d4af37));
+  padding-left: 4px;
+}
+.ft-journal-all {
+  color: var(--color-gold, var(--gold, #d4af37)) !important;
+  font-weight: 700;
+  margin-top: var(--s-1, 6px);
+  font-size: 0.78rem !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.footer-bottom {
+  max-width: 1120px;
+  margin: var(--s-4, 16px) auto 0;
+  padding-top: var(--s-3, 12px);
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2, 8px) var(--s-3, 12px);
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.68rem;
+  color: var(--color-text-3, var(--text-3, #706558));
+  letter-spacing: 0.04em;
+}
+.footer-bottom a {
+  color: inherit;
+  transition: color 0.15s ease;
+}
+.footer-bottom a:hover {
+  color: var(--color-gold, var(--gold, #d4af37));
+}
