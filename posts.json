@@ -1,9 +1,30 @@
 {
   "_comment": "MISTER WOK — posts.json v1.0 | THE SINGLE SOURCE OF TRUTH FOR ALL BLOG CONTENT",
   "_instructions": "To add a new post: 1) Create the HTML file in /journal/ with a clean slug name. 2) Add ONE new entry to the 'posts' array below (copy template at bottom). 3) Upload both files. That is all. Never edit index.html for blog updates. 4) When changing a post from status:'scheduled' to status:'live', also add the post URL to sitemap.xml under TIER 0.8 and update <lastmod>. The 'url' field is canonical for all hyperlinks and sitemaps. The 'file' field is the physical path on disk. When they differ, use 'url' for links and 'file' for server-side resolution only.",
-  "_last_updated": "2026-05-08",
+  "_last_updated": "2026-05-24",
 
   "posts": [
+
+    {
+      "id": "decade-at-the-flame",
+      "slug": "decade-at-the-flame",
+      "title": "Still at the Flame: Ten Years of Wok, Nairobi, and the Shared Table",
+      "subtitle": "A decade of smoke, steel, and the table Nairobi learned to share",
+      "excerpt": "A ten-year retrospective on what Mister Wok built in Nairobi — the craft, the shared table, and the guests who grew up with us. Published on our founding day, 14 February 2026.",
+      "category": "Retrospective",
+      "tags": ["ten year anniversary", "Nairobi", "shared dining", "heritage", "wok cuisine", "Karim"],
+      "date_published": "2026-02-14",
+      "date_modified": "2026-02-14",
+      "status": "live",
+      "file": "journal/decade-at-the-flame.html",
+      "url": "/journal/decade-at-the-flame",
+      "image": "images/food/hero-shot.webp",
+      "image_alt": "Mister Wok kitchen — wok at 300°C, Nairobi",
+      "featured": true,
+      "video_url": null,
+      "read_time": "8 min",
+      "ai_keywords": ["Mister Wok ten years", "Mister Wok Nairobi history", "wok restaurant Nairobi anniversary"]
+    },
 
     {
       "id": "ntv-am-live-mister-wok-2014",

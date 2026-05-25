@@ -1,0 +1,2358 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Mister Wok Food Image Manifest",
+  "description": "Machine-readable index of production WebP food images for DEO and RAG.",
+  "numberOfItems": 42,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/beef-brocolli.webp#image",
+        "name": "Beef Brocolli",
+        "contentUrl": "https://misterwok.net/images/food/beef-brocolli.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Beef Broccoli - premium beef sirloin seared at high wok heat with fresh broccoli florets",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 51.1
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "beef"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Beef Broccoli",
+              "Beef Sizzler"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/beef-manchurian.webp#image",
+        "name": "Beef Manchurian",
+        "contentUrl": "https://misterwok.net/images/food/beef-manchurian.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Beef Manchurian - tender beef in tangy Manchurian sauce with fried onions",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 73.4
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "beef"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 8
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Tangy · Crisp"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Crispy Sesame Beef Manchurian"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/beef-mushroom.webp#image",
+        "name": "Beef Mushroom",
+        "contentUrl": "https://misterwok.net/images/food/beef-mushroom.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Beef with Mushroom - sliced beef and button mushrooms in garlic soy reduction",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 48.6
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "beef"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Beef with Mushroom"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/beef-strips.webp#image",
+        "name": "Beef Strips",
+        "contentUrl": "https://misterwok.net/images/food/beef-strips.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Chilli Lamb Strips - tender lamb strips wok-tossed with dry chilli and aromatics",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 66.7
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "beef"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Sautéed Chilli Lamb Strips",
+              "Dry Chilli Beef"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/chicken-cashewnuts.webp#image",
+        "name": "Chicken Cashewnuts",
+        "contentUrl": "https://misterwok.net/images/food/chicken-cashewnuts.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Chicken with Cashewnuts - diced chicken breast tossed with roasted cashews and capsicum",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 29.5
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "chicken"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Chicken with Cashewnuts"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "egg"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/chicken-wings.webp#image",
+        "name": "Chicken Wings",
+        "contentUrl": "https://misterwok.net/images/food/chicken-wings.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "House Chicken Wings - dry-style Chinese wings on red onion and colour capsicum",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 60.5
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "chicken"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "House Chicken Wings"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "egg"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/chilli-fish.webp#image",
+        "name": "Chilli Fish",
+        "contentUrl": "https://misterwok.net/images/food/chilli-fish.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Tilapia Fish - fresh Kenyan tilapia wok-cooked in bold Chinese sauce",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 41.8
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "fish"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Winglets of Tilapia",
+              "Tilapia Fish in Schezuan Sauce",
+              "Tilapia Fish in Soya Sauce",
+              "Tilapia Fish in Black Bean Sauce",
+              "Sweet and Sour Fish"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "fish",
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/chilli-garlic-noodles.webp#image",
+        "name": "Chilli Garlic Noodles",
+        "contentUrl": "https://misterwok.net/images/food/chilli-garlic-noodles.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Chilli Garlic Noodles - stir-fried noodles with aromatic garlic, dry chilli, and fresh herbs",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 27.6
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 10
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "2mm Noodles · Aromatic"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Chilli Garlic Noodles"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/chilli-garlic-paneer.webp#image",
+        "name": "Chilli Garlic Paneer",
+        "contentUrl": "https://misterwok.net/images/food/chilli-garlic-paneer.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Chilli Garlic Paneer - Indian cottage cheese cubes seared in wok with dry chilli and garlic",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 42.4
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 4
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Vegetarian · Bold"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Chilli Garlic Paneer",
+              "Schezuan Paneer"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/dim-sum-main-index.webp#image",
+        "name": "Dim Sum Main Index",
+        "contentUrl": "https://misterwok.net/images/food/dim-sum-main-index.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Dim Sum - hand-wrapped dumplings steamed to order",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 61.8
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "mixed"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Mushroom Dumpling (4 pieces)",
+              "Chicken Dumpling (4 pieces)",
+              "Prawn Dumpling (4 pieces)"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten",
+              "egg"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/dumplings.webp#image",
+        "name": "Dumplings",
+        "contentUrl": "https://misterwok.net/images/food/dumplings.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Garden Veg Dumpling - vegetable filling in delicate steamed pastry",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 35.8
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Garden Veg Dumpling (4 pieces)"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/fish-in-garlic.webp#image",
+        "name": "Fish In Garlic",
+        "contentUrl": "https://misterwok.net/images/food/fish-in-garlic.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Tilapia Fish in Garlic Sauce - fresh tilapia in aromatic garlic base",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 41.9
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "fish"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Tilapia Fish in Garlic Sauce"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "fish",
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/ginger-crab.webp#image",
+        "name": "Ginger Crab",
+        "contentUrl": "https://misterwok.net/images/food/ginger-crab.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Ginger Crab - fresh crab meat wok-cooked with young ginger and Shaoxing wine",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 42.1
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "seafood"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 12
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Seafood · Aromatic"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": []
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "seafood",
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/golden-fried-prawns.webp#image",
+        "name": "Golden Fried Prawns",
+        "contentUrl": "https://misterwok.net/images/food/golden-fried-prawns.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Golden Fried Prawns - succulent prawns in tempura batter, wok-tossed to golden perfection",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 23.4
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "seafood"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 3
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Seafood · Crisp"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Prawns Pili-Pili (Dry)",
+              "Golden Fried Prawns",
+              "Queen Prawns in Schezuan Sauce",
+              "Queen Prawns in Soya Sauce",
+              "Queen Prawns in Black Bean Sauce",
+              "Queen Prawns in Garlic"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "seafood",
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/hero-shot.webp#image",
+        "name": "Hero Shot",
+        "contentUrl": "https://misterwok.net/images/food/hero-shot.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Mister Wok hero - signature wok-fired dish presentation",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 93.4
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "brand"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": []
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": []
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/honey-chilli-chicken.webp#image",
+        "name": "Honey Chilli Chicken",
+        "contentUrl": "https://misterwok.net/images/food/honey-chilli-chicken.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Honey Chilli Chicken - golden chicken nuggets glazed with honey and sesame",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 54.3
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "chicken"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Honey Chilli Chicken",
+              "Sweet and Sour Chicken",
+              "Chicken Sizzler",
+              "Chicken Schezuan with Rice",
+              "Chicken Schezuan with Noodles"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "egg"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/lamb-in-schezuan-sauce.webp#image",
+        "name": "Lamb In Schezuan Sauce",
+        "contentUrl": "https://misterwok.net/images/food/lamb-in-schezuan-sauce.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Lamb in Schezuan Sauce - tender lamb strands in spicy tangy Schezuan reduction",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 55.5
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "lamb"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Lamb in Schezuan Sauce",
+              "Lamb Sizzler"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/lamb-ribs.webp#image",
+        "name": "Lamb Ribs",
+        "contentUrl": "https://misterwok.net/images/food/lamb-ribs.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Lamb Ribs - fall-off-the-bone lamb in spiced wok reduction",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 69.0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "lamb"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 5
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Most-Ordered Starter"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Mister Wok Lamb Ribs"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/lollipop-kiddie.webp#image",
+        "name": "Lollipop Kiddie",
+        "contentUrl": "https://misterwok.net/images/food/lollipop-kiddie.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Lollipop Kiddie - playful chicken lollipops seasoned with mild spices",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 33.9
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "chicken"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 6
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Obinna's Pick · Family First"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Mister Wok Chicken Lollipops",
+              "Chicken Lollipops with Chips / Noodles"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "egg"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/lollipops.webp#image",
+        "name": "Lollipops",
+        "contentUrl": "https://misterwok.net/images/food/lollipops.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Dry Chilli Chicken - spiced chicken nuggets wok-tossed dry with bold chilli heat",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 43.4
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "chicken"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Dry Chilli Chicken — Wok Signature Dish"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "egg"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/noodles-beef.webp#image",
+        "name": "Noodles Beef",
+        "contentUrl": "https://misterwok.net/images/food/noodles-beef.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Beef Noodles - hand-cut noodles wok-tossed with tender beef and seasoning",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 51.6
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "beef"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Beef Noodles"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/plain-fried-rice.webp#image",
+        "name": "Plain Fried Rice",
+        "contentUrl": "https://misterwok.net/images/food/plain-fried-rice.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Plain Fried Rice - premium long-grain aromatic rice wok-fried with egg",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 46.2
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Plain Fried Rice"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/prawn-sizzler.webp#image",
+        "name": "Prawn Sizzler",
+        "contentUrl": "https://misterwok.net/images/food/prawn-sizzler.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Prawns Sizzler - queen prawns on hot sizzling platter with vegetables",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 48.0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "seafood"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Prawns Sizzler"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "seafood",
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/hero-shot.webp#image",
+        "name": "Tilapia Hero",
+        "contentUrl": "https://misterwok.net/images/food/hero-shot.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Tilapia - whole fish seared at 300°C wok temperature crispy skin moist flesh",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 93.4
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "fish"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": []
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "fish",
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/salt-and-pepper-vegetable.webp#image",
+        "name": "Salt And Pepper Vegetable",
+        "contentUrl": "https://misterwok.net/images/food/salt-and-pepper-vegetable.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Salt and Pepper Vegetable - seasonal vegetables with wok-hei char and cracked pepper",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 62.5
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 7
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Vegetarian · Crisp"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Salt and Pepper Veg with Cashewnuts"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/sesame-tofu-bites.webp#image",
+        "name": "Sesame Tofu Bites",
+        "contentUrl": "https://misterwok.net/images/food/sesame-tofu-bites.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Sesame Tofu Bites - soft tofu cubes in teriyaki glaze with sesame",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 44.0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Sesame Tofu Bites in Teriyaki Sauce"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/shan-tung-potato-wedges.webp#image",
+        "name": "Shan Tung Potato Wedges",
+        "contentUrl": "https://misterwok.net/images/food/shan-tung-potato-wedges.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Shan Tung Potato Wedges - spicy potato wedges with wok-hei char",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 51.7
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Shan Tung Spicy Potato Wedges"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/shanghai-lemon-prawns.webp#image",
+        "name": "Shanghai Lemon Prawns",
+        "contentUrl": "https://misterwok.net/images/food/shanghai-lemon-prawns.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Shanghai Lemon Prawns - king prawns in crisp batter with house lemon glaze",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 46.2
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "seafood"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Shanghai Lemon Prawns"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "seafood",
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/shanghai-veg-tofu-mushroom-brocolli.webp#image",
+        "name": "Shanghai Veg Tofu Mushroom Brocolli",
+        "contentUrl": "https://misterwok.net/images/food/shanghai-veg-tofu-mushroom-brocolli.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Chicken Baby Corn Broccoli - chicken with baby corn broccoli and light soy glaze",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 52.0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "chicken"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Chicken Baby Corn and Broccoli"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "egg"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/shanghai-veg-withcashew.webp#image",
+        "name": "Shanghai Veg Withcashew",
+        "contentUrl": "https://misterwok.net/images/food/shanghai-veg-withcashew.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Vegetable Wrap - wok-tossed vegetables with cashews in fresh wrap",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 30.8
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Vegetable Wrap"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/soups.webp#image",
+        "name": "Soups",
+        "contentUrl": "https://misterwok.net/images/food/soups.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Soup - aromatic broth with aged long-grain aromatic rice noodles and wok-seared garnish",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 47.2
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "mixed"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 1
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Made to Order"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Vegetable & Tofu Clear Soup"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten",
+              "egg"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/spring-rolls.webp#image",
+        "name": "Spring Rolls",
+        "contentUrl": "https://misterwok.net/images/food/spring-rolls.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Spring Rolls - crispy pastry with vegetable and protein filling, served with sweet chilli sauce",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 60.4
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "mixed"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 2
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Gold Bars · Crisp"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Chicken Spring Rolls (4 pieces)"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten",
+              "egg"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/sweet-sour-prawns.webp#image",
+        "name": "Sweet Sour Prawns",
+        "contentUrl": "https://misterwok.net/images/food/sweet-sour-prawns.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Sweet and Sour Prawns - prawns in balanced sweet-tangy sauce with pineapple and bell peppers",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 42.8
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "seafood"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 11
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Seafood · Tangy"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Sweet and Sour Prawns"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "seafood",
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/takeaway.webp#image",
+        "name": "Takeaway",
+        "contentUrl": "https://misterwok.net/images/food/takeaway.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Takeaway Box - stir-fry premium aromatic rice and spring roll feeds 1 to 2",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 32.4
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "service"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": []
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/tofu-in-black-bean-sauce.webp#image",
+        "name": "Tofu In Black Bean Sauce",
+        "contentUrl": "https://misterwok.net/images/food/tofu-in-black-bean-sauce.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Tofu in Black Bean Sauce - soft tofu cubes in fermented black bean and garlic",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 37.7
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Tofu in Black Bean Sauce"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/tom-yum-prawn.webp#image",
+        "name": "Tom Yum Prawn",
+        "contentUrl": "https://misterwok.net/images/food/tom-yum-prawn.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Tom Yum Prawn Soup - prawns in hot sour fragrant Thai coconut broth",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 27.6
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "seafood"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Tom Yum Spicy Thai Prawn Soup"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "seafood",
+              "soy"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/veg-rice.webp#image",
+        "name": "Veg Rice",
+        "contentUrl": "https://misterwok.net/images/food/veg-rice.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Vegetable Fried Rice - aged aromatic long-grain rice with garden vegetables, egg, and wok-hei seasoning",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 35.2
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": 9
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": "Aged Long-Grain · Wok-Hei"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Vegetable Fried Rice"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/veg-sizzler.webp#image",
+        "name": "Veg Sizzler",
+        "contentUrl": "https://misterwok.net/images/food/veg-sizzler.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Vegetable Sizzler - seasonal vegetables on hot sizzling platter",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 28.3
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": []
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/vegetable-spring-rolls-portion.webp#image",
+        "name": "Vegetable Spring Rolls Portion",
+        "contentUrl": "https://misterwok.net/images/food/vegetable-spring-rolls-portion.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Veg Spring Rolls Portion - four gold-bar spring rolls served crisp",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 49.0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Veg Spring Rolls (4 pieces)"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/vegetable-springrolls.webp#image",
+        "name": "Vegetable Springrolls",
+        "contentUrl": "https://misterwok.net/images/food/vegetable-springrolls.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Veg Spring Rolls - crispy pastry with fresh vegetable filling",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 41.9
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "vegetarian"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": []
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 41,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/wok-toss-rice.webp#image",
+        "name": "Wok Toss Action Hero",
+        "contentUrl": "https://misterwok.net/images/food/wok-toss-rice.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Wok Hei - high-heat wok toss at 300 degrees breath of the wok",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 39.7
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "brand"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": []
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": []
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 42,
+      "item": {
+        "@type": "ImageObject",
+        "@id": "https://misterwok.net/images/food/wok-toss-rice.webp#image",
+        "name": "Wok Toss Rice",
+        "contentUrl": "https://misterwok.net/images/food/wok-toss-rice.webp",
+        "encodingFormat": "image/webp",
+        "width": 600,
+        "height": 600,
+        "description": "Yong Chow Fried Rice - premium aromatic rice with shrimp egg and chicken",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "sizeKB",
+            "value": 27.1
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "primaryProtein",
+            "value": "mixed"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "galleryPosition",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "dishTag",
+            "value": null
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mappedDishes",
+            "value": [
+              "Shrimp Egg & Chicken Yong Chow Rice"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "allergenFlags",
+            "value": [
+              "soy",
+              "gluten",
+              "egg"
+            ]
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "inMenuPhotosManifest",
+            "value": true
+          }
+        ]
+      }
+    }
+  ]
+}

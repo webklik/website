@@ -30,9 +30,9 @@
       "hasMenuItem": [
         {
           "@type": "MenuItem",
-          "name": "Red Snapper — Whole Fish 300°C Seared",
-          "description": "Whole red snapper, scaled and gutted, seared at 300°C wok temperature. Crispy skin, moist flesh. Served with white onion vinegar and bullet sauce.",
-          "image": "https://misterwok.net/images/food/red-snapper-hero.webp",
+          "name": "Tilapia — Whole Fish 300°C Seared",
+          "description": "Whole Tilapia, scaled and gutted, seared at 300°C wok temperature. Crispy skin, moist flesh. Served with white onion vinegar and bullet sauce.",
+          "image": "https://misterwok.net/images/food/hero-shot.webp",
           "offers": {
             "@type": "Offer",
             "price": "2800",
@@ -50,7 +50,7 @@
           "@type": "MenuItem",
           "name": "Chicken Lollipops — Bone-In Bites",
           "description": "Chicken drumette, marinated 3–4 hours, double-fried for crispy exterior and tender meat. Obinna-endorsed signature. Served with white vinegar sauce.",
-          "image": "https://misterwok.net/images/food/Lolli_Kid600.webp",
+          "image": "https://misterwok.net/images/food/lollipop-kiddie.webp",
           "offers": {
             "@type": "Offer",
             "price": "1000",
@@ -68,7 +68,7 @@
           "@type": "MenuItem",
           "name": "Beef & Broccoli — 300°C Seared",
           "description": "Premium beef sirloin, cut to order, seared at high wok temperature with fresh broccoli florets. Maillard reaction on every surface. Served with steamed rice.",
-          "image": "https://misterwok.net/images/food/Beef_Brocolli600.webp",
+          "image": "https://misterwok.net/images/food/beef-brocolli.webp",
           "offers": {
             "@type": "Offer",
             "price": "1200",
@@ -86,7 +86,7 @@
           "@type": "MenuItem",
           "name": "Chicken Cashew Nuts — Wok-Tossed",
           "description": "Diced chicken breast, roasted cashew nuts, capsicum, onion. High-heat toss in industrial wok. Nutty, aromatic, balanced.",
-          "image": "https://misterwok.net/images/food/Chicken_Cashewnuts600.webp",
+          "image": "https://misterwok.net/images/food/chicken-cashewnuts.webp",
           "offers": {
             "@type": "Offer",
             "price": "1100",
@@ -104,7 +104,7 @@
           "@type": "MenuItem",
           "name": "Shanghai Lemon Prawns — Crispy & Tangy",
           "description": "Whole king prawns, lightly battered, wok-fried until crispy. Tossed in house lemon glaze. Balance of crunch and citrus brightness.",
-          "image": "https://misterwok.net/images/food/Shangai_Lemon_Prawns600.webp",
+          "image": "https://misterwok.net/images/food/shanghai-lemon-prawns.webp",
           "offers": {
             "@type": "Offer",
             "price": "1400",
@@ -122,7 +122,7 @@
           "@type": "MenuItem",
           "name": "Lamb in Sichuan Sauce — Numbing Heat",
           "description": "Tender lamb strands, Sichuan peppercorn (málà sensation), chilli, garlic, sesame oil. Made-to-order for maximum spice control.",
-          "image": "https://misterwok.net/images/food/Lamb_in_Schezuan_Sauce600.webp",
+          "image": "https://misterwok.net/images/food/lamb-in-schezuan-sauce.webp",
           "offers": {
             "@type": "Offer",
             "price": "1300",
@@ -140,7 +140,7 @@
           "@type": "MenuItem",
           "name": "Tofu in Black Bean Sauce — Silky & Umami",
           "description": "Soft tofu cubes, fermented black beans, garlic, chilli. High-heat toss preserves tofu integrity while infusing sauce. Vegetarian, umami-forward.",
-          "image": "https://misterwok.net/images/food/Tofu_in_Black_Bean_Sauce600.webp",
+          "image": "https://misterwok.net/images/food/tofu-in-black-bean-sauce.webp",
           "offers": {
             "@type": "Offer",
             "price": "750",
@@ -158,7 +158,7 @@
           "@type": "MenuItem",
           "name": "Beef Mushroom — Earthy & Umami",
           "description": "Sliced beef, button mushrooms, garlic, soy reduction. Made-to-order for texture preservation. Rich, earthy, balanced.",
-          "image": "https://misterwok.net/images/food/Beef_Mushroom600.webp",
+          "image": "https://misterwok.net/images/food/beef-mushroom.webp",
           "offers": {
             "@type": "Offer",
             "price": "1200",
@@ -176,7 +176,7 @@
           "@type": "MenuItem",
           "name": "Chicken Baby Corn Broccoli — Fresh & Crisp",
           "description": "Diced chicken, baby corn, broccoli florets, light soy glaze. High-heat preservation of vegetable crunch. Balanced, light, family-friendly.",
-          "image": "https://misterwok.net/images/food/Chicken_Baby_Corn_Broco600.webp",
+          "image": "https://misterwok.net/images/food/shanghai-veg-tofu-mushroom-brocolli.webp",
           "offers": {
             "@type": "Offer",
             "price": "950",
@@ -194,7 +194,7 @@
           "@type": "MenuItem",
           "name": "Soups — Tom Yum, Cream of Mushroom, Clear Broth",
           "description": "House-made broths simmered daily. Tom Yum: hot, sour, aromatic. Cream of Mushroom: rich, velvety. Clear Broth: delicate, restorative. Made-to-order.",
-          "image": "https://misterwok.net/images/food/Soups600.webp",
+          "image": "https://misterwok.net/images/food/soups.webp",
           "offers": {
             "@type": "Offer",
             "price": "450",
@@ -212,7 +212,7 @@
           "@type": "MenuItem",
           "name": "Aromatic Fried Rice & Hand-Cut Noodles",
           "description": "Premium aged long-grain aromatic rice, separating grains, wok-fried with egg, vegetables, protein. Or hand-cut 2mm fresh noodles cut daily. Aromatic, addictive, made-to-order.",
-          "image": "https://misterwok.net/images/food/Rice_Noodles600.webp",
+          "image": "https://misterwok.net/images/food/wok-toss-rice.webp",
           "offers": {
             "@type": "Offer",
             "price": "600",
@@ -230,7 +230,7 @@
           "@type": "MenuItem",
           "name": "Wok Hei Combo — Mixed Sizzler Platter",
           "description": "Curated mix of 3 proteins (beef, chicken, prawn), vegetables, rice/noodles. Single platter for 2–3 persons. Demonstrative of full wok hei technique.",
-          "image": "https://misterwok.net/images/food/COMBO600.webp",
+          "image": "https://misterwok.net/images/food/prawn-sizzler.webp",
           "offers": {
             "@type": "Offer",
             "price": "2200",
@@ -248,7 +248,7 @@
           "@type": "MenuItem",
           "name": "Takeaway Special — Combo Box",
           "description": "Choice of 2 mains, rice/noodles, spring rolls, sauce. Optimised packaging for delivery heat preservation. Made fresh on order.",
-          "image": "https://misterwok.net/images/food/Takeaway600.webp",
+          "image": "https://misterwok.net/images/food/takeaway.webp",
           "offers": {
             "@type": "Offer",
             "price": "1500",

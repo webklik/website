@@ -1,86 +1,232 @@
 /**
+
  * Mister Wok — Dish Photo Manifest
+
  * Protein-accurate mapping: image must match the dish's primary ingredient.
+
  *
+
  * To add a photo: upload .webp to /images/food/, add one line here.
+
  * Dish names are case-sensitive; must match itemprop="name" exactly.
+
  */
+
 window.MW_PHOTOS = {
 
+
+
   /* ── SOUPS ── */
-  "Vegetable & Tofu Clear Soup":              "Soup_Index_Menu_2048x2048600.webp",
+
+  "Vegetable & Tofu Clear Soup":              "soups.webp",
+
+  "Tom Yum Spicy Thai Prawn Soup":            "tom-yum-prawn.webp",
+
+
 
   /* ── VEGETARIAN APPETIZERS ── */
-  "Salt and Pepper Veg with Cashewnuts":      "Salt_and_Pepper_Vegetable600.webp",
-  "Chilli Garlic Paneer":                     "Chilli_Garlic_Paneer600.webp",
-  "Veg Spring Rolls (4 pieces)":              "Rolls_for_Index600.webp",
+
+  "Salt and Pepper Veg with Cashewnuts":      "salt-and-pepper-vegetable.webp",
+
+  "Chilli Garlic Paneer":                     "chilli-garlic-paneer.webp",
+
+  "Veg Spring Rolls (4 pieces)":              "vegetable-spring-rolls-portion.webp",
+
+  "Sesame Tofu Bites in Teriyaki Sauce":      "sesame-tofu-bites.webp",
+
+  "Shan Tung Spicy Potato Wedges":            "shan-tung-potato-wedges.webp",
+
+
 
   /* ── CHICKEN APPETIZERS ── */
-  "Chicken Spring Rolls (4 pieces)":          "Spring_Rolls600.webp",
-  "House Chicken Wings":                      "Chicken_Wings600.webp",
-  "Mister Wok Chicken Lollipops":             "Lolli_Kid600.webp",
+
+  "Chicken Spring Rolls (4 pieces)":          "spring-rolls.webp",
+
+  "House Chicken Wings":                      "chicken-wings.webp",
+
+  "Mister Wok Chicken Lollipops":             "lollipops.webp",
+
+  "Honey Chilli Chicken":                     "honey-chilli-chicken.webp",
+
+  "Dry Chilli Chicken — Wok Signature Dish":  "lollipops.webp",
+
+
 
   /* ── LAMB & BEEF APPETIZERS ── */
-  "Crispy Sesame Beef Manchurian":            "Beef_Manchurian600.webp",
-  "Sautéed Chilli Lamb Strips":               "Beef_Strips600.webp",
-  "Mister Wok Lamb Ribs":                     "Lamb_Ribs600.webp",
+
+  "Crispy Sesame Beef Manchurian":            "beef-manchurian.webp",
+
+  "Sautéed Chilli Lamb Strips":               "beef-strips.webp",
+
+  "Mister Wok Lamb Ribs":                     "lamb-ribs.webp",
+
+
 
   /* ── SEAFOOD APPETIZERS ── */
-  "Shanghai Lemon Prawns":                    "Shangai_Lemon_Prawns600.webp",
-  "Prawns Pili-Pili (Dry)":                   "Golden_Fried_Prawns600.webp",
-  "Golden Fried Prawns":                      "Golden_Fried_Prawns600.webp",
-  "Winglets of Tilapia":                      "Chilli_Fish600.webp",
+
+  "Shanghai Lemon Prawns":                    "shanghai-lemon-prawns.webp",
+
+  "Prawns Pili-Pili (Dry)":                   "golden-fried-prawns.webp",
+
+  "Golden Fried Prawns":                      "golden-fried-prawns.webp",
+
+  "Winglets of Tilapia":                      "chilli-fish.webp",
+
+
 
   /* ── DIM SUM ── */
-  "Mushroom Dumpling (4 pieces)":             "Dim_Sum600.webp",
-  "Garden Veg Dumpling (4 pieces)":           "Dumplings600.webp",
-  "Chicken Dumpling (4 pieces)":              "Dim_Sum600.webp",
-  "Prawn Dumpling (4 pieces)":                "Dim_Sum600.webp",
+
+  "Mushroom Dumpling (4 pieces)":             "dim-sum-main-index.webp",
+
+  "Garden Veg Dumpling (4 pieces)":           "dumplings.webp",
+
+  "Chicken Dumpling (4 pieces)":              "dim-sum-main-index.webp",
+
+  "Prawn Dumpling (4 pieces)":                "dim-sum-main-index.webp",
+
+
 
   /* ── CHICKEN MAIN ── */
-  "Chicken with Cashewnuts":                  "Chicken_Cashewnuts600.webp",
-  "Chicken Baby Corn and Broccoli":           "Chicken_Baby_Corn_Broco600.webp",
-  "Sweet and Sour Chicken":                     "Sweet_Sour_Prawns600.webp",
-  "Chicken Sizzler":                            "Sizzler600.webp",
+
+  "Chicken with Cashewnuts":                  "chicken-cashewnuts.webp",
+
+  "Chicken Baby Corn and Broccoli":           "shanghai-veg-tofu-mushroom-brocolli.webp",
+
+  "Sweet and Sour Chicken":                   "honey-chilli-chicken.webp",
+
+  "Chicken Sizzler":                          "honey-chilli-chicken.webp",
+
+
 
   /* ── BEEF MAIN ── */
-  "Beef with Mushroom":                       "Beef_Mushroom600.webp",
-  "Beef Broccoli":                            "Beef_Brocolli600.webp",
-  "Beef Noodles":                             "Beef_Noodles600.webp",
-  "Dry Chilli Beef":                          "Dry_Chilli_Beef600.webp",
-  "Beef Sizzler":                               "Sizzler600.webp",
+
+  "Beef with Mushroom":                       "beef-mushroom.webp",
+
+  "Beef Broccoli":                            "beef-brocolli.webp",
+
+  "Beef Noodles":                             "noodles-beef.webp",
+
+  "Dry Chilli Beef":                          "beef-strips.webp",
+
+  "Beef Sizzler":                             "beef-brocolli.webp",
+
+
 
   /* ── LAMB MAIN ── */
-  "Lamb in Schezuan Sauce":                   "Lamb_in_Schezuan_Sauce600.webp",
-  "Lamb Sizzler":                               "Sizzler600.webp",
+
+  "Lamb in Schezuan Sauce":                   "lamb-in-schezuan-sauce.webp",
+
+  "Lamb Sizzler":                             "lamb-in-schezuan-sauce.webp",
+
+
 
   /* ── SEAFOOD MAIN ── */
-  "Tilapia Fish in Schezuan Sauce":           "Fish600.webp",
-  "Tilapia Fish in Soya Sauce":               "Fish600.webp",
-  "Tilapia Fish in Black Bean Sauce":         "Fish600.webp",
-  "Tilapia Fish in Garlic Sauce":             "Fish_In_Garlic600.webp",
-  "Sweet and Sour Fish":                      "Sweet_Sour_Prawns600.webp",
-  "Queen Prawns in Schezuan Sauce":           "Golden_Fried_Prawns600.webp",
-  "Queen Prawns in Soya Sauce":               "Golden_Fried_Prawns600.webp",
-  "Queen Prawns in Black Bean Sauce":         "Golden_Fried_Prawns600.webp",
-  "Queen Prawns in Garlic":                   "Golden_Fried_Prawns600.webp",
-  "Sweet and Sour Prawns":                    "Sweet_Sour_Prawns600.webp",
-  "Prawns Sizzler":                           "Golden_Fried_Prawns600.webp",
+
+  "Tilapia Fish in Schezuan Sauce":           "chilli-fish.webp",
+
+  "Tilapia Fish in Soya Sauce":               "chilli-fish.webp",
+
+  "Tilapia Fish in Black Bean Sauce":         "chilli-fish.webp",
+
+  "Tilapia Fish in Garlic Sauce":             "fish-in-garlic.webp",
+
+  "Sweet and Sour Fish":                      "chilli-fish.webp",
+
+  "Queen Prawns in Schezuan Sauce":           "golden-fried-prawns.webp",
+
+  "Queen Prawns in Soya Sauce":               "golden-fried-prawns.webp",
+
+  "Queen Prawns in Black Bean Sauce":         "golden-fried-prawns.webp",
+
+  "Queen Prawns in Garlic":                   "golden-fried-prawns.webp",
+
+  "Sweet and Sour Prawns":                    "sweet-sour-prawns.webp",
+
+  "Prawns Sizzler":                           "prawn-sizzler.webp",
+
+
 
   /* ── VEGETARIAN MAIN ── */
-  "Tofu in Black Bean Sauce":                 "Tofu_in_Black_Bean_Sauce600.webp",
-  "Schezuan Paneer":                          "Schezuan_Paneer600.webp",
+
+  "Tofu in Black Bean Sauce":                 "tofu-in-black-bean-sauce.webp",
+
+  "Schezuan Paneer":                          "chilli-garlic-paneer.webp",
+
+  "Shanghai Vegetables Stir Fry":             "shanghai-veg-tofu-mushroom-brocolli.webp",
+
+
 
   /* ── FRIED RICE ── */
-  "Vegetable Fried Rice":                     "Veg_Fried_Rice600.webp",
+
+  "Vegetable Fried Rice":                     "veg-rice.webp",
+
+  "Plain Fried Rice":                         "plain-fried-rice.webp",
+
+  "Shrimp Egg & Chicken Yong Chow Rice":      "wok-toss-rice.webp",
+
+
 
   /* ── NOODLES ── */
-  "Chilli Garlic Noodles":                    "Chilli_Garlic_Noodles600.webp",
+
+  "Chilli Garlic Noodles":                    "chilli-garlic-noodles.webp",
+
+
+
+  /* ── COMBOS ── */
+
+  "Chicken Schezuan with Rice":               "honey-chilli-chicken.webp",
+
+  "Chicken Schezuan with Noodles":            "honey-chilli-chicken.webp",
+
+
 
   /* ── WRAPS & SALADS ── */
-  "Vegetable Wrap":                           "Lifestyle_Wrap600.webp",
+
+  "Vegetable Wrap":                           "shanghai-veg-withcashew.webp",
+
+
 
   /* ── KIDDIE MENU ── */
-  "Chicken Lollipops with Chips / Noodles":   "Kiddie_Menu600.webp",
+
+  "Chicken Lollipops with Chips / Noodles":   "lollipop-kiddie.webp",
+
+
+
+
+
+  /* ── NEW PARKLANDS-ONLY ITEMS ── */
+  "Crab Meat and Sweet Corn Soup":            "soups.webp",
+  "Fish Coriander Soup":                      "soups.webp",
+  "Seafood Soup":                             "soups.webp",
+  "Tom Yum Hed – Mushroom":                   "tom-yum-prawn.webp",
+  "Tom Kha Hed – Mushroom":                   "tom-yum-prawn.webp",
+  "Tom Kha Gai – Chicken":                    "tom-yum-prawn.webp",
+  "Tom Kha Goong – Prawns":                   "tom-yum-prawn.webp",
+  "Butterfly Salt & Pepper Prawns":           "golden-fried-prawns.webp",
+  "Chilli Calamari":                          "chilli-fish.webp",
+  "Seafood Tempura":                          "golden-fried-prawns.webp",
+  "Sweet Chilli Lamb Special":                "lamb-ribs.webp",
+  "Chicken Satay Skewers In Peanut Sauce":    "honey-chilli-chicken.webp",
+  "Tofu Satay Skewers":                       "sesame-tofu-bites.webp",
+  "Honey Chilli Tofu":                        "sesame-tofu-bites.webp",
+  "Black Pepper Tofu":                        "sesame-tofu-bites.webp",
+  "Mister Wok Golden 5 Special":              "shanghai-veg-tofu-mushroom-brocolli.webp",
+  "Vegetable Tempura":                        "shan-tung-potato-wedges.webp",
+  "Coconut Fish Special":                     "fish-in-garlic.webp",
+  "Mandarin Steamed Whole Fish":              "fish-in-garlic.webp",
+  "Steamed Fish Fillet":                      "fish-in-garlic.webp",
+  "Ginger Crab":                              "ginger-crab.webp",
+  "Crab in Garlic":                           "ginger-crab.webp",
+  "Crab In Black Bean":                       "ginger-crab.webp",
+  "Ginger Lobster":                           "ginger-crab.webp",
+  "Lobster in Garlic":                        "ginger-crab.webp",
+  "Lobster In Black Bean":                    "ginger-crab.webp",
+  "Mushroom FuYong":                          "shanghai-veg-tofu-mushroom-brocolli.webp",
+  "Chicken FuYong":                           "honey-chilli-chicken.webp",
+  "Chicken and Mushroom FuYong":              "honey-chilli-chicken.webp",
+  "Beef and Mushroom FuYong":                 "beef-mushroom.webp",
+  "Prawn and Mushroom FuYong":                "golden-fried-prawns.webp",
 
 };
+
+

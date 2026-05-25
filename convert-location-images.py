@@ -30,7 +30,7 @@ SHARED_COPY = ("parklandslounge.webp", "mw-group-dining.webp")
 ARCHIVE = []
 
 SLIDER_SRC = os.path.join(FOOD_DIR, "Slider_Toss600.webp")
-HERO_DST = os.path.join(FOOD_DIR, "wok-toss-action-hero.webp")
+HERO_DST = os.path.join(FOOD_DIR, "wok-toss-rice.webp")
 
 
 def find_source(name: str) -> str | None:
@@ -126,9 +126,9 @@ print("--- LCP HERO ---")
 if os.path.exists(SLIDER_SRC):
     if not os.path.exists(HERO_DST):
         shutil.copy2(SLIDER_SRC, HERO_DST)
-        print(f"  Created /images/food/wok-toss-action-hero.webp ({os.path.getsize(HERO_DST) / 1024:.0f}KB)")
+        print(f"  Created /images/food/wok-toss-rice.webp ({os.path.getsize(HERO_DST) / 1024:.0f}KB)")
     else:
-        print("  wok-toss-action-hero.webp exists — skipped")
+        print("  wok-toss-rice.webp exists — skipped")
 else:
     print("  WARN: images/food/Slider_Toss600.webp not found")
 print()

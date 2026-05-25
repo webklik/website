@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mister Wok on NTV AM Live: The 10th Anniversary Feature</title>
   <meta name="description" content="Karim and Chef Francis Makau on NTV AM Live for Mister Wok's 10th anniversary feature.">
+  <meta name="robots" content="noindex,follow">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -20,6 +21,7 @@
     'event': 'page_view',
     'page_title': document.title,
     'page_url': window.location.href,
+    'page_type': 'article',
     'user_id': null,
     'branch_selected': null,
     'timestamp': new Date().toISOString()
@@ -56,6 +58,31 @@
     "mainEntityOfPage": "https://misterwok.net/journal/ntv-am-live",
     "datePublished": "2014-02-14",
     "dateModified": "2026-05-08"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Mister Wok on NTV AM Live: The 10th Anniversary Feature",
+    "url": "https://misterwok.net/journal/ntv-am-live-mister-wok-2014.html",
+    "datePublished": "2014-02-14",
+    "dateModified": "2026-05-24",
+    "inLanguage": "en-KE",
+    "author": {"@type": "Organization", "name": "Mister Wok"},
+    "publisher": {"@type": "Organization", "name": "Mister Wok"},
+    "articleSection": "The Wok Journal · Media"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://misterwok.net/"},
+      {"@type": "ListItem", "position": 2, "name": "The Journal", "item": "https://misterwok.net/journal/"},
+      {"@type": "ListItem", "position": 3, "name": "Mister Wok on NTV AM Live", "item": "https://misterwok.net/journal/ntv-am-live-mister-wok-2014.html"}
+    ]
   }
   </script>
   <style>
@@ -121,7 +148,7 @@
       <li class="nav-dropdown">
         <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
         <ul class="nav-dropdown-menu" role="menu">
-          <li role="menuitem"><a href="/parklands/menu.html">🏮 Parklands <span>Full menu · 138 dishes</span></a></li>
+          <li role="menuitem"><a href="/parklands/menu.html">🏮 Parklands <span>Full menu · 229 dishes</span></a></li>
           <li role="menuitem"><a href="/capital-centre/menu.html">🕌 Capital Centre <span>Curated · Halal flagship</span></a></li>
           <li role="menuitem"><a href="/two-rivers/menu.html">🏬 Two Rivers <span>Curated · Gigiri</span></a></li>
         </ul>
@@ -353,7 +380,7 @@
   <nav class="bottom-nav" id="bottom-nav" role="navigation" aria-label="Quick actions">
     <button type="button" class="bn-btn bn-call" data-modal-trigger="call" aria-label="Call a Mister Wok branch"><span aria-hidden="true">☎</span><span>Call</span></button>
     <button type="button" class="bn-btn bn-order" data-modal-trigger="order" data-order-btn="true" aria-label="Order from Mister Wok"><span aria-hidden="true">🛒</span><span>Order</span></button>
-    <a href="/parklands/menu.html" class="bn-btn bn-menu" aria-label="Full menu — 138 dishes"><span aria-hidden="true">🍜</span><span>Menu</span></a>
+    <a href="/parklands/menu.html" class="bn-btn bn-menu" aria-label="Full menu — 229 dishes"><span aria-hidden="true">🍜</span><span>Menu</span></a>
     <a href="/#branches" class="bn-btn bn-find" aria-label="Find a Mister Wok branch"><span aria-hidden="true">🧭</span><span>Find</span></a>
   </nav>
   <script>
@@ -361,28 +388,4 @@
       var ham = document.getElementById('ham');
       var drawer = document.getElementById('drawer');
       if (ham && drawer) {
-        ham.addEventListener('click', function () {
-          var open = drawer.classList.toggle('open');
-          ham.setAttribute('aria-expanded', open ? 'true' : 'false');
-          drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
-        });
-        drawer.querySelectorAll('a').forEach(function (a) {
-          a.addEventListener('click', function () {
-            drawer.classList.remove('open');
-            ham.setAttribute('aria-expanded', 'false');
-            drawer.setAttribute('aria-hidden', 'true');
-          });
-        });
-      }
-      var currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
-      document.querySelectorAll('.nav-links a[href], .drawer-nav a[href], .nav-dropdown-menu a[href]').forEach(function (link) {
-        var href = link.getAttribute('href');
-        if (!href || href === '#' || href.indexOf('/#') === 0 || href.indexOf('http') === 0) return;
-        var normalizedHref = href.replace(/\/+$/, '') || '/';
-        if (normalizedHref === currentPath) link.classList.add('active');
-      });
-    }());
-  </script>
-  <script src="/assets/js/engine.js" defer></script>
-</body>
-</html>
+        h

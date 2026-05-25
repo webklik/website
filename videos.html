@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,6 +20,7 @@
     'event': 'page_view',
     'page_title': document.title,
     'page_url': window.location.href,
+    'page_type': 'videos',
     'user_id': null,
     'branch_selected': null,
     'timestamp': new Date().toISOString()
@@ -92,7 +93,7 @@
       <li class="nav-dropdown">
         <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
         <ul class="nav-dropdown-menu" role="menu">
-          <li role="menuitem"><a href="/parklands/menu.html">🏮 Parklands <span>Full menu · 138 dishes</span></a></li>
+          <li role="menuitem"><a href="/parklands/menu.html">🏮 Parklands <span>Full menu · 229 dishes</span></a></li>
           <li role="menuitem"><a href="/capital-centre/menu.html">🕌 Capital Centre <span>Curated · Halal flagship</span></a></li>
           <li role="menuitem"><a href="/two-rivers/menu.html">🏬 Two Rivers <span>Curated · Gigiri</span></a></li>
         </ul>
@@ -362,14 +363,4 @@
         });
       }
       var currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
-      document.querySelectorAll('.nav-links a[href], .drawer-nav a[href], .nav-dropdown-menu a[href]').forEach(function (link) {
-        var href = link.getAttribute('href');
-        if (!href || href === '#' || href.indexOf('/#') === 0 || href.indexOf('http') === 0) return;
-        var normalizedHref = href.replace(/\/+$/, '') || '/';
-        if (normalizedHref === currentPath) link.classList.add('active');
-      });
-    }());
-  </script>
-  <script src="/assets/js/engine.js" defer></script>
-</body>
-</html>
+      document.querySelectorAll('.nav-links a[href], .drawer-nav a[href], .nav-dropdown-menu a[href]').forEach(function (link)
