@@ -204,21 +204,319 @@
   .section-h2{font-family:var(--font-serif);font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;color:var(--color-white);line-height:1.15;margin-bottom:var(--s-3);}
   .section-body{font-size:.92rem;color:var(--color-text-2);max-width:560px;line-height:1.6;}
 
-  .dishes{padding:var(--s-7) var(--s-4);max-width:1120px;margin:0 auto;}
-  .dishes-head{margin-bottom:var(--s-6);text-align:center;}
-  .dishes-head .section-body{margin:0 auto;}
-  .dish-grid{display:grid;gap:var(--s-4);grid-template-columns:repeat(2,1fr);}
-  @media (min-width:720px){.dish-grid{grid-template-columns:repeat(3,1fr);gap:var(--s-5);}}
-  @media (min-width:1024px){.dish-grid{grid-template-columns:repeat(4,1fr);gap:var(--s-5);}}
-  .dish-card{display:flex;flex-direction:column;gap:var(--s-2);transition:transform var(--t-fast);}
-  .dish-card:hover{transform:translateY(-3px);}
-  .dish-card img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--r-lg);box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 1px rgba(212,175,55,.12);background:var(--color-surface-2);}
-  .dish-name{font-size:.88rem;font-weight:600;color:var(--color-text);line-height:1.3;}
-  .dish-price{font-size:.78rem;color:var(--color-gold);font-weight:700;}
-  .dish-tag{font-size:.58rem;color:var(--color-text-3);letter-spacing:.08em;text-transform:uppercase;}
-  .dish-cta-row{text-align:center;margin-top:var(--s-6);}
-  .dish-cta-row a{display:inline-block;border:1px solid var(--color-rim);color:var(--color-text-2);padding:14px 24px;border-radius:var(--r-sm);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:border-color var(--t-fast),color var(--t-fast);}
-  .dish-cta-row a:hover{border-color:var(--color-gold);color:var(--color-gold);}
+/* ─── 12-CARD DISH GRID + Quick Look + Takeaway (Phase 1B) ─ */
+  .dishes {
+    padding: var(--s-7) var(--s-4) var(--s-7);
+    max-width: 1200px; margin: 0 auto;
+  }
+  .dishes-head { margin-bottom: var(--s-6); text-align: center; }
+  .dishes-head .section-body { margin: 0 auto; }
+  .dish-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-3);
+    padding: var(--s-5) var(--s-4);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @media (min-width: 640px) {
+    .dish-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 960px) {
+    .dish-grid { grid-template-columns: repeat(4, 1fr); gap: var(--s-4); }
+  }
+  .dish-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: #111111;
+    border-radius: var(--r-lg);
+    border: 1px solid rgba(212,175,55,0.14);
+    overflow: hidden;
+    transition: transform 320ms ease, border-color 320ms ease, box-shadow 320ms ease;
+    cursor: pointer;
+  }
+  .dish-card:hover,
+  .dish-card:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(212,175,55,0.60);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.55),
+                0 0 0 1px rgba(212,175,55,0.28);
+  }
+  .dish-card-inner {
+    position: relative;
+    overflow: clip;
+    border-radius: 0;
+    aspect-ratio: 1 / 1;
+    background: var(--color-surface-2);
+  }
+  .dish-card-inner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 55%,
+      rgba(10,10,10,0.65) 100%
+    );
+    pointer-events: none;
+  }
+  .dish-card-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: none;
+    transition: transform 400ms ease;
+  }
+  .dish-card:hover .dish-card-inner img,
+  .dish-card:focus-within .dish-card-inner img {
+    transform: scale(1.05);
+  }
+  .ql-trigger {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: var(--s-2);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: var(--color-gold);
+    opacity: 0;
+    transition: opacity var(--t-fast);
+    cursor: pointer;
+    z-index: 2;
+  }
+  .ql-trigger svg {
+    width: 16px; height: 16px;
+    background: rgba(10,10,10,0.85);
+    border: 1px solid rgba(212,175,55,0.55);
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: content-box;
+    flex-shrink: 0;
+    pointer-events: none;
+  }
+  .dish-card:hover .ql-trigger,
+  .dish-card:focus-within .ql-trigger {
+    opacity: 1;
+  }
+  @media (hover: none) {
+    .ql-trigger { opacity: 1; background: rgba(0,0,0,0.18); }
+  }
+  .dish-name { font-size: 0.88rem; font-weight: 600; color: var(--color-text); line-height: 1.3; padding: var(--s-3) var(--s-3) 0; }
+  .dish-price { font-size: 0.78rem; color: var(--color-gold); font-weight: 700; letter-spacing: 0.02em; padding: 0 var(--s-3); }
+  .dish-card .dish-tag {
+    display: inline-block; font-size: 0.58rem;
+    color: var(--color-text-3); letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0 var(--s-3);
+  }
+  .dish-card-order {
+    text-decoration: none;
+    display: inline-block;
+    margin: var(--s-3);
+    align-self: flex-start;
+    background: transparent;
+    border: 1px solid rgba(212,175,55,0.30);
+    color: var(--color-gold);
+    padding: 7px 14px;
+    border-radius: var(--r-sm);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: border-color var(--t-fast), background var(--t-fast);
+  }
+  .dish-card-order:hover { border-color: var(--color-gold); background: rgba(212,175,55,0.10); }
+
+  .takeaway-banner {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: var(--s-5);
+    align-items: center;
+    max-width: 1200px;
+    margin: var(--s-4) auto 0;
+    padding: var(--s-5) var(--s-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-rim);
+    border-left: 3px solid var(--color-gold);
+    border-radius: var(--r-lg);
+  }
+  @media (min-width: 640px) {
+    .takeaway-banner { grid-template-columns: 240px 1fr; }
+  }
+  .tb-img-wrap img {
+    width: 100%;
+    border-radius: var(--r-md);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .tb-tag {
+    font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--color-gold);
+    margin-bottom: var(--s-2);
+  }
+  .tb-name {
+    font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700;
+    color: var(--color-white); margin-bottom: var(--s-2);
+  }
+  .tb-price {
+    font-size: 0.9rem; color: var(--color-text-2); margin-bottom: var(--s-4);
+  }
+  .tb-cta {
+    display: inline-flex; align-items: center; gap: var(--s-2);
+    background: transparent;
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    padding: 12px 24px;
+    border-radius: var(--r-md);
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    transition: background var(--t-fast), color var(--t-fast);
+  }
+  .tb-cta:hover {
+    background: var(--color-gold);
+    color: #0a0a0a;
+  }
+
+  .ql-modal {
+    display: none;
+    position: fixed; inset: 0;
+    z-index: 1050;
+    align-items: flex-end; justify-content: center;
+  }
+  .ql-modal.open { display: flex; }
+  .ql-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(8px) saturate(0.8);
+    -webkit-backdrop-filter: blur(8px) saturate(0.8);
+  }
+  .ql-sheet {
+    position: relative;
+    width: 100%; max-width: 480px;
+    max-height: 92svh;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-gold);
+    border-top-left-radius: var(--r-xl);
+    border-top-right-radius: var(--r-xl);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    animation: qlSlideUp 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes qlSlideUp {
+    from { transform: translateY(48px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+  @media (min-width: 640px) {
+    .ql-modal { align-items: center; }
+    .ql-sheet {
+      border-radius: var(--r-xl);
+      border-top: 1px solid var(--color-gold);
+      max-height: 88vh;
+      animation: qlFadeScale 280ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes qlFadeScale {
+      from { transform: scale(0.95); opacity: 0; }
+      to   { transform: scale(1);    opacity: 1; }
+    }
+  }
+  .ql-close {
+    position: absolute; top: var(--s-3); right: var(--s-3);
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(10,10,10,0.7);
+    border: 1px solid var(--color-rim);
+    border-radius: 50%;
+    color: var(--color-text-2);
+    font-size: 1rem;
+    z-index: 2;
+    cursor: pointer;
+    transition: border-color var(--t-fast), color var(--t-fast);
+  }
+  .ql-close:hover { border-color: var(--color-gold); color: var(--color-gold); }
+  .ql-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: clip;
+    border-radius: var(--r-xl) var(--r-xl) 0 0;
+    background: var(--color-black);
+  }
+  .ql-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: luminesce 3s ease-in-out infinite;
+  }
+  @keyframes luminesce {
+    0%, 100% { box-shadow: inset 0 0 0 1px rgba(212,175,55,0.0); }
+    50%       { box-shadow: inset 0 0 40px 4px rgba(212,175,55,0.12); }
+  }
+  .ql-details {
+    padding: var(--s-5) var(--s-5) var(--s-4);
+    flex: 1;
+  }
+  .ql-tag {
+    font-size: 0.58rem; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--color-gold);
+    margin-bottom: var(--s-2);
+  }
+  .ql-name {
+    font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700;
+    color: var(--color-white); line-height: 1.15;
+    margin-bottom: var(--s-3);
+  }
+  .ql-desc {
+    font-size: 0.86rem; color: var(--color-text-2); line-height: 1.6;
+    margin-bottom: var(--s-3);
+  }
+  .ql-price {
+    font-size: 1rem; font-weight: 700; color: var(--color-text);
+    letter-spacing: 0.04em;
+  }
+  .ql-order-wrap {
+    position: sticky;
+    bottom: 0;
+    padding: var(--s-4) var(--s-5) calc(var(--s-4) + env(safe-area-inset-bottom));
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-rim);
+  }
+  .ql-order-btn {
+    display: flex; align-items: center; justify-content: center; gap: var(--s-2);
+    width: 100%;
+    background: var(--color-gold);
+    color: #0a0a0a;
+    border: none; border-radius: var(--r-md);
+    padding: 16px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem; font-weight: 800; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    min-height: 52px;
+    transition: background var(--t-fast);
+    box-sizing: border-box;
+  }
+  .ql-order-btn:hover { background: var(--color-gold-hot); }
+
+  .dish-cta-row { text-align: center; margin-top: var(--s-6); }
+  .dish-cta-row a {
+    display: inline-block;
+    border: 1px solid var(--color-rim);
+    color: var(--color-text-2);
+    padding: 14px 24px; border-radius: var(--r-sm);
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: border-color var(--t-fast), color var(--t-fast);
+  }
+  .dish-cta-row a:hover { border-color: var(--color-gold); color: var(--color-gold); }
 
   .trust{background:var(--color-surface);border-top:1px solid var(--color-rim);border-bottom:1px solid var(--color-rim);padding:var(--s-7) var(--s-4);}
   .trust-inner{max-width:1120px;margin:0 auto;}
@@ -442,81 +740,287 @@
   </div>
 
     <div class="dish-grid" role="list">
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="soups" data-branch="Capital Centre" aria-label="Order Wok Soups from Capital Centre">
-        <img src="/images/food/soups.webp" loading="eager" decoding="sync" width="600" height="600" alt="Soup - aromatic broth with aged long-grain aromatic rice noodles and wok-seared garnish">
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="soups"
+        data-ql-name="Wok Soups — House Broths Daily"
+        data-ql-desc="House-made broths simmered daily. Tom Yum: hot, sour, aromatic. Cream of Mushroom: rich, velvety. Clear Broth: delicate, restorative. Made-to-order."
+        data-ql-price="KES 450"
+        data-ql-tag="Made to Order"
+        data-ql-src="/images/food/soups.webp"
+        data-branch="Capital Centre"
+        aria-label="Wok Soups — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/soups.webp" loading="eager" decoding="sync" width="600" height="600" alt="Soup - aromatic broth with aged long-grain aromatic rice noodles and wok-seared garnish">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Wok Soups" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Wok Soups</div>
         <div class="dish-price">KES 450</div>
         <div class="dish-tag">Made to Order</div>
-      </a>
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="spring-rolls" data-branch="Capital Centre" aria-label="Order Spring Rolls from Capital Centre">
-        <img src="/images/food/spring-rolls.webp" loading="lazy" decoding="async" alt="Spring Rolls - crispy pastry with vegetable and protein filling, served with sweet chilli sauce">
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Wok Soups from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="spring-rolls"
+        data-ql-name="Spring Rolls — Gold Bars"
+        data-ql-desc="Handcrafted vegetarian spring rolls — thin crisp pastry, fresh-cut vegetables, wok-fried to order. Nairobi's original gold bars. Served with house chilli sauce."
+        data-ql-price="From KES 550"
+        data-ql-tag="Gold Bars · Crisp"
+        data-ql-src="/images/food/spring-rolls.webp"
+        data-branch="Capital Centre"
+        aria-label="Spring Rolls — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/spring-rolls.webp" loading="lazy" decoding="async" alt="Spring Rolls - crispy pastry with vegetable and protein filling, served with sweet chilli sauce">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Spring Rolls" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Spring Rolls</div>
         <div class="dish-price">From KES 550</div>
         <div class="dish-tag">Gold Bars · Crisp</div>
-      </a>
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="golden-fried-prawns" data-branch="Capital Centre" aria-label="Order Golden Fried Prawns from Capital Centre">
-        <img src="/images/food/golden-fried-prawns.webp" loading="lazy" decoding="async" alt="Golden Fried Prawns - succulent prawns in tempura batter, wok-tossed to golden perfection">
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Spring Rolls from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="golden-fried-prawns"
+        data-ql-name="Golden Fried Prawns — Tempura Crisp"
+        data-ql-desc="Succulent prawns in tempura batter, wok-tossed to golden perfection. Clean batter, lime-ready finish."
+        data-ql-price="KES 1,350"
+        data-ql-tag="Seafood · Crisp"
+        data-ql-src="/images/food/golden-fried-prawns.webp"
+        data-branch="Capital Centre"
+        aria-label="Golden Fried Prawns — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/golden-fried-prawns.webp" loading="lazy" decoding="async" alt="Golden Fried Prawns - succulent prawns in tempura batter, wok-tossed to golden perfection">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Golden Fried Prawns" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Golden Fried Prawns</div>
         <div class="dish-price">KES 1,350</div>
         <div class="dish-tag">Seafood · Crisp</div>
-      </a>
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="chilli-garlic-paneer" data-branch="Capital Centre" aria-label="Order Chilli Garlic Paneer from Capital Centre">
-        <img src="/images/food/chilli-garlic-paneer.webp" loading="lazy" decoding="async" alt="Chilli Garlic Paneer - Indian cottage cheese cubes seared in wok with dry chilli and garlic">
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Golden Fried Prawns from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="chilli-garlic-paneer"
+        data-ql-name="Chilli Garlic Paneer — Wok-Seared"
+        data-ql-desc="Indian cottage cheese cubes seared in wok with dry chilli and garlic. Bold vegetarian main."
+        data-ql-price="KES 1,100"
+        data-ql-tag="Vegetarian · Bold"
+        data-ql-src="/images/food/chilli-garlic-paneer.webp"
+        data-branch="Capital Centre"
+        aria-label="Chilli Garlic Paneer — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/chilli-garlic-paneer.webp" loading="lazy" decoding="async" alt="Chilli Garlic Paneer - Indian cottage cheese cubes seared in wok with dry chilli and garlic">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Chilli Garlic Paneer" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Chilli Garlic Paneer</div>
         <div class="dish-price">KES 1,100</div>
         <div class="dish-tag">Vegetarian · Bold</div>
-      </a>
-      <a class="dish-card" role="listitem" href="/capital-centre/menu.html#lamb-starters" data-cta="menu" data-dish-id="lamb-ribs" data-branch="Capital Centre" aria-label="Order Lamb Ribs from Capital Centre">
-        <img src="/images/food/lamb-ribs.webp" loading="lazy" decoding="async" alt="Lamb Ribs - fall-off-the-bone lamb in spiced wok reduction">
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Chilli Garlic Paneer from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="lamb-ribs"
+        data-ql-name="Lamb Ribs — Fall-Tender"
+        data-ql-desc="Young Dopa lamb ribs prepared in three stages to achieve fall-tender texture. Sticky-sweet sauce with a quiet punch — one of the most ordered starters."
+        data-ql-price="KES 1,400"
+        data-ql-tag="Most-Ordered Starter · ✓ Halal-Assured"
+        data-ql-src="/images/food/lamb-ribs.webp"
+        data-branch="Capital Centre"
+        aria-label="Lamb Ribs — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/lamb-ribs.webp" loading="lazy" decoding="async" alt="Lamb Ribs - fall-off-the-bone lamb in spiced wok reduction">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Lamb Ribs" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Lamb Ribs</div>
         <div class="dish-price">KES 1,400</div>
         <div class="dish-tag">Most-Ordered Starter · ✓ Halal-Assured</div>
-      </a>
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="lollipop-kiddie" data-branch="Capital Centre" aria-label="Order Chicken Lollipops from Capital Centre">
-        <img src="/images/food/lollipop-kiddie.webp" loading="lazy" decoding="async" alt="Lollipop Kiddie - playful chicken lollipops seasoned with mild spices">
+        <a class="dish-card-order" href="/capital-centre/menu.html#lamb-starters" data-cta="menu" aria-label="Order Lamb Ribs from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="lollipop-kiddie"
+        data-ql-name="Chicken Lollipops — Bone-In Bites"
+        data-ql-desc="Chicken drumette, marinated 3-4 hours, double-fried for crispy exterior and tender meat. Obinna-endorsed signature."
+        data-ql-price="KES 1,000 – 1,200"
+        data-ql-tag="Obinna's Pick · Bone-In"
+        data-ql-src="/images/food/lollipop-kiddie.webp"
+        data-branch="Capital Centre"
+        aria-label="Chicken Lollipops — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/lollipop-kiddie.webp" loading="lazy" decoding="async" alt="Lollipop Kiddie - playful chicken lollipops seasoned with mild spices">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Chicken Lollipops" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Chicken Lollipops</div>
         <div class="dish-price">KES 1,000 – 1,200</div>
         <div class="dish-tag">Obinna's Pick · Bone-In</div>
-      </a>
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="salt-and-pepper-vegetable" data-branch="Capital Centre" aria-label="Order Salt & Pepper Vegetable from Capital Centre">
-        <img src="/images/food/salt-and-pepper-vegetable.webp" loading="lazy" decoding="async" alt="Salt and Pepper Vegetable - seasonal vegetables with wok-hei char and cracked pepper">
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Chicken Lollipops from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="salt-and-pepper-vegetable"
+        data-ql-name="Salt &amp; Pepper Vegetable — Wok-Hei"
+        data-ql-desc="Seasonal vegetables with wok-hei char and cracked pepper. Light, crisp, vegetarian."
+        data-ql-price="KES 950"
+        data-ql-tag="Vegetarian · Crisp"
+        data-ql-src="/images/food/salt-and-pepper-vegetable.webp"
+        data-branch="Capital Centre"
+        aria-label="Salt & Pepper Vegetable — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/salt-and-pepper-vegetable.webp" loading="lazy" decoding="async" alt="Salt and Pepper Vegetable - seasonal vegetables with wok-hei char and cracked pepper">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Salt & Pepper Vegetable" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Salt &amp; Pepper Vegetable</div>
         <div class="dish-price">KES 950</div>
         <div class="dish-tag">Vegetarian · Crisp</div>
-      </a>
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="beef-manchurian" data-branch="Capital Centre" aria-label="Order Beef Manchurian from Capital Centre">
-        <img src="/images/food/beef-manchurian.webp" loading="lazy" decoding="async" alt="Beef Manchurian - tender beef in tangy Manchurian sauce with fried onions">
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Salt & Pepper Vegetable from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="beef-manchurian"
+        data-ql-name="Beef Manchurian — Tangy &amp; Crisp"
+        data-ql-desc="Tender beef in tangy Manchurian sauce with fried onions. High-heat wok finish."
+        data-ql-price="KES 1,200"
+        data-ql-tag="Tangy · Crisp"
+        data-ql-src="/images/food/beef-manchurian.webp"
+        data-branch="Capital Centre"
+        aria-label="Beef Manchurian — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/beef-manchurian.webp" loading="lazy" decoding="async" alt="Beef Manchurian - tender beef in tangy Manchurian sauce with fried onions">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Beef Manchurian" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Beef Manchurian</div>
         <div class="dish-price">KES 1,200</div>
         <div class="dish-tag">Tangy · Crisp</div>
-      </a>
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="veg-rice" data-branch="Capital Centre" aria-label="Order Vegetable Fried Rice from Capital Centre">
-        <img src="/images/food/veg-rice.webp" loading="lazy" decoding="async" alt="Vegetable Fried Rice - aged aromatic long-grain rice with garden vegetables, egg, and wok-hei seasoning">
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Beef Manchurian from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="veg-rice"
+        data-ql-name="Vegetable Fried Rice — Aged Long-Grain"
+        data-ql-desc="Premium aged long-grain aromatic rice with garden vegetables, egg, and wok-hei seasoning."
+        data-ql-price="KES 650"
+        data-ql-tag="Aged Long-Grain · Wok-Hei"
+        data-ql-src="/images/food/veg-rice.webp"
+        data-branch="Capital Centre"
+        aria-label="Vegetable Fried Rice — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/veg-rice.webp" loading="lazy" decoding="async" alt="Vegetable Fried Rice - aged aromatic long-grain rice with garden vegetables, egg, and wok-hei seasoning">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Vegetable Fried Rice" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Vegetable Fried Rice</div>
         <div class="dish-price">KES 650</div>
         <div class="dish-tag">Aged Long-Grain · Wok-Hei</div>
-      </a>
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="chilli-garlic-noodles" data-branch="Capital Centre" aria-label="Order Chilli Garlic Noodles from Capital Centre">
-        <img src="/images/food/chilli-garlic-noodles.webp" loading="lazy" decoding="async" alt="Chilli Garlic Noodles - stir-fried noodles with aromatic garlic, dry chilli, and fresh herbs">
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Vegetable Fried Rice from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="chilli-garlic-noodles"
+        data-ql-name="Chilli Garlic Noodles — 2mm Hand-Cut"
+        data-ql-desc="Stir-fried noodles with aromatic garlic, dry chilli, and fresh herbs. Fresh 2mm noodles cut daily."
+        data-ql-price="KES 700"
+        data-ql-tag="2mm Noodles · Aromatic"
+        data-ql-src="/images/food/chilli-garlic-noodles.webp"
+        data-branch="Capital Centre"
+        aria-label="Chilli Garlic Noodles — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/chilli-garlic-noodles.webp" loading="lazy" decoding="async" alt="Chilli Garlic Noodles - stir-fried noodles with aromatic garlic, dry chilli, and fresh herbs">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Chilli Garlic Noodles" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Chilli Garlic Noodles</div>
         <div class="dish-price">KES 700</div>
         <div class="dish-tag">2mm Noodles · Aromatic</div>
-      </a>
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="sweet-sour-prawns" data-branch="Capital Centre" aria-label="Order Sweet & Sour Prawns from Capital Centre">
-        <img src="/images/food/sweet-sour-prawns.webp" loading="lazy" decoding="async" alt="Sweet and Sour Prawns - prawns in balanced sweet-tangy sauce with pineapple and bell peppers">
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Chilli Garlic Noodles from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="sweet-sour-prawns"
+        data-ql-name="Sweet &amp; Sour Prawns — Balanced Tang"
+        data-ql-desc="Prawns in balanced sweet-tangy sauce with pineapple and bell peppers."
+        data-ql-price="KES 1,450"
+        data-ql-tag="Seafood · Tangy"
+        data-ql-src="/images/food/sweet-sour-prawns.webp"
+        data-branch="Capital Centre"
+        aria-label="Sweet & Sour Prawns — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/sweet-sour-prawns.webp" loading="lazy" decoding="async" alt="Sweet and Sour Prawns - prawns in balanced sweet-tangy sauce with pineapple and bell peppers">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Sweet & Sour Prawns" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Sweet &amp; Sour Prawns</div>
         <div class="dish-price">KES 1,450</div>
         <div class="dish-tag">Seafood · Tangy</div>
-      </a>
-      <a class="dish-card" role="listitem" href="https://www.foodbooking.com/api/fb/d_yq_g" data-cta="direct" target="_blank" rel="noopener" data-dish-id="shanghai-vegetables-stir-fry" data-branch="Capital Centre" aria-label="Order Shanghai Vegetables Stir Fry from Capital Centre">
-        <img src="/images/food/shanghai-veg-tofu-mushroom-brocolli.webp" loading="lazy" decoding="async" alt="Shanghai vegetables stir fry with tofu, broccoli, beansprout and mushroom — Mister Wok">
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Sweet & Sour Prawns from Capital Centre">Order</a>
+      </article>
+      <article class="dish-card" role="listitem" tabindex="0" data-dish-id="shanghai-vegetables-stir-fry"
+        data-ql-name="Shanghai Vegetables Stir Fry"
+        data-ql-desc="Shanghai vegetables stir fry with tofu, broccoli, beansprout and mushroom — light, balanced, vegetarian-forward."
+        data-ql-price="KES 1,050"
+        data-ql-tag="Vegetarian · Shanghai"
+        data-ql-src="/images/food/shanghai-veg-tofu-mushroom-brocolli.webp"
+        data-branch="Capital Centre"
+        aria-label="Shanghai Vegetables Stir Fry — Quick Look or order">
+        <div class="dish-card-inner">
+          <img src="/images/food/shanghai-veg-tofu-mushroom-brocolli.webp" loading="lazy" decoding="async" alt="Shanghai vegetables stir fry with tofu, broccoli, beansprout and mushroom — Mister Wok">
+          <button type="button" class="ql-trigger" aria-label="Quick Look: Shanghai Vegetables Stir Fry" data-ql-trigger>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          </button>
+        </div>
         <div class="dish-name">Shanghai Vegetables Stir Fry</div>
         <div class="dish-price">KES 1,050</div>
         <div class="dish-tag">Vegetarian · Shanghai</div>
-      </a>
+        <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Shanghai Vegetables Stir Fry from Capital Centre">Order</a>
+      </article>
     </div>
 
+    <section class="takeaway-banner" aria-label="Order Mister Wok Takeaway Box from Capital Centre">
+      <div class="tb-img-wrap">
+        <img src="/images/food/takeaway.webp" loading="lazy" decoding="async" width="600" height="600" alt="Mister Wok takeaway box with stir-fry, premium aromatic rice and spring roll — feeds 1 to 2 people">
+      </div>
+      <div class="tb-content">
+        <div class="tb-tag">Feeds 1–2 · Ready in 15 min · Recyclable packaging</div>
+        <h3 class="tb-name">The Takeaway Box</h3>
+        <div class="tb-price">KES 1,500</div>
+        <a href="https://www.foodbooking.com/api/fb/d_yq_g" class="tb-cta" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order The Takeaway Box from Capital Centre">Order Takeaway →</a>
+      </div>
+    </section>
+
     <div class="dish-cta-row">
+      <a href="/capital-centre/menu.html" data-cta="menu">🍜 See the full Capital Centre menu →</a>
+    </div>
       <a href="/capital-centre/menu.html" data-cta="menu">🍜 See the full Capital Centre menu →</a>
     </div>
   </section>
@@ -726,6 +1230,27 @@
       </div>
     </div>
   </div>
+
+
+  <div id="ql-modal" class="ql-modal" role="dialog" aria-modal="true" aria-label="Dish quick look" aria-hidden="true">
+    <div class="ql-backdrop" id="ql-backdrop"></div>
+    <div class="ql-sheet">
+      <button class="ql-close" id="ql-close" aria-label="Close quick look" type="button">✕</button>
+      <div class="ql-img-wrap">
+        <img id="ql-img" src="" alt="" loading="eager" decoding="async" class="ql-img">
+      </div>
+      <div class="ql-details">
+        <div id="ql-tag" class="ql-tag"></div>
+        <h2 id="ql-name" class="ql-name"></h2>
+        <p id="ql-desc" class="ql-desc"></p>
+        <div id="ql-price" class="ql-price"></div>
+      </div>
+      <div class="ql-order-wrap">
+        <a id="ql-order-btn" class="ql-order-btn" href="#" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" aria-label="Order this dish"><span aria-hidden="true">🛒</span> Order Now</a>
+      </div>
+    </div>
+  </div>
+
 
   <nav class="bottom-nav" id="bottom-nav" role="navigation" aria-label="Quick Capital Centre actions">
     <a href="tel:+254722248248"

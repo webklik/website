@@ -273,6 +273,7 @@
       document.querySelectorAll('[data-modal-trigger]').forEach(function(btn) {
         btn.addEventListener('click', function(e) {
           e.preventDefault();
+          e.stopPropagation();
           self.open(btn.getAttribute('data-modal-trigger') || 'order');
         });
       });
