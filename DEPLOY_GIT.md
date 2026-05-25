@@ -5,6 +5,18 @@ Repo: https://github.com/webklik/website.git
 Deploy root (live): `/home2/dykbsgmy/public_html/` → https://misterwok.net/  
 Git repo root: this folder (`Mister_Wok_MNFVSS/`)
 
+**Status:** `.cpanel.yml` is on GitHub `main` (commit `25086c8`). Complete the cPanel steps below once to enable Git-based deploys.
+
+### cPanel first deploy — copy/paste values
+
+| Field | Value |
+|-------|-------|
+| Clone URL | `https://github.com/webklik/website.git` |
+| Repository path | `/home2/dykbsgmy/repositories/website` |
+| Branch | `main` |
+
+After clone: **Pull or Deploy** → **Update from Remote** → **Deploy HEAD Commit** → purge LiteSpeed cache.
+
 ---
 
 ## DEPLOYPATH verification
