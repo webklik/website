@@ -50,13 +50,19 @@
   <!-- Machine-readable assets -->
   <url>
     <loc>https://misterwok.net/llms.txt</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://misterwok.net/menu.jsonld</loc>
     <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://misterwok.net/entity-map.json</loc>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -89,7 +95,7 @@
 
   <!-- Journal articles (clean slugs via .htaccess) -->
   <url>
-    <loc>https://misterwok.net/journal/decade-at-the-flame.html</loc>
+    <loc>https://misterwok.net/journal/decade-at-the-flame</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

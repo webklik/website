@@ -33,7 +33,8 @@ RewriteRule ^(.*)$ https://misterwok.net/$1 [R=301,L]
 # ================================================================
 # PHASE 1B — DEPRECATED ROOT MENU
 # /menu.html is the legacy single-branch menu. Permanent redirect to
-# the Parklands full menu (canonical 138-dish menu).
+# the Parklands full menu —
+# canonical 229-dish menu (Parklands) — menu.jsonld
 # ================================================================
 RewriteRule ^menu\.html$ /parklands/menu.html [R=301,L]
 
@@ -53,6 +54,7 @@ RewriteRule ^journal/birthday-catering-guide/?$     /journal/birthday-catering-g
 RewriteRule ^journal/falcon-rice/?$           /journal/long-grain-aromatic-rice.html [R=301,L]
 RewriteRule ^journal/long-grain-aromatic-rice/?$  /journal/long-grain-aromatic-rice.html [L]
 RewriteRule ^journal/halal-wok-nairobi/?$     /journal/halal-wok-nairobi.html [L]
+RewriteRule ^journal/decade-at-the-flame/?$   /journal/decade-at-the-flame.html [L]
 RewriteRule ^journal/lamb-ribs/?$             /journal/ [R=302,L]
 RewriteRule ^journal/fresh-noodles/?$         /journal/ [R=302,L]
 
@@ -136,7 +138,8 @@ RewriteRule ^(.*)/$ /$1 [R=301,L]
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-XSS-Protection "1; mode=block"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  # Uncomment after confirming HTTPS stable for 30+ days:
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  # HSTS — uncomment after 30 days confirmed HTTPS stability on live server
   # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
   Header unset Server
   Header unset X-Powered-By

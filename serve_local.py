@@ -33,6 +33,9 @@ class MisterWokHandler(SimpleHTTPRequestHandler):
         if path in ('', '/'):
             return super().translate_path('/index.html')
 
+        if path == '/menu.html':
+            return super().translate_path('/parklands/menu.html')
+
         m = re.match(r'^/journal/([a-z0-9-]+)/?$', path)
         if m:
             slug = m.group(1)

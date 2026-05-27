@@ -2,11 +2,12 @@
   "@context": "https://schema.org",
   "@type": "Menu",
   "@id": "https://misterwok.net/menu.jsonld",
+  "isBasedOn": "https://misterwok.net/entity-map.json",
   "name": "Mister Wok — Full Menu 2026",
   "url": "https://misterwok.net/parklands/menu.html",
   "dateModified": "2026-05-12",
   "inLanguage": "en",
-  "description": "138 halal-assured dishes across three Nairobi branches. Soups, Dim Sum, Chicken, Lamb, Beef, Seafood, Noodles, Rice, Desserts, Thai specialties. Fired at 300°C. Fresh hand-cut noodles. Premium aged long-grain aromatic rice. Made to order. MSG used for authentic umami; no-MSG available on request.",
+  "description": "229 halal-assured dishes at Parklands (138 curated at Capital Centre and Two Rivers). Soups, Dim Sum, Chicken, Lamb, Beef, Seafood, Noodles, Rice, Desserts, Thai specialties. Fired at 300°C. Fresh hand-cut noodles. Premium aged long-grain aromatic rice. Made to order. MSG used for authentic umami; no-MSG available on request.",
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "menuScope", "value": "Parklands carries the full menu; Capital Centre and Two Rivers carry the curated wok menu (same dishes minus alcohol)." },
     { "@type": "PropertyValue", "name": "alcoholAvailability", "value": "Alcohol items are Parklands only and not served at Capital Centre or Two Rivers." },
