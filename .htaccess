@@ -1,5 +1,5 @@
 # ================================================================
-# MISTER WOK — .htaccess
+# MISTER WOK - .htaccess
 # Clean static HTML site. WordPress removed April 2026.
 # Bluehost Apache / LiteSpeed compatible
 # Last updated: 2026-05-10 (GZIP text types + Cache-Control by asset type)
@@ -31,20 +31,20 @@ RewriteCond %{HTTP_HOST} ^www\.misterwok\.net [NC]
 RewriteRule ^(.*)$ https://misterwok.net/$1 [R=301,L]
 
 # ================================================================
-# PHASE 1B — DEPRECATED ROOT MENU
+# PHASE 1B - DEPRECATED ROOT MENU
 # /menu.html is the legacy single-branch menu. Permanent redirect to
-# the Parklands full menu —
-# canonical 229-dish menu (Parklands) — menu.jsonld
+# the Parklands full menu -
+# canonical 229-dish menu (Parklands) - menu.jsonld
 # ================================================================
 RewriteRule ^menu\.html$ /parklands/menu.html [R=301,L]
 
 # ================================================================
 # CLEAN URL REWRITES
 # These map clean slugs -> actual .html files
-# Format: /journal/slug → /journal/actual-filename.html
+# Format: /journal/slug - /journal/actual-filename.html
 # ================================================================
 
-# ── Explicit journal post mappings ──────────────────────────────
+# -- Explicit journal post mappings ------------------------------
 # Add one line per article as you publish
 
 RewriteRule ^journal/ntv-am-live/?$           /journal/ntv-am-live-mister-wok-2014.html [L]
@@ -69,7 +69,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [R=301,L]
 
 # ================================================================
-# PERFORMANCE — GZIP COMPRESSION
+# PERFORMANCE - GZIP COMPRESSION
 # ================================================================
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html
@@ -139,7 +139,7 @@ RewriteRule ^(.*)/$ /$1 [R=301,L]
   Header always set X-XSS-Protection "1; mode=block"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-  # HSTS — uncomment after 30 days confirmed HTTPS stability on live server
+  # HSTS - uncomment after 30 days confirmed HTTPS stability on live server
   # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
   Header unset Server
   Header unset X-Powered-By
