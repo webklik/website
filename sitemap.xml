@@ -7,13 +7,6 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://misterwok.net/locations/</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <!-- Branch landing pages -->
   <url>
     <loc>https://misterwok.net/parklands/</loc>
@@ -32,6 +25,12 @@
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://misterwok.net/locations/</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- Full menus (per branch) -->
@@ -54,26 +53,6 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- Machine-readable assets -->
-  <url>
-    <loc>https://misterwok.net/llms.txt</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://misterwok.net/menu.jsonld</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://misterwok.net/entity-map.json</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
   <!-- Brand surface pages -->
   <url>
     <loc>https://misterwok.net/journal/</loc>
@@ -87,19 +66,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://misterwok.net/videos.html</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://misterwok.net/social-proof.html</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
   <!-- Journal articles (clean slugs via .htaccess) -->
   <url>
     <loc>https://misterwok.net/journal/decade-at-the-flame</loc>

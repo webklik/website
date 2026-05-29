@@ -5,17 +5,11 @@
 # Last updated: 2026-05-10 (GZIP text types + Cache-Control by asset type)
 # ================================================================
 
-# --- llms.txt: AI-readable, not Google-indexed (IP policy) -----
+# Protect AI intelligence files from Google indexing
 <IfModule mod_headers.c>
-  <Files "llms.txt">
-    Header set X-Robots-Tag "noindex"
-  </Files>
-</IfModule>
-
-<IfModule mod_headers.c>
-  <Files "menu.jsonld">
-    Header set X-Robots-Tag "noindex"
-  </Files>
+  <FilesMatch "^(llms\.txt|menu\.jsonld|entity-map\.json)$">
+    Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
 </IfModule>
 
 # --- DirectoryIndex -------------------------------------------
