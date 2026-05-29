@@ -7,9 +7,15 @@
 
 # Protect AI intelligence files from Google indexing
 <IfModule mod_headers.c>
-  <FilesMatch "^(llms\.txt|menu\.jsonld|entity-map\.json)$">
+  <Files "llms.txt">
     Header set X-Robots-Tag "noindex, nofollow"
-  </FilesMatch>
+  </Files>
+  <Files "menu.jsonld">
+    Header set X-Robots-Tag "noindex, nofollow"
+  </Files>
+  <Files "entity-map.json">
+    Header set X-Robots-Tag "noindex, nofollow"
+  </Files>
 </IfModule>
 
 # --- DirectoryIndex -------------------------------------------
