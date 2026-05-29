@@ -5,7 +5,7 @@
   "isBasedOn": "https://misterwok.net/entity-map.json",
   "name": "Mister Wok — Full Menu 2026",
   "url": "https://misterwok.net/parklands/menu.html",
-  "dateModified": "2026-05-12",
+  "dateModified": "2026-05-27",
   "inLanguage": "en",
   "description": "229 halal-assured dishes at Parklands (138 curated at Capital Centre and Two Rivers). Soups, Dim Sum, Chicken, Lamb, Beef, Seafood, Noodles, Rice, Desserts, Thai specialties. Fired at 300°C. Fresh hand-cut noodles. Premium aged long-grain aromatic rice. Made to order. MSG used for authentic umami; no-MSG available on request.",
   "additionalProperty": [
@@ -21,7 +21,78 @@
     "url": "https://misterwok.net",
     "servesCuisine": ["Chinese", "Thai", "Wok Cuisine", "Halal"],
     "foundingDate": "2004-02-14",
-    "priceRange": "KES 450-3500"
+    "priceRange": "KES 1,100–2,700",
+    "location": [
+      {
+        "@type": "Restaurant",
+        "@id": "https://misterwok.net/parklands/#branch",
+        "name": "Mister Wok Parklands",
+        "url": "https://misterwok.net/parklands/",
+        "telephone": "+254724100100",
+        "priceRange": "KES 1,300–2,700",
+        "parentOrganization": { "@id": "https://misterwok.net/#organization" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kolobot Road, Kengen RBS Apartments",
+          "addressLocality": "Parklands",
+          "addressRegion": "Nairobi",
+          "postalCode": "00619",
+          "addressCountry": "KE"
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "11:00",
+          "closes": "23:00"
+        }]
+      },
+      {
+        "@type": "Restaurant",
+        "@id": "https://misterwok.net/capital-centre/#branch",
+        "name": "Mister Wok Capital Centre",
+        "url": "https://misterwok.net/capital-centre/",
+        "telephone": "+254722248248",
+        "priceRange": "KES 1,100–2,500",
+        "parentOrganization": { "@id": "https://misterwok.net/#organization" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Capital Centre Mall, Mombasa Road",
+          "addressLocality": "South B",
+          "addressRegion": "Nairobi",
+          "postalCode": "00619",
+          "addressCountry": "KE"
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "11:00",
+          "closes": "21:30"
+        }]
+      },
+      {
+        "@type": "Restaurant",
+        "@id": "https://misterwok.net/two-rivers/#branch",
+        "name": "Mister Wok Two Rivers",
+        "url": "https://misterwok.net/two-rivers/",
+        "telephone": "+254753222222",
+        "priceRange": "KES 1,100–2,500",
+        "parentOrganization": { "@id": "https://misterwok.net/#organization" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Two Rivers Mall, Limuru Road",
+          "addressLocality": "Gigiri",
+          "addressRegion": "Nairobi",
+          "postalCode": "00619",
+          "addressCountry": "KE"
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "11:00",
+          "closes": "21:00"
+        }]
+      }
+    ]
   },
   "hasMenuSection": [
     {

@@ -1,5 +1,5 @@
 /**
- * Site-wide footer — Brand | Contact | Journal (3 equal columns @ 720px+)
+ * Site-wide footer — Brand | Branch Links | Contact | Journal (4 cols @ 960px+)
  * Load after page tokens; mirrors canonical hub footer with tighter vertical rhythm.
  */
 footer {
@@ -17,8 +17,13 @@ footer {
 }
 @media (min-width: 720px) {
   .footer-inner {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--s-5, 22px) var(--s-6, 28px);
+  }
+}
+@media (min-width: 960px) {
+  .footer-inner {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -113,6 +118,25 @@ footer {
 }
 .ft-contact-email:hover {
   color: var(--color-gold, var(--gold, #d4af37));
+}
+
+.ft-branch-strip {
+  display: flex;
+  flex-direction: column;
+}
+.ft-branch-strip a {
+  font-size: 0.82rem;
+  color: var(--color-text-2, var(--text-2, #b8a898));
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: color 0.15s ease, padding-left 0.15s ease;
+}
+.ft-branch-strip a:last-child {
+  border-bottom: none;
+}
+.ft-branch-strip a:hover {
+  color: var(--color-gold, var(--gold, #d4af37));
+  padding-left: 4px;
 }
 
 .ft-journal-strip {

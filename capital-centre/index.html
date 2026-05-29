@@ -70,7 +70,7 @@
     "image": "https://misterwok.net/images/restaurant/capitalcentreexterior.webp",
     "telephone": "+254722248248",
     "email": "events@misterwok.net",
-    "priceRange": "KES 450–2500",
+    "priceRange": "KES 1,100–2,500",
     "currenciesAccepted": "KES",
     "servesCuisine": ["Chinese", "Thai", "Wok Cuisine", "Halal"],
     "foundingDate": "2004-02-14",
@@ -137,6 +137,67 @@
       { "@type": "Question", "name": "Where is Mister Wok Capital Centre?", "acceptedAnswer": { "@type": "Answer", "text": "Mister Wok Capital Centre is located inside Capital Centre Mall on Mombasa Road, South B, Nairobi. Open daily 11am–9:30pm." } },
       { "@type": "Question", "name": "Does Capital Centre deliver?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Capital Centre delivers to South B, South C, Langata, Nairobi West, Eastleigh, Nyayo Estate, Embakasi and Upper Hill." } }
     ]
+  }
+  </script>
+
+  <!-- LocalBusiness — GBP-aligned branch entity (Halal-Assured) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "additionalType": "HalalRestaurant",
+    "name": "Mister Wok - Capital Centre",
+    "alternateName": ["Mr Wok", "Mr Wok Capital Centre", "Mister Wok Mombasa Road"],
+    "image": "https://misterwok.net/images/restaurant/capitalcentreinterior.webp",
+    "url": "https://misterwok.net/capital-centre/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Capital Centre Mall, Mombasa Road",
+      "addressLocality": "South B",
+      "addressRegion": "Nairobi",
+      "postalCode": "00100",
+      "addressCountry": "KE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -1.3057,
+      "longitude": 36.8219
+    },
+    "telephone": "+254722248248",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "21:30"
+      }
+    ],
+    "priceRange": "KES 800-2700",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.2",
+      "reviewCount": "710"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "South B"},
+      {"@type": "City", "name": "South C"},
+      {"@type": "City", "name": "Langata"},
+      {"@type": "City", "name": "Nairobi West"},
+      {"@type": "City", "name": "Eastleigh"},
+      {"@type": "City", "name": "Embakasi"},
+      {"@type": "City", "name": "Upper Hill"},
+      {"@type": "City", "name": "Mombasa Road"}
+    ],
+    "sameAs": [
+      "https://www.google.com/maps/place/Mister+Wok+Capital+Centre",
+      "https://www.instagram.com/mister.wok/",
+      "https://www.facebook.com/254misterwok",
+      "https://www.youtube.com/@misterwok8114"
+    ],
+    "potentialAction": {
+      "@type": "OrderAction",
+      "target": "https://misterwok.net/capital-centre/menu.html"
+    }
   }
   </script>
 
@@ -555,14 +616,14 @@
   </a>
   <ul class="nav-links" role="list">
     <li class="nav-dropdown">
-      <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch locations">📍 Locations ▾</a>
+      <a href="/locations/" class="nav-dropdown-trigger" aria-haspopup="true" aria-label="Locations">LOCATIONS ▼</a>
       <ul class="nav-dropdown-menu" role="menu">
-        <li role="menuitem"><a href="/parklands/">🏮 Parklands <span>Kolobot Rd · Dine-in flagship</span></a></li>
+                <li role="menuitem"><a href="/parklands/">🏮 Parklands <span>Kolobot Rd · Dine-in flagship</span></a></li>
         <li role="menuitem"><a href="/capital-centre/">🕌 Capital Centre <span>Halal-assured flagship</span></a></li>
         <li role="menuitem"><a href="/two-rivers/">🏬 Two Rivers <span>Two Rivers Mall · Gigiri</span></a></li>
       </ul>
     </li>
-    <li class="nav-dropdown">
+      <li class="nav-dropdown">
       <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
       <ul class="nav-dropdown-menu" role="menu">
         <li role="menuitem"><a href="/parklands/menu.html">🏮 Parklands <span>Full menu · 229 dishes</span></a></li>
@@ -592,14 +653,16 @@
 
 <div class="drawer" id="drawer" role="dialog" aria-label="Navigation menu" aria-hidden="true">
   <nav class="drawer-nav" aria-label="Site pages">
+    <a href="/locations/" class="drawer-nav-row">LOCATIONS <span>→</span></a>
     <details class="drawer-accordion">
-      <summary>📍 Locations</summary>
+      <summary>Branch Pages ▾</summary>
       <div class="drawer-accordion-panel">
-        <a href="/parklands/">🏮 Parklands <span>Kolobot Rd</span></a>
+                <a href="/parklands/">🏮 Parklands <span>Kolobot Rd</span></a>
         <a href="/capital-centre/">🕌 Capital Centre <span>Halal-assured</span></a>
         <a href="/two-rivers/">🏬 Two Rivers <span>Gigiri</span></a>
       </div>
     </details>
+    
     <details class="drawer-accordion">
       <summary>📖 Menu</summary>
       <div class="drawer-accordion-panel">
@@ -1091,7 +1154,17 @@
         </div>
       </div>
 
-      <!-- Col 2: Contact -->
+            <!-- Col 2: Branch Links -->
+      <div>
+        <div class="ft-col-title">Branch Links</div>
+        <nav class="ft-branch-strip" aria-label="Branch pages">
+          <a href="/parklands/">Parklands</a>
+          <a href="/capital-centre/">Capital Centre</a>
+          <a href="/two-rivers/">Two Rivers</a>
+        </nav>
+      </div>
+
+      <!-- Col 3: Contact -->
       <div>
         <div class="ft-col-title">Call Us</div>
         <div class="ft-contact-stack">
@@ -1115,7 +1188,7 @@
         </div>
       </div>
 
-      <!-- Col 3: The Journal -->
+      <!-- Col 4: The Journal -->
       <div>
         <div class="ft-col-title">The Journal</div>
         <nav class="ft-journal-strip" aria-label="The Wok Journal — featured articles">

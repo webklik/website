@@ -83,7 +83,7 @@
     "Thai",
     "Wok Cuisine"
   ],
-  "priceRange": "KES 450–2500",
+  "priceRange": "KES 1,100–2,500",
   "currenciesAccepted": "KES",
   "parentOrganization": {
     "@id": "https://misterwok.net/#organization"
@@ -1718,9 +1718,9 @@ summary::marker               { display: none; }
 </a>
 <ul class="nav-links" role="list">
 <li class="nav-dropdown">
-<a aria-haspopup="true" aria-label="Branch locations" class="nav-dropdown-trigger" href="#" role="button">📍 Locations ▾</a>
+<a href="/locations/" class="nav-dropdown-trigger" aria-haspopup="true" aria-label="Locations">LOCATIONS ▼</a>
 <ul class="nav-dropdown-menu" role="menu">
-<li role="menuitem"><a href="/parklands/">🏮 Parklands <span>Kolobot Rd · Dine-in flagship</span></a></li>
+                <li role="menuitem"><a href="/parklands/">🏮 Parklands <span>Kolobot Rd · Dine-in flagship</span></a></li>
 <li role="menuitem"><a href="/capital-centre/">🕌 Capital Centre <span>South B flagship dining</span></a></li>
 <li role="menuitem"><a href="/two-rivers/">🏬 Two Rivers <span>Two Rivers Mall · Gigiri</span></a></li>
 </ul>
@@ -1754,14 +1754,16 @@ summary::marker               { display: none; }
 </nav>
 <div aria-hidden="true" aria-label="Navigation menu" class="drawer" id="drawer" role="dialog">
 <nav aria-label="Site pages" class="drawer-nav">
-<details class="drawer-accordion">
-<summary>📍 Locations</summary>
+<a href="/locations/" class="drawer-nav-row">LOCATIONS <span>→</span></a>
+    <details class="drawer-accordion">
+<summary>Branch Pages ▾</summary>
 <div class="drawer-accordion-panel">
 <a href="/parklands/">🏮 Parklands <span>Kolobot Rd</span></a>
 <a href="/capital-centre/">🕌 Capital Centre <span>Mombasa Rd · South B</span></a>
 <a href="/two-rivers/">🏬 Two Rivers <span>Gigiri</span></a>
 </div>
 </details>
+    
 <details class="drawer-accordion">
 <summary>📖 Menu</summary>
 <div class="drawer-accordion-panel">
@@ -4314,7 +4316,17 @@ summary::marker               { display: none; }
 <a href="https://www.youtube.com/@misterwok8114" rel="noopener" target="_blank">YouTube</a>
 </div>
 </div>
-<!-- Col 2: Contact -->
+      <!-- Col 2: Branch Links -->
+      <div>
+        <div class="ft-col-title">Branch Links</div>
+        <nav class="ft-branch-strip" aria-label="Branch pages">
+          <a href="/parklands/">Parklands</a>
+          <a href="/capital-centre/">Capital Centre</a>
+          <a href="/two-rivers/">Two Rivers</a>
+        </nav>
+      </div>
+
+      <!-- Col 3: Contact -->
 <div>
 <div class="ft-col-title">Call Us</div>
 <div class="ft-contact-stack">
@@ -4337,7 +4349,7 @@ summary::marker               { display: none; }
 </div>
 </div>
 </div>
-<!-- Col 3: The Journal -->
+<!-- Col 4: The Journal -->
 <div>
 <div class="ft-col-title">The Journal</div>
 <nav aria-label="The Wok Journal — featured articles" class="ft-journal-strip">

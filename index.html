@@ -87,7 +87,7 @@
         "telephone": "+254724100100",
         "email": "events@misterwok.net",
         "servesCuisine": ["Chinese", "Thai", "Wok Cuisine", "Halal"],
-        "priceRange": "KES 450–3500",
+        "priceRange": "KES 1,100–2,700",
         "currenciesAccepted": "KES",
         "sameAs": [
           "https://www.youtube.com/@misterwok8114",
@@ -110,7 +110,7 @@
         "description": "Mister Wok Parklands — premium poolside dine-in flagship on Kolobot Road. Full menu of 229 dishes. Open until 11pm. Serves Westlands, CBD, Kileleshwa, Muthaiga, Gigiri and Ngara.",
         "image": "https://misterwok.net/images/restaurant/parklandsexterior.webp",
         "telephone": "+254724100100",
-        "priceRange": "KES 450–3500",
+        "priceRange": "KES 1,300–2,700",
         "currenciesAccepted": "KES",
         "servesCuisine": ["Chinese", "Thai", "Wok Cuisine"],
         "foundingDate": "2004-02-14",
@@ -146,7 +146,7 @@
         "description": "Mister Wok Capital Centre — Halal-Assured flagship at Capital Centre Mall, Mombasa Road. Curated wok menu. Serves South B, South C, Langata, Nairobi West, Eastleigh and surrounding areas.",
         "image": "https://misterwok.net/images/restaurant/capitalcentreexterior.webp",
         "telephone": "+254722248248",
-        "priceRange": "KES 450–2500",
+        "priceRange": "KES 1,100–2,500",
         "currenciesAccepted": "KES",
         "servesCuisine": ["Chinese", "Thai", "Wok Cuisine", "Halal"],
         "foundingDate": "2004-02-14",
@@ -183,7 +183,7 @@
         "description": "Mister Wok Two Rivers — curated wok menu at Two Rivers Mall, Limuru Road, Gigiri. Serves Runda, Gigiri, Muthaiga, Ridgeways and Rosslyn.",
         "image": "https://misterwok.net/images/restaurant/tworiversfrontage.webp",
         "telephone": "+254753222222",
-        "priceRange": "KES 450–2500",
+        "priceRange": "KES 1,100–2,500",
         "currenciesAccepted": "KES",
         "servesCuisine": ["Chinese", "Thai", "Wok Cuisine"],
         "foundingDate": "2004-02-14",
@@ -859,9 +859,9 @@
     </a>
     <ul class="nav-links" role="list">
       <li class="nav-dropdown">
-        <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch locations">📍 Locations ▾</a>
+        <a href="/locations/" class="nav-dropdown-trigger" aria-haspopup="true" aria-label="Locations">LOCATIONS ▼</a>
         <ul class="nav-dropdown-menu" role="menu">
-          <li role="menuitem"><a href="/parklands/">🏮 Parklands <span>Kolobot Rd · Dine-in flagship</span></a></li>
+                    <li role="menuitem"><a href="/parklands/">🏮 Parklands <span>Kolobot Rd · Dine-in flagship</span></a></li>
           <li role="menuitem"><a href="/capital-centre/">🕌 Capital Centre <span>Halal-assured flagship</span></a></li>
           <li role="menuitem"><a href="/two-rivers/">🏬 Two Rivers <span>Two Rivers Mall · Gigiri</span></a></li>
         </ul>
@@ -896,10 +896,11 @@
 
   <div class="drawer" id="drawer" role="dialog" aria-label="Navigation menu" aria-hidden="true">
     <nav class="drawer-nav" aria-label="Site pages">
+    <a href="/locations/" class="drawer-nav-row">LOCATIONS <span>→</span></a>
       <details class="drawer-accordion">
-        <summary>📍 Locations</summary>
-        <div class="drawer-accordion-panel">
-          <a href="/parklands/">🏮 Parklands <span>Kolobot Rd</span></a>
+      <summary>Branch Pages ▾</summary>
+      <div class="drawer-accordion-panel">
+                  <a href="/parklands/">🏮 Parklands <span>Kolobot Rd</span></a>
           <a href="/capital-centre/">🕌 Capital Centre <span>Halal-assured</span></a>
           <a href="/two-rivers/">🏬 Two Rivers <span>Gigiri</span></a>
         </div>
@@ -1295,7 +1296,17 @@
         </div>
       </div>
 
-      <!-- Col 2: Contact -->
+      <!-- Col 2: Branch Links -->
+      <div>
+        <div class="ft-col-title">Branch Links</div>
+        <nav class="ft-branch-strip" aria-label="Branch pages">
+          <a href="/parklands/">Parklands</a>
+          <a href="/capital-centre/">Capital Centre</a>
+          <a href="/two-rivers/">Two Rivers</a>
+        </nav>
+      </div>
+
+      <!-- Col 3: Contact -->
       <div>
         <div class="ft-col-title">Call Us</div>
         <div class="ft-contact-stack">
@@ -1319,7 +1330,7 @@
         </div>
       </div>
 
-      <!-- Col 3: The Journal -->
+      <!-- Col 4: The Journal -->
       <div>
         <div class="ft-col-title">The Journal</div>
         <nav class="ft-journal-strip" aria-label="The Wok Journal — featured articles">

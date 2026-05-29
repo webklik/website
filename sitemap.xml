@@ -2,47 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://misterwok.net/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Phase 1B: Branch landing pages (conversion-first entry points) -->
+  <url>
+    <loc>https://misterwok.net/locations/</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Branch landing pages -->
   <url>
     <loc>https://misterwok.net/parklands/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://misterwok.net/capital-centre/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://misterwok.net/two-rivers/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
 
   <!-- Full menus (per branch) -->
   <url>
     <loc>https://misterwok.net/parklands/menu.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://misterwok.net/capital-centre/menu.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://misterwok.net/two-rivers/menu.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -56,13 +63,13 @@
   </url>
   <url>
     <loc>https://misterwok.net/menu.jsonld</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://misterwok.net/entity-map.json</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -70,25 +77,25 @@
   <!-- Brand surface pages -->
   <url>
     <loc>https://misterwok.net/journal/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://misterwok.net/catering.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://misterwok.net/videos.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://misterwok.net/social-proof.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -96,43 +103,43 @@
   <!-- Journal articles (clean slugs via .htaccess) -->
   <url>
     <loc>https://misterwok.net/journal/decade-at-the-flame</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://misterwok.net/journal/ntv-am-live</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://misterwok.net/journal/spring-rolls-gold</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://misterwok.net/journal/wok-hei-physics</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://misterwok.net/journal/birthday-catering-guide</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://misterwok.net/journal/long-grain-aromatic-rice</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://misterwok.net/journal/halal-wok-nairobi</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

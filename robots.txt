@@ -1,10 +1,11 @@
 # Mister Wok — robots.txt
 # Static HTML site crawl directives
-# Last updated: 2026-05-10
+# Last updated: 2026-05-27
 
 # Default: allow crawl of public pages
 User-agent: *
 Allow: /
+Allow: /locations/
 Disallow: /api/
 Disallow: /cgi-bin/
 Disallow: /tmp/
