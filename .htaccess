@@ -156,7 +156,7 @@ ErrorDocument 403 /index.html
 # ================================================================
 # PROTECT SENSITIVE FILES
 # ================================================================
-<FilesMatch "(^\.htaccess|\.htpasswd|\.env)">
+<FilesMatch "(\.htaccess|\.htpasswd|\.env)$">
   Order Allow,Deny
   Deny from all
 </FilesMatch>
