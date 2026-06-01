@@ -201,18 +201,73 @@ git push cpanel main
 
 Keep `origin` → GitHub for history. Only set this up after manual deploy works reliably.
 
+The `cpanel` remote is already configured locally:
+
+```powershell
+git remote -v
+# cpanel  ssh://dykbsgmy@misterwok.net/home2/dykbsgmy/repositories/mw-website
+```
+
+If push fails with "Too many authentication failures", use an explicit key:
+
+```powershell
+$env:GIT_SSH_COMMAND = 'ssh -i C:\Users\HUSSEIN\.ssh\YOUR_KEY -o IdentitiesOnly=yes'
+git push cpanel main
+```
+
+---
+
+## SHA verification (every release)
+
+Before considering a release live, confirm all three layers show the **same commit SHA**:
+
+```powershell
+# Local PC
+git log -1 --oneline
+
+# GitHub (after push)
+git ls-remote origin main
+
+# cPanel — Git Version Control → Last Deployed SHA
+```
+
+**Golden rule:** Never click **Deploy HEAD Commit** without **Update from Remote** first. Deploying a stale SHA re-pushes old `.htaccess` and can cause a site-wide 403.
+
+If cPanel SHA ≠ GitHub SHA, reset the server clone before deploy:
+
+```bash
+cd /home2/dykbsgmy/repositories/mw-website
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+git log -1 --oneline
+```
+
+Then **Deploy HEAD Commit** in cPanel UI (or `git push cpanel main` if SSH auto-deploy is configured).
+
 ---
 
 ## Current release status
 
-Latest deploy commit on GitHub `main`:
+Latest commit on GitHub `main`:
 
-`1786cda` — Phase 1B: LocalBusiness schema, `/locations/` hub, selective sitemap
+`f6e886c` — SEO remediation sprint + LiteSpeed-safe `.htaccess` (Files blocks for AI assets)
 
-After cPanel **Deploy HEAD Commit**, verify Phase 1B is live:
+Includes commits since Phase 1B deploy (`1786cda`):
+
+- `eb1305c` — fix sensitive-files `FilesMatch` (403)
+- `6cb439b` — ASCII-only `.htaccess` comments (403)
+- `f44d427` — halal-assured copy, 229 dishes, sitemap cleanup, noindex pages
+- `f6e886c` — per-file `<Files>` for llms.txt / menu.jsonld / entity-map.json
+
+After cPanel **Deploy HEAD Commit**, verify live:
 
 ```powershell
-curl.exe -s "https://misterwok.net/parklands/" | Select-String '"@type": "LocalBusiness"'
-curl.exe -s "https://misterwok.net/capital-centre/" | Select-String "HalalRestaurant"
+curl.exe -sI "https://misterwok.net/" | Select-String "HTTP"
+curl.exe -sI "https://misterwok.net/sitemap.xml" | Select-String "HTTP"
+curl.exe -s "https://misterwok.net/parklands/" | Select-String "Halal-assured wok kitchen"
+curl.exe -s "https://misterwok.net/parklands/" | Select-String "<strong>229</strong> dishes"
 curl.exe -s "https://misterwok.net/sitemap.xml" | Select-String "locations"
 ```
+
+Expected: site and sitemap return **200**; Parklands shows Halal-assured meta and 229 dishes; sitemap has `/locations/` and no `llms.txt`, `menu.jsonld`, or `entity-map.json`.
