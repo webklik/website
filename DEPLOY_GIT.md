@@ -243,6 +243,12 @@ git clean -fd
 git log -1 --oneline
 ```
 
+Or run the helper script from the repo root (after pulling latest):
+
+```bash
+bash cpanel-sync-deploy.sh
+```
+
 Then **Deploy HEAD Commit** in cPanel UI (or `git push cpanel main` if SSH auto-deploy is configured).
 
 ---
@@ -251,7 +257,7 @@ Then **Deploy HEAD Commit** in cPanel UI (or `git push cpanel main` if SSH auto-
 
 Latest commit on GitHub `main`:
 
-`f6e886c` — SEO remediation sprint + LiteSpeed-safe `.htaccess` (Files blocks for AI assets)
+`00f6c97` — SEO remediation sprint + deploy runbook + cPanel sync helper (includes `f6e886c` SEO fixes)
 
 Includes commits since Phase 1B deploy (`1786cda`):
 
