@@ -155,11 +155,17 @@ ErrorDocument 403 /index.html
 
 # ================================================================
 # PROTECT SENSITIVE FILES
+# Do not match .htaccess here - LiteSpeed can fail to read the file (403).
+# Apache never serves .htaccess; protect credentials only.
 # ================================================================
-<FilesMatch "(\.htaccess|\.htpasswd|\.env)$">
+<Files ".htpasswd">
   Order Allow,Deny
   Deny from all
-</FilesMatch>
+</Files>
+<Files ".env">
+  Order Allow,Deny
+  Deny from all
+</Files>
 
 <Files xmlrpc.php>
   Order Deny,Allow
