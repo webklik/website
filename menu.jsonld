@@ -2,365 +2,454 @@
   "@context": "https://schema.org",
   "@type": "Menu",
   "@id": "https://misterwok.net/menu.jsonld",
-  "isBasedOn": "https://misterwok.net/entity-map.json",
   "name": "Mister Wok — Full Menu 2026",
   "url": "https://misterwok.net/parklands/menu.html",
   "dateModified": "2026-06-03",
   "inLanguage": "en",
-  "description": "229 halal-assured dishes at Parklands (138 curated at Capital Centre and Two Rivers). Soups, Dim Sum, Chicken, Lamb, Beef, Seafood, Noodles, Rice, Desserts, Thai specialties. Fired at 300°C. Fresh hand-cut noodles. Premium aged long-grain aromatic rice. Made to order. MSG used for authentic umami; no-MSG available on request.",
+  "description": "222 dishes across 26 sections. Full menu at Parklands (229 items including bar). Curated wok menu at Capital Centre and Two Rivers (138 dishes, no alcohol). Fired at 300°C. Fresh hand-cut noodles. Premium aged long-grain aromatic rice. Made to order.",
   "additionalProperty": [
-    { "@type": "PropertyValue", "name": "menuScope", "value": "Parklands carries the full menu; Capital Centre and Two Rivers carry the curated wok menu (same dishes minus alcohol)." },
-    { "@type": "PropertyValue", "name": "alcoholAvailability", "value": "Alcohol items are Parklands only and not served at Capital Centre or Two Rivers." },
-    { "@type": "PropertyValue", "name": "halalAssurance", "value": "Capital Centre is the halal-assured flagship. Parklands and Two Rivers are not halal-certified." },
-    { "@type": "PropertyValue", "name": "msgPolicy", "value": "MSG (Ajinomoto) used for authentic umami. No-MSG preparation available on request — every dish is cooked to order." }
+    {
+      "@type": "PropertyValue",
+      "name": "menuScope",
+      "value": "Parklands carries the full menu including bar. Capital Centre and Two Rivers carry the curated wok menu — same dishes minus alcohol."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "alcoholAvailability",
+      "value": "Alcohol available at Parklands only. Capital Centre serves no alcohol. Two Rivers offers beer and wine on inquiry — confirm when ordering."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "halalAssurance",
+      "value": "Capital Centre is the halal-assured flagship. Parklands and Two Rivers are not halal-certified."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "msgPolicy",
+      "value": "MSG (Ajinomoto) used for authentic umami. No-MSG preparation available on request — every dish is cooked to order."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pricingDisclaimer",
+      "value": "All prices are inclusive of taxes and subject to change without notice. Prices reflect the Parklands branch menu (Nov 2024). Capital Centre and Two Rivers pricing may vary on select items."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "allergenNotice",
+      "value": "Our kitchen uses ingredients containing common food allergens including egg, gluten, fish, seafood, nuts, sesame seed and soy."
+    }
   ],
   "provider": {
     "@type": "Restaurant",
     "@id": "https://misterwok.net/#organization",
     "name": "Mister Wok",
-    "url": "https://misterwok.net",
-    "servesCuisine": ["Chinese", "Thai", "Wok Cuisine", "Halal"],
-    "foundingDate": "2004-02-14",
-    "priceRange": "KES 1,100–2,700",
-    "location": [
-      {
-        "@type": "Restaurant",
-        "@id": "https://misterwok.net/parklands/#branch",
-        "name": "Mister Wok Parklands",
-        "url": "https://misterwok.net/parklands/",
-        "telephone": "+254724100100",
-        "priceRange": "KES 1,300–2,700",
-        "parentOrganization": { "@id": "https://misterwok.net/#organization" },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Kolobot Road, Kengen RBS Apartments",
-          "addressLocality": "Parklands",
-          "addressRegion": "Nairobi",
-          "postalCode": "00619",
-          "addressCountry": "KE"
-        },
-        "openingHoursSpecification": [{
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "11:00",
-          "closes": "23:00"
-        }]
-      },
-      {
-        "@type": "Restaurant",
-        "@id": "https://misterwok.net/capital-centre/#branch",
-        "name": "Mister Wok Capital Centre",
-        "url": "https://misterwok.net/capital-centre/",
-        "telephone": "+254722248248",
-        "priceRange": "KES 1,100–2,500",
-        "parentOrganization": { "@id": "https://misterwok.net/#organization" },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Capital Centre Mall, Mombasa Road",
-          "addressLocality": "South B",
-          "addressRegion": "Nairobi",
-          "postalCode": "00619",
-          "addressCountry": "KE"
-        },
-        "openingHoursSpecification": [{
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "11:00",
-          "closes": "21:30"
-        }]
-      },
-      {
-        "@type": "Restaurant",
-        "@id": "https://misterwok.net/two-rivers/#branch",
-        "name": "Mister Wok Two Rivers",
-        "url": "https://misterwok.net/two-rivers/",
-        "telephone": "+254753222222",
-        "priceRange": "KES 1,100–2,500",
-        "parentOrganization": { "@id": "https://misterwok.net/#organization" },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Two Rivers Mall, Limuru Road",
-          "addressLocality": "Gigiri",
-          "addressRegion": "Nairobi",
-          "postalCode": "00619",
-          "addressCountry": "KE"
-        },
-        "openingHoursSpecification": [{
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "11:00",
-          "closes": "21:00"
-        }]
-      }
-    ]
+    "url": "https://misterwok.net"
   },
   "hasMenuSection": [
     {
       "@type": "MenuSection",
-      "name": "Signature Dishes 2026",
-      "description": "The 13 signature dishes that define Mister Wok in 2026 — available at all three branches.",
+      "name": "Soups — Vegetable",
       "hasMenuItem": [
         {
           "@type": "MenuItem",
-          "name": "Tilapia — Whole Fish 300°C Seared",
-          "description": "Whole Tilapia, scaled and gutted, seared at 300°C wok temperature. Crispy skin, moist flesh. Served with white onion vinegar and bullet sauce.",
-          "image": "https://misterwok.net/images/food/hero-shot.webp",
-          "offers": {
-            "@type": "Offer",
-            "price": "2800",
-            "priceCurrency": "KES",
-            "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
-            ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "412" },
-          "keywords": ["whole fish", "seared", "300 degrees", "crispy", "wok hei"]
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Chicken Lollipops — Bone-In Bites",
-          "description": "Chicken drumette, marinated 3–4 hours, double-fried for crispy exterior and tender meat. Obinna-endorsed signature. Served with white vinegar sauce.",
-          "image": "https://misterwok.net/images/food/lollipop-kiddie.webp",
-          "offers": {
-            "@type": "Offer",
-            "price": "1200",
-            "priceCurrency": "KES",
-            "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
-            ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "567" },
-          "keywords": ["drumette", "lollipop", "crispy", "Obinna"]
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Beef & Broccoli — 300°C Seared",
-          "description": "Premium beef sirloin, cut to order, seared at high wok temperature with fresh broccoli florets. Maillard reaction on every surface. Served with steamed rice.",
-          "image": "https://misterwok.net/images/food/beef-brocolli.webp",
-          "offers": {
-            "@type": "Offer",
-            "price": "1200",
-            "priceCurrency": "KES",
-            "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
-            ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "289" },
-          "keywords": ["beef", "broccoli", "high heat", "Maillard"]
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Chicken Cashew Nuts — Wok-Tossed",
-          "description": "Diced chicken breast, roasted cashew nuts, capsicum, onion. High-heat toss in industrial wok. Nutty, aromatic, balanced.",
-          "image": "https://misterwok.net/images/food/chicken-cashewnuts.webp",
-          "offers": {
-            "@type": "Offer",
-            "price": "1100",
-            "priceCurrency": "KES",
-            "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
-            ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "198" },
-          "keywords": ["cashew", "chicken", "nutty", "wok-tossed"]
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Shanghai Lemon Prawns — Crispy & Tangy",
-          "description": "Whole king prawns, lightly battered, wok-fried until crispy. Tossed in house lemon glaze. Balance of crunch and citrus brightness.",
-          "image": "https://misterwok.net/images/food/shanghai-lemon-prawns.webp",
-          "offers": {
-            "@type": "Offer",
-            "price": "1400",
-            "priceCurrency": "KES",
-            "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
-            ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "234" },
-          "keywords": ["prawns", "lemon", "crispy", "Shanghai"]
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Lamb in Sichuan Sauce — Numbing Heat",
-          "description": "Tender lamb strands, Sichuan peppercorn (málà sensation), chilli, garlic, sesame oil. Made-to-order for maximum spice control.",
-          "image": "https://misterwok.net/images/food/lamb-in-schezuan-sauce.webp",
-          "offers": {
-            "@type": "Offer",
-            "price": "1300",
-            "priceCurrency": "KES",
-            "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
-            ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "156" },
-          "keywords": ["lamb", "Sichuan", "numbing", "spicy", "málà"]
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Tofu in Black Bean Sauce — Silky & Umami",
-          "description": "Soft tofu cubes, fermented black beans, garlic, chilli. High-heat toss preserves tofu integrity while infusing sauce. Vegetarian, umami-forward.",
-          "image": "https://misterwok.net/images/food/tofu-in-black-bean-sauce.webp",
-          "offers": {
-            "@type": "Offer",
-            "price": "750",
-            "priceCurrency": "KES",
-            "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
-            ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "142" },
-          "keywords": ["tofu", "black bean", "vegetarian", "umami"]
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Beef Mushroom — Earthy & Umami",
-          "description": "Sliced beef, button mushrooms, garlic, soy reduction. Made-to-order for texture preservation. Rich, earthy, balanced.",
-          "image": "https://misterwok.net/images/food/beef-mushroom.webp",
-          "offers": {
-            "@type": "Offer",
-            "price": "1200",
-            "priceCurrency": "KES",
-            "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
-            ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "167" },
-          "keywords": ["beef", "mushroom", "umami", "earthy"]
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Chicken Baby Corn Broccoli — Fresh & Crisp",
-          "description": "Diced chicken, baby corn, broccoli florets, light soy glaze. High-heat preservation of vegetable crunch. Balanced, light, family-friendly.",
-          "image": "https://misterwok.net/images/food/shanghai-veg-tofu-mushroom-brocolli.webp",
-          "offers": {
-            "@type": "Offer",
-            "price": "950",
-            "priceCurrency": "KES",
-            "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
-            ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "133" },
-          "keywords": ["chicken", "baby corn", "broccoli", "fresh"]
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Soups — Tom Yum, Cream of Mushroom, Clear Broth",
-          "description": "House-made broths simmered daily. Tom Yum: hot, sour, aromatic. Cream of Mushroom: rich, velvety. Clear Broth: delicate, restorative. Made-to-order.",
-          "image": "https://misterwok.net/images/food/soups.webp",
+          "name": "Hot & Sour Vegetable Soup",
           "offers": {
             "@type": "Offer",
             "price": "450",
             "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "287" },
-          "keywords": ["soup", "broth", "Tom Yum", "comfort"]
+          }
         },
         {
           "@type": "MenuItem",
-          "name": "Aromatic Fried Rice & Hand-Cut Noodles",
-          "description": "Premium aged long-grain aromatic rice, separating grains, wok-fried with egg, vegetables, protein. Or hand-cut 2mm fresh noodles cut daily. Aromatic, addictive, made-to-order.",
-          "image": "https://misterwok.net/images/food/wok-toss-rice.webp",
+          "name": "Sweet Corn Soup",
           "offers": {
             "@type": "Offer",
-            "price": "600",
+            "price": "450",
             "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "421" },
-          "keywords": ["aromatic rice", "hand-cut noodles", "fried rice", "premium long-grain"]
+          }
         },
         {
           "@type": "MenuItem",
-          "name": "Wok Hei Combo — Mixed Sizzler Platter",
-          "description": "Curated mix of 3 proteins (beef, chicken, prawn), vegetables, rice/noodles. Single platter for 2–3 persons. Demonstrative of full wok hei technique.",
-          "image": "https://misterwok.net/images/food/prawn-sizzler.webp",
+          "name": "Mushroom Plain Soup",
           "offers": {
             "@type": "Offer",
-            "price": "2200",
+            "price": "450",
             "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "198" },
-          "keywords": ["combo", "sizzler", "wok hei", "sharing"]
+          }
         },
         {
           "@type": "MenuItem",
-          "name": "Takeaway Special — Combo Box",
-          "description": "Choice of 2 mains, rice/noodles, spring rolls, sauce. Optimised packaging for delivery heat preservation. Made fresh on order.",
-          "image": "https://misterwok.net/images/food/takeaway.webp",
+          "name": "Vegetable Wonton Soup With Pakchoy",
           "offers": {
             "@type": "Offer",
-            "price": "1500",
+            "price": "450",
             "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "156" },
-          "keywords": ["takeaway", "combo", "delivery", "convenience"]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Noodle Soup",
+          "offers": {
+            "@type": "Offer",
+            "price": "450",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Hot And Sour Vegetable Wonton Soup",
+          "offers": {
+            "@type": "Offer",
+            "price": "450",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Man Chow Soup",
+          "offers": {
+            "@type": "Offer",
+            "price": "450",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
         }
       ]
     },
     {
       "@type": "MenuSection",
-      "name": "Soups",
+      "name": "Soups — Seafood",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Crab Meat And Sweet Corn Soup",
+          "offers": {
+            "@type": "Offer",
+            "price": "800",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Fish Coriander Soup",
+          "offers": {
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Lemon Prawn Soup",
+          "offers": {
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Seafood Soup",
+          "offers": {
+            "@type": "Offer",
+            "price": "800",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Soups — Chicken",
       "hasMenuItem": [
         {
           "@type": "MenuItem",
           "name": "Hot & Sour Chicken Soup",
           "offers": {
-            "@type": "Offer", "price": "500", "priceCurrency": "KES",
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
           }
         },
         {
           "@type": "MenuItem",
-          "name": "Tom Yum Goong",
+          "name": "Sweet Corn Chicken Soup",
           "offers": {
-            "@type": "Offer", "price": "800", "priceCurrency": "KES",
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mushroom Chicken Soup",
+          "offers": {
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Wonton Soup With Pakchoy",
+          "offers": {
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Noodle Soup",
+          "offers": {
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Soup With Pakchoy",
+          "offers": {
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
           }
         }
@@ -368,29 +457,3293 @@
     },
     {
       "@type": "MenuSection",
-      "name": "Appetizers & Starters",
+      "name": "Soups — Tom Yum Thai",
+      "description": "With mushrooms flavoured with lemon grass, chilli and lime.",
       "hasMenuItem": [
         {
           "@type": "MenuItem",
-          "name": "Dry Chilli Chicken",
+          "name": "Tom Yum Hed — Mushroom",
           "offers": {
-            "@type": "Offer", "price": "1200", "priceCurrency": "KES",
+            "@type": "Offer",
+            "price": "600",
+            "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
           }
         },
         {
           "@type": "MenuItem",
+          "name": "Tom Yum Gai — Chicken",
+          "offers": {
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tom Yum Goong — Prawns",
+          "offers": {
+            "@type": "Offer",
+            "price": "800",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Soups — Tom Kha Thai",
+      "description": "With mushrooms simmered in coconut cream flavoured with chilli and lime.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Tom Kha Hed — Mushroom",
+          "offers": {
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tom Kha Gai — Chicken",
+          "offers": {
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tom Kha Goong — Prawns",
+          "offers": {
+            "@type": "Offer",
+            "price": "800",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Starters — Salads & Lettuce Wraps",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Salad",
+          "offers": {
+            "@type": "Offer",
+            "price": "950",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Minced chicken seasoned with herbs, shallot, lemon grass in lemon dressing."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tofu Wrap",
+          "offers": {
+            "@type": "Offer",
+            "price": "900",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Wok seared tofu bites with sweetcorn."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Wrap",
+          "offers": {
+            "@type": "Offer",
+            "price": "900",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Garden fresh diced vegetables."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Wrap",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Wok seared minced chicken with sweetcorn."
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Starters — Steamed Dim Sum",
+      "description": "4 pieces per order. Allow 20 minutes.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Mushroom Dumplings",
+          "offers": {
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Garden Veg Dumplings",
+          "offers": {
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Dumplings",
+          "offers": {
+            "@type": "Offer",
+            "price": "800",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Har-Gow Prawn Dumplings",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Shumai (Open Wontons)",
+          "offers": {
+            "@type": "Offer",
+            "price": "800",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Prawn Shumai (Open Wontons)",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Starters — Seafood",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Prawn Crackers",
+          "offers": {
+            "@type": "Offer",
+            "price": "400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Golden Fried Prawns",
+          "offers": {
+            "@type": "Offer",
+            "price": "1350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Prawns Pili-Pili",
+          "offers": {
+            "@type": "Offer",
+            "price": "1400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Butterfly Salt & Pepper Prawns",
+          "offers": {
+            "@type": "Offer",
+            "price": "1400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Shanghai Lemon Prawns",
+          "offers": {
+            "@type": "Offer",
+            "price": "1400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tilapia Fish Fingers",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Winglets of Tilapia Fillet",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chilli Calamari",
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Florets of squid tossed with bell peppers."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Seafood Tempura",
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Prawn, calamari and tilapia."
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Starters — Lamb",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
           "name": "Mister Wok Lamb Ribs",
           "offers": {
-            "@type": "Offer", "price": "1400", "priceCurrency": "KES",
+            "@type": "Offer",
+            "price": "1400",
+            "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sweet Chilli Lamb Special",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sautéed Chilli Lamb Strips",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Crispy Sesame Lamb Manchurian",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Starters — Chicken",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Spring Rolls (4 Per Plate)",
+          "offers": {
+            "@type": "Offer",
+            "price": "600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mister Wok Chicken Lollipops",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "House Chicken Wings",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Salt & Pepper Chicken Wings Dry",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mandarin Honey Wings",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sautéed Chicken Strips",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Dry Chilli Chicken — Wok Signature Dish",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Honey Chilli Chicken",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Satay Skewers In Peanut Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Starters — Beef",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Crispy Sesame Beef Manchurian",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Starters — Vegetarian",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Spring Rolls (4 Per Plate)",
+          "offers": {
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Special Bean Sprout Spring Rolls",
+          "offers": {
+            "@type": "Offer",
+            "price": "600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Filled with fresh and crunchy mung beans. 4 pieces per plate."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Shan Tung Spicy Potato Wedges",
+          "offers": {
+            "@type": "Offer",
+            "price": "850",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Potato wedges tossed with salt, pepper and garlic."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Simply Potato Fingers (Chips)",
+          "offers": {
+            "@type": "Offer",
+            "price": "450",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sesame Seed Tofu Bites",
+          "offers": {
+            "@type": "Offer",
+            "price": "950",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Tossed in our special teriyaki sauce."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Black Pepper Tofu",
+          "offers": {
+            "@type": "Offer",
+            "price": "950",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tofu Satay Skewers",
+          "offers": {
+            "@type": "Offer",
+            "price": "950",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Tofu cubes served in our Mister Wok sauce."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Honey Chilli Tofu",
+          "offers": {
+            "@type": "Offer",
+            "price": "950",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Shanghai Spicy Cashewnuts",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Cashewnuts spiced Shanghai style."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Schezuan Style Baby Corn",
+          "offers": {
+            "@type": "Offer",
+            "price": "950",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Baby corn in Schezuan sauce."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Golden Fried Babycorn",
+          "offers": {
+            "@type": "Offer",
+            "price": "950",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Salt & Pepper Vegetables with Cashewnuts",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Kung Pao Okra with Cashewnuts",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Tempura",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Nestled in a light, lacy network of thin crispy batter."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chilli Garlic Mushrooms",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Satay Skewers In Peanut Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chilli Garlic Paneer",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Indian cottage cheese."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mister Wok Golden 5 Special",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Babycorn, broccoli, carrots, mushroom, tofu."
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Main Course — Vegetarian",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Four Treasures — Soya Or Garlic",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Baby corn, Chinese cabbage, French bean and mushroom."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Six Treasures — Soya Or Garlic",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Baby corn, bean sprouts, broccoli, carrots, French bean and tofu."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Shanghai Vegetables Stir Fry",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Tofu, broccoli, beansprout and mushroom."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Schezuan Vegetables With Cashewnuts (House Special)",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Baby Corn & Broccoli In Garlic Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Manchurian in Gravy",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Schezuan Paneer",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Indian cottage cheese."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tofu in Black Bean or Soya Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Stir Fried Tofu with Beansprouts",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chinese Greens in Garlic",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Broccoli, French beans, snow peas and pakchoy."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Kung Pao Vegetables with Cashewnuts and Dry Red Chilli",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sweet Corn In Chilli Garlic Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Schezuan Sweet Corn",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sweet Corn In Black Bean",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Baby-Corn & Mushrooms — Garlic Or Soya",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Stir-Fried Mixed Vegetables In Black Bean",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Stir-Fried Mixed Vegetables In Garlic Or Soya",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Stir-Fried Broccoli & Beansprouts",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Pakchoy In Garlic",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mushrooms In Wok Sauce With Tofu",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "S4 — Special Schezuan Style Saucy Chips",
+          "offers": {
+            "@type": "Offer",
+            "price": "600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Thai Vegetable Green Curry",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Thai Vegetable Red Curry",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Sizzler — Soya Or Black Bean",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Main Course — Lamb",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Schezuan Lamb",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Lamb In Black Bean Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Lamb Hot Garlic",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Lamb Sizzler",
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Main Course — Seafood",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Coconut Fish Special",
+          "offers": {
+            "@type": "Offer",
+            "price": "1400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Foil wrapped steamed fish bites in coconut gravy."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tilapia Fish In Garlic Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Fish In Black Bean Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Fish In Soya Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Schezuan Fish",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sweet & Sour Fish",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mandarin Steamed Whole Fish",
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Steamed with ginger, spring onion in soy."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Steamed Fish Fillet",
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Steamed with ginger, spring onion in soy."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tilapia Fish Sizzler",
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Deep Fried Whole Fish",
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Topped with chef's special sauce."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Queen Prawns In Garlic Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Prawns In Black Bean Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Prawns In Soya Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Schezuan Prawns",
+          "offers": {
+            "@type": "Offer",
+            "price": "1600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sweet & Sour Prawns",
+          "offers": {
+            "@type": "Offer",
+            "price": "1600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Ginger Crab",
+          "offers": {
+            "@type": "Offer",
+            "price": "2000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Request on or off the shell."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Crab In Garlic",
+          "offers": {
+            "@type": "Offer",
+            "price": "2000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Crab In Black Bean",
+          "offers": {
+            "@type": "Offer",
+            "price": "2000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Ginger Lobster",
+          "offers": {
+            "@type": "Offer",
+            "price": "3500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Lobster In Garlic",
+          "offers": {
+            "@type": "Offer",
+            "price": "3500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Lobster In Black Bean",
+          "offers": {
+            "@type": "Offer",
+            "price": "3500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Thai Prawn Green Curry",
+          "offers": {
+            "@type": "Offer",
+            "price": "1700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Thai Prawn Red Curry",
+          "offers": {
+            "@type": "Offer",
+            "price": "1700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Prawn Sizzler",
+          "offers": {
+            "@type": "Offer",
+            "price": "1800",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Main Course — Chicken",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Schezuan Chicken",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Cashewnuts",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Kung Pao Chicken",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Cashewnuts and dry red chilli."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken In Black Bean Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Baby Corn & Broccoli",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Stir Fry Chicken With Three Vegetables",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Bean sprouts, Chinese cabbage and mushrooms."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken With Mushrooms",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Lemon Chicken",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sweet & Sour Chicken",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Thai Chicken Green Curry",
+          "offers": {
+            "@type": "Offer",
+            "price": "1300",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Thai Chicken Red Curry",
+          "offers": {
+            "@type": "Offer",
+            "price": "1300",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Thai Chicken Teriyaki",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Stir Fry Chicken With Fresh Chilli and Basil",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Sizzler",
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Main Course — Beef",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Dry Chilli Beef Strips",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Beef In Black Bean Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Beef Green Pepper",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Beef Cashewnuts",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Beef Hot Garlic",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Beef With Mushrooms",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Pineapple And Ginger Beef",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Beef Broccoli",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Schezuan Beef",
+          "offers": {
+            "@type": "Offer",
+            "price": "1100",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Beef Sizzler",
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Main Course — FuYong",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Mushroom FuYong",
+          "offers": {
+            "@type": "Offer",
+            "price": "800",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken FuYong",
+          "offers": {
+            "@type": "Offer",
+            "price": "800",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken And Mushroom FuYong",
+          "offers": {
+            "@type": "Offer",
+            "price": "850",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Beef And Mushroom FuYong",
+          "offers": {
+            "@type": "Offer",
+            "price": "850",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Prawn And Mushroom FuYong",
+          "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
           }
         }
@@ -402,13 +3755,185 @@
       "hasMenuItem": [
         {
           "@type": "MenuItem",
+          "name": "Steamed Rice",
+          "offers": {
+            "@type": "Offer",
+            "price": "450",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Plain Fried Rice",
+          "offers": {
+            "@type": "Offer",
+            "price": "600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Ginger Fried Rice",
+          "offers": {
+            "@type": "Offer",
+            "price": "600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vegetable Fried Rice",
+          "offers": {
+            "@type": "Offer",
+            "price": "650",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Egg-Fried Rice",
+          "offers": {
+            "@type": "Offer",
+            "price": "650",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Fried Rice",
+          "offers": {
+            "@type": "Offer",
+            "price": "750",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Beef Fried Rice",
+          "offers": {
+            "@type": "Offer",
+            "price": "750",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
           "name": "Shrimp Egg & Chicken Yong Chow Rice",
           "offers": {
-            "@type": "Offer", "price": "1000", "priceCurrency": "KES",
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/capital-centre/#branch" },
-              { "@type": "Place", "@id": "https://misterwok.net/two-rivers/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
           }
         }
@@ -416,46 +3941,1232 @@
     },
     {
       "@type": "MenuSection",
-      "name": "Parklands Bar Menu",
-      "description": "This section is available at Parklands only. Capital Centre and Two Rivers do not serve alcohol.",
+      "name": "Chowmein — Noodles",
+      "description": "Hand-cut 2mm fresh egg noodles, cut daily at each branch.",
       "hasMenuItem": [
         {
           "@type": "MenuItem",
-          "name": "Kenyan Beers",
+          "name": "Schezuan Spicy Noodles",
           "offers": {
-            "@type": "Offer", "price": "450", "priceCurrency": "KES",
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
           }
         },
         {
           "@type": "MenuItem",
-          "name": "Wine (By Glass)",
+          "name": "Plain Noodles",
           "offers": {
-            "@type": "Offer", "price": "550", "priceCurrency": "KES",
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
           }
         },
         {
           "@type": "MenuItem",
-          "name": "Wine Bottle (Enquire)",
+          "name": "Vegetable Noodles",
           "offers": {
-            "@type": "Offer", "priceCurrency": "KES",
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
             ]
           }
         },
         {
           "@type": "MenuItem",
-          "name": "Request Bar Menu for Alcoholic Drinks",
+          "name": "Chilli Garlic Noodles",
           "offers": {
-            "@type": "Offer", "priceCurrency": "KES",
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
             "availableAtOrFrom": [
-              { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" }
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Noodles",
+          "offers": {
+            "@type": "Offer",
+            "price": "750",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Beef Noodles",
+          "offers": {
+            "@type": "Offer",
+            "price": "750",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Shrimp Bang-Bang Noodles",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Contains nuts."
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Desserts",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Ice Cream Delight Special",
+          "offers": {
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Flavours: vanilla, strawberry or chocolate."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cake On Order — Half Kg",
+          "offers": {
+            "@type": "Offer",
+            "price": "2000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cake On Order — 1 Kg",
+          "offers": {
+            "@type": "Offer",
+            "price": "3000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Date Pancakes With Ice Cream",
+          "offers": {
+            "@type": "Offer",
+            "price": "650",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Toffee Banana With Ice Cream",
+          "offers": {
+            "@type": "Offer",
+            "price": "650",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Banana Fritters With Ice Cream",
+          "offers": {
+            "@type": "Offer",
+            "price": "650",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Pineapple Cinnamon Fritters With Ice Cream",
+          "offers": {
+            "@type": "Offer",
+            "price": "650",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Milkshake",
+          "offers": {
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Flavours: vanilla, strawberry or chocolate."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Slice of Cake",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Ask for the flavour of the week. Subject to availability."
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Hot Beverages",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Caffe Latte",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cappuccino",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chai Latte",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chinese Tea Pot",
+          "offers": {
+            "@type": "Offer",
+            "price": "400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Espresso",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Masala Tea (Pot)",
+          "offers": {
+            "@type": "Offer",
+            "price": "400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Hot Chocolate",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Hot Water with Lemon & Honey",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Kenya Coffee Pot",
+          "offers": {
+            "@type": "Offer",
+            "price": "400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Kenya Tea Pot",
+          "offers": {
+            "@type": "Offer",
+            "price": "400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Latte Macchiato",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mocha",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Non-Alcoholic Beverages",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Sodas",
+          "offers": {
+            "@type": "Offer",
+            "price": "200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Coke Lite",
+          "offers": {
+            "@type": "Offer",
+            "price": "200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mineral Water — Small",
+          "offers": {
+            "@type": "Offer",
+            "price": "150",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mineral Water — Large",
+          "offers": {
+            "@type": "Offer",
+            "price": "200",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sparkling Water — Large",
+          "offers": {
+            "@type": "Offer",
+            "price": "250",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Fresh Juice",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Lime and ginger, mango, passion, pineapple and mint, tree tomato."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Fruit Cocktail Juice",
+          "offers": {
+            "@type": "Offer",
+            "price": "400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Mango, passion or tree tomato."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mocktails",
+          "offers": {
+            "@type": "Offer",
+            "price": "600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/capital-centre/#branch"
+              },
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/two-rivers/#branch"
+              }
+            ]
+          },
+          "description": "Quiet Sunday, Shirley Temple, Sprinter."
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Bar Menu — Wine",
+      "description": "Available at Mister Wok Parklands only. Capital Centre and Two Rivers do not serve alcohol.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Image Dry Wine — Red or White (Bottle)",
+          "offers": {
+            "@type": "Offer",
+            "price": "2400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Dompo Sweet Fortified 18% — Classic, Gold or Garnet (Bottle)",
+          "offers": {
+            "@type": "Offer",
+            "price": "2700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "St. Mary's Sweet White (Bottle)",
+          "offers": {
+            "@type": "Offer",
+            "price": "2400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "For You — Rosé Wine (Bottle)",
+          "offers": {
+            "@type": "Offer",
+            "price": "2300",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Altar Wine Sweet Fortified (Bottle)",
+          "offers": {
+            "@type": "Offer",
+            "price": "2700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Rooster Unicorn Dry Wine — Red or White (Bottle)",
+          "offers": {
+            "@type": "Offer",
+            "price": "2800",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "House Wine Per Glass",
+          "offers": {
+            "@type": "Offer",
+            "price": "550",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Bar Menu — Spirits & Cocktails",
+      "description": "Available at Mister Wok Parklands only.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Aperitif — Campari, Martini Bianco",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sherry Triple Sec",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Gin / Vodka",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          },
+          "description": "Bombay Sapphire, Gordons, Gilbeys, Absolute Vodka, Smirnoff."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Rum",
+          "offers": {
+            "@type": "Offer",
+            "price": "350",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          },
+          "description": "Bacardi, Captain Morgan, Malibu Coconut, Myers."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cognac / Brandy",
+          "offers": {
+            "@type": "Offer",
+            "price": "700",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          },
+          "description": "Courvoisier, Hennessy, Martel."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chivas Regal 12 Years",
+          "offers": {
+            "@type": "Offer",
+            "price": "600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Johnnie Walker Black Label",
+          "offers": {
+            "@type": "Offer",
+            "price": "550",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Jack Daniels",
+          "offers": {
+            "@type": "Offer",
+            "price": "550",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Glenfiddich Special Reserve (Single Malt)",
+          "offers": {
+            "@type": "Offer",
+            "price": "600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Whisky",
+          "offers": {
+            "@type": "Offer",
+            "price": "450",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          },
+          "description": "Famous Grouse, Jameson, Johnnie Walker Red Label."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Liqueur",
+          "offers": {
+            "@type": "Offer",
+            "price": "400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          },
+          "description": "Amarula, Baileys, Cointreau, Drambuie, Kahlua, Tia Maria."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Shooters",
+          "offers": {
+            "@type": "Offer",
+            "price": "400",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          },
+          "description": "Camino Tequila, Sambuca Borgheti."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cocktails",
+          "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          },
+          "description": "Dawa, Margarita, Mojito, Pinacolada, Restriction, Screw Driver, Tequila Sunrise. Ask the barman for any cocktail not listed."
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Bar Menu — Beer",
+      "description": "Available at Mister Wok Parklands only. Two Rivers offers beer and wine on inquiry.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Kenyan Beer",
+          "offers": {
+            "@type": "Offer",
+            "price": "450",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Imported Beer",
+          "offers": {
+            "@type": "Offer",
+            "price": "600",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Smirnoff Ice Black",
+          "offers": {
+            "@type": "Offer",
+            "price": "450",
+            "priceCurrency": "KES",
+            "availableAtOrFrom": [
+              {
+                "@type": "Place",
+                "@id": "https://misterwok.net/parklands/#branch"
+              }
             ]
           }
         }

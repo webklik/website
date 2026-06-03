@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -624,7 +624,7 @@
       </ul>
     </li>
     <li class="nav-dropdown">
-      <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
+      <a href="/parklands/menu.html" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
       <ul class="nav-dropdown-menu" role="menu">
         <li role="menuitem"><a href="/parklands/menu.html">🏮 Parklands <span>Full menu · 229 dishes</span></a></li>
         <li role="menuitem"><a href="/capital-centre/menu.html">🕌 Capital Centre <span>Curated · Halal flagship</span></a></li>
@@ -632,7 +632,7 @@
       </ul>
       </li>
       <li class="nav-dropdown">
-        <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Reserve a table">📅 Reserve ▾</a>
+        <a href="/locations/" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Reserve a table">📅 Reserve ▾</a>
       <ul class="nav-dropdown-menu" role="menu">
         <li role="menuitem"><a href="https://www.foodbooking.com/api/res/67_y_m" target="_blank" rel="noopener">🏮 Parklands <span>Reserve a table</span></a></li>
         <li role="menuitem"><a href="https://www.foodbooking.com/api/res/d_yq_g" target="_blank" rel="noopener">🕌 Capital Centre <span>Reserve · Halal-assured</span></a></li>
@@ -640,7 +640,7 @@
       </ul>
     </li>
     <li class="nav-dropdown">
-      <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Discover Mister Wok">DISCOVER ▾</a>
+      <a href="/journal/" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Discover Mister Wok">DISCOVER ▾</a>
       <ul class="nav-dropdown-menu" role="menu">
         <li role="menuitem"><a href="/journal/">✦ The Journal <span>Stories from the kitchen</span></a></li>
         <li role="menuitem"><a href="/social-proof.html">✦ As Seen On <span>Kula Cooler · Press · Reviews</span></a></li>
@@ -671,8 +671,8 @@
     <details class="drawer-accordion">
       <summary>📖 Menu</summary>
       <div class="drawer-accordion-panel">
+        <a href="/capital-centre/menu.html" aria-current="page">🕌 Capital Centre Menu</a>
         <a href="/parklands/menu.html">🏮 Parklands Menu</a>
-        <a href="/capital-centre/menu.html">🕌 Capital Centre Menu</a>
         <a href="/two-rivers/menu.html">🏬 Two Rivers Menu</a>
       </div>
     </details>
@@ -1341,30 +1341,25 @@
 
   <nav class="bottom-nav" id="bottom-nav" role="navigation" aria-label="Quick Capital Centre actions">
     <a href="tel:+254722248248"
-       class="bn-call"
+       class="bn-btn bn-call"
        data-branch="Capital Centre"
        aria-label="Call Mister Wok Capital Centre">
       <span aria-hidden="true">☎</span>Call
     </a>
     <a href="https://www.foodbooking.com/api/fb/d_yq_g"
-       class="bn-order"
+       class="bn-btn bn-order"
        target="_blank" rel="noopener"
        data-cta="direct" data-order-btn="true" data-branch="Capital Centre"
        aria-label="Order from Capital Centre">
       <span aria-hidden="true">🛒</span>Order
     </a>
-    <details class="bn-menu-details">
-      <summary class="bn-menu" aria-label="View Capital Centre menu">
-        <span aria-hidden="true">🍜</span>Menu
-      </summary>
-      <div class="bn-menu-panel" role="menu">
-        <a href="/capital-centre/menu.html" role="menuitem">🕌 Capital Centre Menu</a>
-        <a href="/parklands/menu.html" role="menuitem">🏮 Parklands Menu</a>
-        <a href="/two-rivers/menu.html" role="menuitem">🏬 Two Rivers Menu</a>
-      </div>
-    </details>
+    <a href="/capital-centre/menu.html"
+       class="bn-btn bn-menu"
+       aria-label="View Capital Centre full menu">
+      <span aria-hidden="true">🍜</span><span>Menu</span>
+    </a>
     <a href="https://maps.app.goo.gl/e2PxCzzsZevVFWZj7"
-       class="bn-find"
+       class="bn-btn bn-find"
        target="_blank" rel="noopener"
        data-branch="Capital Centre"
        aria-label="Open Capital Centre in Google Maps">
