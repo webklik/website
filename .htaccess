@@ -8,13 +8,13 @@
 # Protect AI intelligence files from Google indexing
 <IfModule mod_headers.c>
   <Files "llms.txt">
-    Header set X-Robots-Tag "noindex, nofollow"
+    Header set X-Robots-Tag "noindex"
   </Files>
   <Files "menu.jsonld">
-    Header set X-Robots-Tag "noindex, nofollow"
+    Header set X-Robots-Tag "noindex"
   </Files>
   <Files "entity-map.json">
-    Header set X-Robots-Tag "noindex, nofollow"
+    Header set X-Robots-Tag "noindex"
   </Files>
 </IfModule>
 

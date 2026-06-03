@@ -1,6 +1,6 @@
 # Mister Wok — robots.txt
 # Static HTML site crawl directives
-# Last updated: 2026-05-27
+# Last updated: 2026-06-03
 
 # Default: allow crawl of public pages
 User-agent: *
@@ -30,6 +30,12 @@ Allow: /menu.jsonld
 Allow: /entity-map.json
 
 User-agent: OAI-SearchBot
+Allow: /
+Allow: /llms.txt
+Allow: /menu.jsonld
+Allow: /entity-map.json
+
+User-agent: Google-Extended
 Allow: /
 Allow: /llms.txt
 Allow: /menu.jsonld
