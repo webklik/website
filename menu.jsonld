@@ -5,13 +5,13 @@
   "isBasedOn": "https://misterwok.net/entity-map.json",
   "name": "Mister Wok — Full Menu 2026",
   "url": "https://misterwok.net/parklands/menu.html",
-  "dateModified": "2026-05-27",
+  "dateModified": "2026-06-03",
   "inLanguage": "en",
   "description": "229 halal-assured dishes at Parklands (138 curated at Capital Centre and Two Rivers). Soups, Dim Sum, Chicken, Lamb, Beef, Seafood, Noodles, Rice, Desserts, Thai specialties. Fired at 300°C. Fresh hand-cut noodles. Premium aged long-grain aromatic rice. Made to order. MSG used for authentic umami; no-MSG available on request.",
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "menuScope", "value": "Parklands carries the full menu; Capital Centre and Two Rivers carry the curated wok menu (same dishes minus alcohol)." },
     { "@type": "PropertyValue", "name": "alcoholAvailability", "value": "Alcohol items are Parklands only and not served at Capital Centre or Two Rivers." },
-    { "@type": "PropertyValue", "name": "halalAssurance", "value": "Capital Centre is the halal-assured flagship; all three branches use halal-sourced meats." },
+    { "@type": "PropertyValue", "name": "halalAssurance", "value": "Capital Centre is the halal-assured flagship. Parklands and Two Rivers are not halal-certified." },
     { "@type": "PropertyValue", "name": "msgPolicy", "value": "MSG (Ajinomoto) used for authentic umami. No-MSG preparation available on request — every dish is cooked to order." }
   ],
   "provider": {
@@ -125,7 +125,7 @@
           "image": "https://misterwok.net/images/food/lollipop-kiddie.webp",
           "offers": {
             "@type": "Offer",
-            "price": "1000",
+            "price": "1200",
             "priceCurrency": "KES",
             "availableAtOrFrom": [
               { "@type": "Place", "@id": "https://misterwok.net/parklands/#branch" },

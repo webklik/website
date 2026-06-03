@@ -624,20 +624,8 @@
   };
 
   function personalizeHeroCTA() {
-    var btn = document.querySelector('[data-hero-cta]');
-    var span = btn && btn.querySelector('.hero-cta-text');
-    if (!btn || !span) return;
-    if (Tracking.getPageType() !== 'homepage') return;
-
-    var branchKey = Memory.get('last_order_branch');
-    if (!branchKey || !BRANCHES[branchKey]) return;
-
-    var branchName = BRANCHES[branchKey].name;
-    var lastOrderTime = Memory.get('last_order_time');
-    var within24 = lastOrderTime && (Date.now() - parseInt(lastOrderTime, 10)) < CONFIG.orderRecentThreshold;
-    span.textContent = within24
-      ? ('Order from ' + branchName + ' Again →')
-      : ('Order from ' + branchName + ' →');
+    // Memory personalisation removed 2026-06-03.
+    // Hero CTA is always "Select Your Branch" — modal fires on every tap.
   }
 
   function inferBranchFromText(text) {

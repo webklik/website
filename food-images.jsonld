@@ -1305,7 +1305,7 @@
       "position": 24,
       "item": {
         "@type": "ImageObject",
-        "@id": "https://misterwok.net/images/food/hero-shot.webp#image",
+        "@id": "https://misterwok.net/images/food/hero-shot.webp#tilapia",
         "name": "Tilapia Hero",
         "contentUrl": "https://misterwok.net/images/food/hero-shot.webp",
         "encodingFormat": "image/webp",
@@ -2251,7 +2251,7 @@
       "position": 41,
       "item": {
         "@type": "ImageObject",
-        "@id": "https://misterwok.net/images/food/wok-toss-rice.webp#image",
+        "@id": "https://misterwok.net/images/food/wok-toss-rice.webp#action",
         "name": "Wok Toss Action Hero",
         "contentUrl": "https://misterwok.net/images/food/wok-toss-rice.webp",
         "encodingFormat": "image/webp",

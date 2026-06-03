@@ -389,4 +389,14 @@
         });
       }
       var currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
-      document.querySelectorAll('.nav-links a[href], .drawer-nav a[href], .nav-dropdown-menu a[href]').forEach(function (link)
+      document.querySelectorAll('.nav-links a[href], .drawer-nav a[href], .nav-dropdown-menu a[href]').forEach(function (link) {
+        var href = link.getAttribute('href');
+        if (!href || href === '#' || href.indexOf('/#') === 0 || href.indexOf('http') === 0) return;
+        var normalizedHref = href.replace(/\/+$/, '') || '/';
+        if (normalizedHref === currentPath) link.classList.add('active');
+      });
+    }());
+  </script>
+  <script src="/assets/js/engine.js" defer></script>
+</body>
+</html>
