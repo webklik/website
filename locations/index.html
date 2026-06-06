@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -406,7 +406,7 @@
       </ul>
     </li>
     <li class="nav-dropdown">
-      <a href="/parklands/menu.html" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
+      <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
       <ul class="nav-dropdown-menu" role="menu">
         <li role="menuitem"><a href="/parklands/menu.html">🏮 Parklands <span>Full menu · 229 dishes</span></a></li>
         <li role="menuitem"><a href="/capital-centre/menu.html">🕌 Capital Centre <span>Curated · Halal flagship</span></a></li>
@@ -414,7 +414,7 @@
       </ul>
       </li>
       <li class="nav-dropdown">
-        <a href="/locations/" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Reserve a table">📅 Reserve ▾</a>
+        <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Reserve a table">📅 Reserve ▾</a>
       <ul class="nav-dropdown-menu" role="menu">
         <li role="menuitem"><a href="https://www.foodbooking.com/api/res/67_y_m" target="_blank" rel="noopener">🏮 Parklands <span>Reserve a table</span></a></li>
         <li role="menuitem"><a href="https://www.foodbooking.com/api/res/d_yq_g" target="_blank" rel="noopener">🕌 Capital Centre <span>Reserve · Halal-assured</span></a></li>
@@ -711,15 +711,15 @@
       <h2 class="modal-title" id="modal-title">Choose Your Branch</h2>
       <p class="modal-sub">Delivery radius varies by branch. Pick the one nearest you.</p>
       <div class="modal-options" role="list">
-        <a class="modal-opt" href="https://www.foodbooking.com/api/fb/67_y_m" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Parklands" data-branch-slug="parklands" data-branch-phone="+254724100100" data-order-url="https://www.foodbooking.com/api/fb/67_y_m" role="listitem" aria-label="Order from Mister Wok Parklands">
+        <a class="modal-opt" href="https://www.foodbooking.com/api/fb/67_y_m" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Parklands" data-branch-slug="parklands" data-branch-phone="+254724100100" data-order-url="https://www.foodbooking.com/api/fb/67_y_m" data-reserve-url="https://www.foodbooking.com/api/res/67_y_m" role="listitem" aria-label="Order from Mister Wok Parklands">
           <div><div class="modal-opt-name">🏮 Parklands</div><div class="modal-opt-meta">Kolobot Rd · 4.3★ · 11am – 11pm</div></div>
           <span class="modal-opt-arrow" aria-hidden="true">→</span>
         </a>
-        <a class="modal-opt" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" data-branch-slug="capital-centre" data-branch-phone="+254722248248" data-order-url="https://www.foodbooking.com/api/fb/d_yq_g" role="listitem" aria-label="Order from Mister Wok Capital Centre">
+        <a class="modal-opt" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" data-branch-slug="capital-centre" data-branch-phone="+254722248248" data-order-url="https://www.foodbooking.com/api/fb/d_yq_g" data-reserve-url="https://www.foodbooking.com/api/res/d_yq_g" role="listitem" aria-label="Order from Mister Wok Capital Centre">
           <div><div class="modal-opt-name">🕌 Capital Centre</div><div class="modal-opt-meta">Mombasa Rd · 4.2★ · 11am – 9:30pm</div><span class="modal-opt-halal">✓ Halal-Assured</span></div>
           <span class="modal-opt-arrow" aria-hidden="true">→</span>
         </a>
-        <a class="modal-opt" href="https://www.foodbooking.com/api/fb/k8_d_z" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Two Rivers" data-branch-slug="two-rivers" data-branch-phone="+254753222222" data-order-url="https://www.foodbooking.com/api/fb/k8_d_z" role="listitem" aria-label="Order from Mister Wok Two Rivers">
+        <a class="modal-opt" href="https://www.foodbooking.com/api/fb/k8_d_z" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Two Rivers" data-branch-slug="two-rivers" data-branch-phone="+254753222222" data-order-url="https://www.foodbooking.com/api/fb/k8_d_z" data-reserve-url="https://www.foodbooking.com/api/res/k8_d_z" role="listitem" aria-label="Order from Mister Wok Two Rivers">
           <div><div class="modal-opt-name">🏬 Two Rivers</div><div class="modal-opt-meta">Limuru Rd · 4.1★ · 11am – 9pm</div></div>
           <span class="modal-opt-arrow" aria-hidden="true">→</span>
         </a>
@@ -739,39 +739,20 @@
     </div>
   </div>
 
-  <nav class="bottom-nav" id="bottom-nav" role="navigation" aria-label="Quick actions">
-    <button type="button" class="bn-btn bn-call" data-modal-trigger="call" aria-label="Call a Mister Wok branch"><span aria-hidden="true">☎</span><span>Call</span></button>
-    <button type="button" class="bn-btn bn-order" data-modal-trigger="order" data-order-btn="true" aria-label="Order from Mister Wok"><span aria-hidden="true">🛒</span><span>Order</span></button>
-    <details class="bn-menu-details">
-      <summary class="bn-btn bn-menu" aria-label="Choose branch menu"><span aria-hidden="true">🍜</span><span>Menu</span></summary>
-      <div class="bn-menu-panel" role="menu">
-        <a href="/parklands/menu.html" role="menuitem">🏮 Parklands</a>
-        <a href="/capital-centre/menu.html" role="menuitem">🕌 Capital Centre</a>
-        <a href="/two-rivers/menu.html" role="menuitem">🏬 Two Rivers</a>
-      </div>
-    </details>
-    <a href="#branch-cards" class="bn-btn bn-find" aria-label="Find a Mister Wok branch"><span aria-hidden="true">🧭</span><span>Find</span></a>
+  <nav id="bottom-nav" aria-label="Quick actions">
+    <button type="button" class="bn-tab" data-modal-trigger="call" aria-label="Call a Mister Wok branch">
+      <span class="bn-icon">☎</span><span class="bn-label">CALL</span>
+    </button>
+    <button type="button" class="bn-tab bn-cta" id="bn-order" data-modal-trigger="order" data-order-btn="true" aria-label="Order online">
+      <span class="bn-icon">🛒</span><span class="bn-label">ORDER NOW</span>
+    </button>
+    <a class="bn-tab" href="/parklands/menu.html" aria-label="View full menu">
+      <span class="bn-icon">🍜</span><span class="bn-label">MENU</span>
+    </a>
+    <a class="bn-tab" href="/locations/" aria-label="Find us">
+      <span class="bn-icon">🧭</span><span class="bn-label">FIND</span>
+    </a>
   </nav>
-
-  <script>
-  (function () {
-    var h = document.getElementById('ham');
-    var d = document.getElementById('drawer');
-    if (!h || !d) return;
-    h.addEventListener('click', function () {
-      var open = d.classList.toggle('open');
-      h.setAttribute('aria-expanded', open ? 'true' : 'false');
-      d.setAttribute('aria-hidden', open ? 'false' : 'true');
-    });
-    d.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        d.classList.remove('open');
-        h.setAttribute('aria-expanded', 'false');
-        d.setAttribute('aria-hidden', 'true');
-      });
-    });
-  }());
-  </script>
   <script src="/assets/js/engine.js" defer></script>
 </body>
 </html>

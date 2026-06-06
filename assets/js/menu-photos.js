@@ -36,6 +36,8 @@ window.MW_PHOTOS = {
 
   "Shan Tung Spicy Potato Wedges":            "shan-tung-potato-wedges.webp",
 
+  "Special Bean Sprout Spring Rolls":        "vegetable-springrolls.webp",
+
 
 
   /* ── CHICKEN APPETIZERS ── */
@@ -153,6 +155,10 @@ window.MW_PHOTOS = {
   "Schezuan Paneer":                          "chilli-garlic-paneer.webp",
 
   "Shanghai Vegetables Stir Fry":             "shanghai-veg-tofu-mushroom-brocolli.webp",
+
+  "Schezuan Vegetables with Cashewnuts":     "shanghai-veg-withcashew.webp",
+
+  "Vegetable Sizzler in Soya Sauce":         "veg-sizzler.webp",
 
 
 

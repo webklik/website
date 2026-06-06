@@ -96,11 +96,24 @@
       const directOrderCTAs = document.querySelectorAll('[data-cta="direct"]');
 
       if (this.isMobile()) {
-        whatsappCTAs.forEach(function(el) { el.style.display = ''; });
-        directOrderCTAs.forEach(function(el) { el.style.display = 'none'; });
+        whatsappCTAs.forEach(function(el) {
+          if (el.closest('#bottom-nav')) return;
+          el.style.display = '';
+        });
+        directOrderCTAs.forEach(function(el) {
+          if (el.closest('#bottom-nav')) return;
+          if (el.classList.contains('qa-reserve')) return;
+          el.style.display = 'none';
+        });
       } else {
-        whatsappCTAs.forEach(function(el) { el.style.display = 'none'; });
-        directOrderCTAs.forEach(function(el) { el.style.display = ''; });
+        whatsappCTAs.forEach(function(el) {
+          if (el.closest('#bottom-nav')) return;
+          el.style.display = 'none';
+        });
+        directOrderCTAs.forEach(function(el) {
+          if (el.closest('#bottom-nav')) return;
+          el.style.display = '';
+        });
       }
     }
   };
@@ -271,17 +284,30 @@
 
       // Trigger bindings (any element marked with the relevant data attribute)
       document.querySelectorAll('[data-modal-trigger]').forEach(function(btn) {
+        if (btn.id === 'bn-order' && Tracking.getPageType() === 'homepage') return;
         btn.addEventListener('click', function(e) {
+          var mode = btn.getAttribute('data-modal-trigger') || 'order';
+          if (isBranchPage() && mode === 'order') {
+            e.preventDefault();
+            e.stopPropagation();
+            var url = getBranchGloriaUrl();
+            if (url) window.open(url, '_blank', 'noopener');
+            return;
+          }
           e.preventDefault();
           e.stopPropagation();
-          self.open(btn.getAttribute('data-modal-trigger') || 'order');
+          self.open(mode);
         });
       });
 
       // Legacy class hooks from Phase 1A (preserve behaviour)
       document.querySelectorAll('.order-trigger').forEach(function(btn) {
         if (btn.hasAttribute('data-modal-trigger')) return;
-        btn.addEventListener('click', function(e) { e.preventDefault(); self.open('order'); });
+        btn.addEventListener('click', function(e) {
+          if (isBranchPage()) return;
+          e.preventDefault();
+          self.open('order');
+        });
       });
       document.querySelectorAll('.reserve-trigger').forEach(function(btn) {
         if (btn.hasAttribute('data-modal-trigger')) return;
@@ -301,11 +327,19 @@
         if (e.key === 'Escape' && self.isOpen) self.close();
       });
 
-      // Track branch selection clicks (lets Tracking module log + remember)
+      // Track branch selection + conscious-pick memory on homepage order flow
       options.forEach(function(opt) {
-        opt.addEventListener('click', function() {
+        opt.addEventListener('click', function(e) {
           const slug = opt.getAttribute('data-branch-slug') || opt.getAttribute('data-branch');
           if (slug) Memory.set('last_order_branch', slug);
+          if (Tracking.getPageType() === 'homepage' && self.currentMode === 'order' && slug) {
+            e.preventDefault();
+            try { localStorage.setItem(MW_LAST_BRANCH_KEY, slug); } catch (_) {}
+            const url = MW_ORDER_URLS[slug] || opt.getAttribute('data-order-url');
+            if (url) window.open(url, '_blank', 'noopener');
+            personalizeHeroCTA();
+            self.close();
+          }
           Tracking.trackBranchSelected(opt);
         });
       });
@@ -467,13 +501,13 @@
 
       if (Memory.hasOrderedRecently()) {
         orderButtons.forEach(function(btn) {
-          if (btn.closest('[data-hero-cta]') || btn.closest('.dish-card') || btn.closest('.takeaway-banner')) return;
+          if (btn.closest('[data-hero-cta]') || btn.closest('.dish-card') || btn.closest('.takeaway-banner') || btn.closest('#bottom-nav')) return;
           btn.textContent = 'Re-order Your Favorites?';
           btn.setAttribute('data-repeat', 'true');
         });
       } else {
         orderButtons.forEach(function(btn) {
-          if (btn.closest('[data-hero-cta]') || btn.closest('.dish-card') || btn.closest('.takeaway-banner')) return;
+          if (btn.closest('[data-hero-cta]') || btn.closest('.dish-card') || btn.closest('.takeaway-banner') || btn.closest('#bottom-nav')) return;
           btn.textContent = 'Order Now';
           btn.removeAttribute('data-repeat');
         });
@@ -498,6 +532,131 @@
     'Capital Centre': 'https://www.foodbooking.com/api/fb/d_yq_g',
     'Two Rivers': 'https://www.foodbooking.com/api/fb/k8_d_z'
   };
+
+  const MW_LAST_BRANCH_KEY = 'mw_last_branch';
+
+  const MW_ORDER_URLS = {
+    'parklands': 'https://www.foodbooking.com/api/fb/67_y_m',
+    'capital-centre': 'https://www.foodbooking.com/api/fb/d_yq_g',
+    'two-rivers': 'https://www.foodbooking.com/api/fb/k8_d_z'
+  };
+
+  function openBranchSelector() {
+    Modal.open('order');
+  }
+
+  function isBranchPage() {
+    const path = window.location.pathname;
+    return /\/(parklands|capital-centre|two-rivers)\//i.test(path);
+  }
+
+  function getBranchGloriaUrl() {
+    const path = window.location.pathname;
+    if (/parklands/i.test(path)) return BRANCH_GLORIA_ORDER_URL['Parklands'];
+    if (/capital-centre/i.test(path)) return BRANCH_GLORIA_ORDER_URL['Capital Centre'];
+    if (/two-rivers/i.test(path)) return BRANCH_GLORIA_ORDER_URL['Two Rivers'];
+    return null;
+  }
+
+  const NavDrawer = {
+    drawer: null,
+    toggle: null,
+    backdrop: null,
+    bound: false,
+
+    init: function() {
+      this.drawer = document.getElementById('drawer') || document.getElementById('site-nav-drawer');
+      this.toggle = document.getElementById('ham') || document.getElementById('nav-toggle');
+      if (!this.drawer || !this.toggle || this.bound) return;
+
+      this.ensureBackdrop();
+      var self = this;
+
+      this.toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        self.setOpen(!self.drawer.classList.contains('open'));
+      });
+
+      if (this.backdrop) {
+        this.backdrop.addEventListener('click', function() { self.setOpen(false); });
+      }
+
+      document.addEventListener('click', function(e) {
+        if (!self.drawer.classList.contains('open')) return;
+        if (self.drawer.contains(e.target) || self.toggle.contains(e.target)) return;
+        self.setOpen(false);
+      });
+
+      this.drawer.querySelectorAll('a, button.drawer-order-btn').forEach(function(el) {
+        el.addEventListener('click', function() { self.setOpen(false); });
+      });
+
+      this.drawer.querySelectorAll('details.drawer-accordion').forEach(function(details) {
+        details.addEventListener('toggle', function() {
+          if (!details.open) return;
+          self.drawer.querySelectorAll('details.drawer-accordion').forEach(function(other) {
+            if (other !== details) other.open = false;
+          });
+        });
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && self.drawer.classList.contains('open')) self.setOpen(false);
+      });
+
+      this.bound = true;
+    },
+
+    ensureBackdrop: function() {
+      this.backdrop = document.getElementById('nav-backdrop');
+      if (!this.backdrop) {
+        this.backdrop = document.createElement('div');
+        this.backdrop.id = 'nav-backdrop';
+        this.backdrop.setAttribute('aria-hidden', 'true');
+        this.backdrop.style.cssText = 'display:none;position:fixed;inset:0;z-index:8999;background:rgba(0,0,0,0.55)';
+        document.body.appendChild(this.backdrop);
+      }
+    },
+
+    setOpen: function(open) {
+      this.drawer.classList.toggle('open', open);
+      this.toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      this.drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.classList.toggle('nav-open', open);
+      if (this.backdrop) this.backdrop.style.display = open ? 'block' : 'none';
+    }
+  };
+
+  function injectAuditStyles() {
+    if (document.getElementById('mw-audit-fixes')) return;
+    var style = document.createElement('style');
+    style.id = 'mw-audit-fixes';
+    style.textContent = [
+      '#drawer,.drawer{position:fixed!important;top:0!important;right:0!important;height:100%!important;',
+      'max-width:min(320px,88vw)!important;width:min(320px,88vw)!important;z-index:9000!important;',
+      'transform:translateX(100%);transition:transform .25s ease;}',
+      '#drawer.open,.drawer.open{transform:translateX(0);}',
+      '#bottom-nav{display:grid!important;grid-template-columns:repeat(4,1fr)!important;',
+      'position:fixed;bottom:0;left:0;right:0;background:#0a0a0a;',
+      'border-top:1px solid rgba(212,175,55,0.2);padding-bottom:env(safe-area-inset-bottom,0px);',
+      'z-index:8000;height:64px;gap:0!important;}',
+      '#bottom-nav .bn-tab,#bottom-nav .bn-btn,#bottom-nav>a,#bottom-nav>button{',
+      'display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;',
+      'font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,0.55);text-decoration:none;',
+      'transition:color .2s;border:none;background:transparent;min-height:0;flex:none;width:100%;}',
+      '#bottom-nav .bn-tab:active,#bottom-nav .bn-btn:active{color:#d4af37;}',
+      '#bottom-nav .bn-icon,#bottom-nav .bn-tab>span:first-child,#bottom-nav .bn-btn>span:first-child{font-size:18px;line-height:1;}',
+      '#bottom-nav .bn-label{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;}',
+      '#bottom-nav .bn-cta,#bottom-nav .bn-order{background:#d4af37!important;color:#0a0a0a!important;border-radius:0;}',
+      '#bottom-nav .bn-cta:active,#bottom-nav .bn-order:active{background:#c49b2e!important;}',
+      '@media(max-width:1023px){body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))!important;}}',
+      '@keyframes mw-fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}',
+      'main,.page-body,.page{animation:mw-fade .35s ease forwards}',
+      '@media(max-width:1023px){section{padding:48px 24px}section+section,.card+.card{margin-bottom:40px}}',
+      '@media(min-width:1024px){#bottom-nav{display:none!important;}}'
+    ].join('');
+    document.head.appendChild(style);
+  }
 
   const QuickLook = {
     lastTrigger: null,
@@ -624,8 +783,56 @@
   };
 
   function personalizeHeroCTA() {
-    // Memory personalisation removed 2026-06-03.
-    // Hero CTA is always "Select Your Branch" — modal fires on every tap.
+    var saved = null;
+    try { saved = localStorage.getItem(MW_LAST_BRANCH_KEY); } catch (_) {}
+    var heroBtn = document.getElementById('hero-order-cta');
+    var heroText = heroBtn ? heroBtn.querySelector('.hero-cta-text') : null;
+    var changeLink = document.getElementById('hero-change-branch');
+    if (!heroBtn || !heroText) return;
+
+    var labels = {
+      'parklands': 'Order from Parklands',
+      'capital-centre': 'Order from Capital Centre',
+      'two-rivers': 'Order from Two Rivers'
+    };
+
+    if (saved && labels[saved]) {
+      heroText.textContent = labels[saved];
+      if (changeLink) changeLink.style.display = 'inline';
+    } else {
+      heroText.textContent = 'Select Your Branch';
+      if (changeLink) changeLink.style.display = 'none';
+    }
+  }
+
+  function initHomepageOrderFlow() {
+    if (isBranchPage() || Tracking.getPageType() !== 'homepage') return;
+
+    var orderBtn = document.getElementById('bn-order');
+    if (orderBtn) {
+      orderBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var saved = null;
+        try { saved = localStorage.getItem(MW_LAST_BRANCH_KEY); } catch (_) {}
+        if (saved && MW_ORDER_URLS[saved]) {
+          window.open(MW_ORDER_URLS[saved], '_blank', 'noopener');
+        } else {
+          openBranchSelector();
+        }
+      });
+    }
+
+    var changeLink = document.getElementById('hero-change-branch');
+    if (changeLink && !changeLink.dataset.mwBound) {
+      changeLink.dataset.mwBound = 'true';
+      changeLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        try { localStorage.removeItem(MW_LAST_BRANCH_KEY); } catch (_) {}
+        personalizeHeroCTA();
+        openBranchSelector();
+      });
+    }
   }
 
   function inferBranchFromText(text) {
@@ -692,9 +899,21 @@
     });
   }
 
+  function initNavDropdownTriggers() {
+    document.querySelectorAll('a.nav-dropdown-trigger').forEach(function(trigger) {
+      trigger.addEventListener('click', function(e) {
+        var href = trigger.getAttribute('href') || '';
+        if (href === '#' || href === '') e.preventDefault();
+      });
+    });
+  }
+
   function init() {
     window.pageLoadTime = Date.now();
 
+    injectAuditStyles();
+    initNavDropdownTriggers();
+    NavDrawer.init();
     Platform.initCTAVisibility();
     OrderCTA.updateCTAText();
     AbandonCart.init();
@@ -703,6 +922,7 @@
     QuickLook.init();
     bindTrackingHandlers();
     personalizeHeroCTA();
+    initHomepageOrderFlow();
 
     Tracking.push({
       event: 'page_view',
@@ -725,8 +945,13 @@
     Modal: Modal,
     EditDetails: EditDetails,
     QuickLook: QuickLook,
+    NavDrawer: NavDrawer,
+    isBranchPage: isBranchPage,
+    openBranchSelector: openBranchSelector,
     init: init
   };
+
+  window.openBranchSelector = openBranchSelector;
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);

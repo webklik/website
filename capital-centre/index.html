@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -624,7 +624,7 @@
       </ul>
     </li>
     <li class="nav-dropdown">
-      <a href="/parklands/menu.html" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
+      <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
       <ul class="nav-dropdown-menu" role="menu">
         <li role="menuitem"><a href="/parklands/menu.html">🏮 Parklands <span>Full menu · 229 dishes</span></a></li>
         <li role="menuitem"><a href="/capital-centre/menu.html">🕌 Capital Centre <span>Curated · Halal flagship</span></a></li>
@@ -632,7 +632,7 @@
       </ul>
       </li>
       <li class="nav-dropdown">
-        <a href="/locations/" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Reserve a table">📅 Reserve ▾</a>
+        <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Reserve a table">📅 Reserve ▾</a>
       <ul class="nav-dropdown-menu" role="menu">
         <li role="menuitem"><a href="https://www.foodbooking.com/api/res/67_y_m" target="_blank" rel="noopener">🏮 Parklands <span>Reserve a table</span></a></li>
         <li role="menuitem"><a href="https://www.foodbooking.com/api/res/d_yq_g" target="_blank" rel="noopener">🕌 Capital Centre <span>Reserve · Halal-assured</span></a></li>
@@ -664,15 +664,15 @@
       <summary>Branch Pages ▾</summary>
       <div class="drawer-accordion-panel">
         <a href="/parklands/">🏮 Parklands <span>Kolobot Rd</span></a>
-        <a href="/capital-centre/">🕌 Capital Centre <span>Halal-assured</span></a>
+        <a href="/capital-centre/" aria-current="page">🕌 Capital Centre <span>Halal-assured</span></a>
         <a href="/two-rivers/">🏬 Two Rivers <span>Gigiri</span></a>
       </div>
     </details>
     <details class="drawer-accordion">
       <summary>📖 Menu</summary>
       <div class="drawer-accordion-panel">
-        <a href="/capital-centre/menu.html" aria-current="page">🕌 Capital Centre Menu</a>
         <a href="/parklands/menu.html">🏮 Parklands Menu</a>
+        <a href="/capital-centre/menu.html">🕌 Capital Centre Menu</a>
         <a href="/two-rivers/menu.html">🏬 Two Rivers Menu</a>
       </div>
     </details>
@@ -685,9 +685,9 @@
       </div>
     </details>
     <div class="drawer-order-row">
-      <button type="button" class="drawer-order-btn" data-modal-trigger="order" data-order-btn="true" aria-haspopup="dialog" aria-controls="modal">
+      <a class="drawer-order-btn" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" aria-label="Order from Capital Centre">
         <span class="cta-flame" aria-hidden="true">🔥</span> Order Now
-      </button>
+      </a>
     </div>
     <details class="drawer-accordion">
       <summary>DISCOVER ▾</summary>
@@ -700,26 +700,6 @@
   </nav>
 </div>
 
-
-  <script>
-  (function () {
-    var h = document.getElementById('ham');
-    var d = document.getElementById('drawer');
-    if (!h || !d) return;
-    h.addEventListener('click', function () {
-      var open = d.classList.toggle('open');
-      h.setAttribute('aria-expanded', open ? 'true' : 'false');
-      d.setAttribute('aria-hidden', open ? 'false' : 'true');
-    });
-    d.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        d.classList.remove('open');
-        h.setAttribute('aria-expanded', 'false');
-        d.setAttribute('aria-hidden', 'true');
-      });
-    });
-  }());
-  </script>
 
   <!-- HERO — Capital Centre: Halal-Assured flagship -->
   <header class="hero" id="hero" aria-label="Mister Wok Capital Centre — Halal-Assured flagship">
@@ -764,7 +744,7 @@
       <div class="halal-icon" aria-hidden="true">✨</div>
       <div class="halal-body">
         <h2>What "Halal-Assured" actually means.</h2>
-        <p>We don't say <strong>halal-certified</strong> because that implies a paper trail managed by someone else. <strong>Halal-assured</strong> means accountability sits with the owner — every supplier, every cut, every cooking surface. Since Valentine's Day 2004. <a href="/journal/halal-wok-nairobi">Read the full Mister Wok halal standard →</a></p>
+        <p>We don't say <strong>halal-certified</strong> because that implies a paper trail managed by someone else. <strong>Halal-assured</strong> means accountability sits with the owner — every supplier, every cut, every cooking surface. Since Valentine's Day 2004. <a href="/journal/halal-wok-nairobi.html">Read the full Mister Wok halal standard →</a></p>
       </div>
     </div>
   </section>
@@ -842,7 +822,7 @@
       <article class="dish-card" role="listitem" tabindex="0" data-dish-id="spring-rolls"
         data-ql-name="Spring Rolls — Gold Bars"
         data-ql-desc="Handcrafted vegetarian spring rolls — thin crisp pastry, fresh-cut vegetables, wok-fried to order. Nairobi's original gold bars. Served with house chilli sauce."
-        data-ql-price="From KES 550"
+        data-ql-price="KES 550 – 600"
         data-ql-tag="Gold Bars · Crisp"
         data-ql-src="/images/food/spring-rolls.webp"
         data-branch="Capital Centre"
@@ -857,7 +837,7 @@
           </button>
         </div>
         <div class="dish-name">Spring Rolls</div>
-        <div class="dish-price">From KES 550</div>
+        <div class="dish-price">KES 550 – 600</div>
         <div class="dish-tag">Gold Bars · Crisp</div>
         <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Spring Rolls from Capital Centre">Order</a>
       </article>
@@ -886,7 +866,7 @@
       <article class="dish-card" role="listitem" tabindex="0" data-dish-id="chilli-garlic-paneer"
         data-ql-name="Chilli Garlic Paneer — Wok-Seared"
         data-ql-desc="Indian cottage cheese cubes seared in wok with dry chilli and garlic. Bold vegetarian main."
-        data-ql-price="KES 1,100"
+        data-ql-price="KES 1,000"
         data-ql-tag="Vegetarian · Bold"
         data-ql-src="/images/food/chilli-garlic-paneer.webp"
         data-branch="Capital Centre"
@@ -901,7 +881,7 @@
           </button>
         </div>
         <div class="dish-name">Chilli Garlic Paneer</div>
-        <div class="dish-price">KES 1,100</div>
+        <div class="dish-price">KES 1,000</div>
         <div class="dish-tag">Vegetarian · Bold</div>
         <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Chilli Garlic Paneer from Capital Centre">Order</a>
       </article>
@@ -952,7 +932,7 @@
       <article class="dish-card" role="listitem" tabindex="0" data-dish-id="salt-and-pepper-vegetable"
         data-ql-name="Salt &amp; Pepper Vegetable — Wok-Hei"
         data-ql-desc="Seasonal vegetables with wok-hei char and cracked pepper. Light, crisp, vegetarian."
-        data-ql-price="KES 950"
+        data-ql-price="KES 1,100"
         data-ql-tag="Vegetarian · Crisp"
         data-ql-src="/images/food/salt-and-pepper-vegetable.webp"
         data-branch="Capital Centre"
@@ -967,7 +947,7 @@
           </button>
         </div>
         <div class="dish-name">Salt &amp; Pepper Vegetable</div>
-        <div class="dish-price">KES 950</div>
+        <div class="dish-price">KES 1,100</div>
         <div class="dish-tag">Vegetarian · Crisp</div>
         <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Salt & Pepper Vegetable from Capital Centre">Order</a>
       </article>
@@ -1040,7 +1020,7 @@
       <article class="dish-card" role="listitem" tabindex="0" data-dish-id="sweet-sour-prawns"
         data-ql-name="Sweet &amp; Sour Prawns — Balanced Tang"
         data-ql-desc="Prawns in balanced sweet-tangy sauce with pineapple and bell peppers."
-        data-ql-price="KES 1,450"
+        data-ql-price="KES 1,600"
         data-ql-tag="Seafood · Tangy"
         data-ql-src="/images/food/sweet-sour-prawns.webp"
         data-branch="Capital Centre"
@@ -1055,14 +1035,14 @@
           </button>
         </div>
         <div class="dish-name">Sweet &amp; Sour Prawns</div>
-        <div class="dish-price">KES 1,450</div>
+        <div class="dish-price">KES 1,600</div>
         <div class="dish-tag">Seafood · Tangy</div>
         <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Sweet & Sour Prawns from Capital Centre">Order</a>
       </article>
       <article class="dish-card" role="listitem" tabindex="0" data-dish-id="shanghai-vegetables-stir-fry"
         data-ql-name="Shanghai Vegetables Stir Fry"
         data-ql-desc="Shanghai vegetables stir fry with tofu, broccoli, beansprout and mushroom — light, balanced, vegetarian-forward."
-        data-ql-price="KES 1,050"
+        data-ql-price="KES 1,000"
         data-ql-tag="Vegetarian · Shanghai"
         data-ql-src="/images/food/shanghai-veg-tofu-mushroom-brocolli.webp"
         data-branch="Capital Centre"
@@ -1077,7 +1057,7 @@
           </button>
         </div>
         <div class="dish-name">Shanghai Vegetables Stir Fry</div>
-        <div class="dish-price">KES 1,050</div>
+        <div class="dish-price">KES 1,000</div>
         <div class="dish-tag">Vegetarian · Shanghai</div>
         <a class="dish-card-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" aria-label="Order Shanghai Vegetables Stir Fry from Capital Centre">Order</a>
       </article>
@@ -1204,10 +1184,10 @@
       <div>
         <div class="ft-col-title">The Journal</div>
         <nav class="ft-journal-strip" aria-label="The Wok Journal — featured articles">
-          <a href="/journal/wok-hei-physics">Wok Hei Physics — 300°C</a>
-          <a href="/journal/long-grain-aromatic-rice">Aromatic Long-Grain Rice</a>
-          <a href="/journal/halal-wok-nairobi">Halal-Assured · 22 Years</a>
-          <a href="/journal/spring-rolls-gold">Spring Rolls &amp; Gold Ingots</a>
+          <a href="/journal/wok-hei-physics.html">Wok Hei Physics — 300°C</a>
+          <a href="/journal/long-grain-aromatic-rice.html">Aromatic Long-Grain Rice</a>
+          <a href="/journal/halal-wok-nairobi.html">Halal-Assured · 22 Years</a>
+          <a href="/journal/spring-rolls-gold-prosperity.html">Spring Rolls &amp; Gold Ingots</a>
           <a href="/journal/ntv-am-live-mister-wok-2014.html">NTV AM Live · 2014</a>
           <a href="/journal/" class="ft-journal-all">Explore the full Journal →</a>
         </nav>
@@ -1339,34 +1319,23 @@
   </div>
 
 
-  <nav class="bottom-nav" id="bottom-nav" role="navigation" aria-label="Quick Capital Centre actions">
-    <a href="tel:+254722248248"
-       class="bn-btn bn-call"
-       data-branch="Capital Centre"
-       aria-label="Call Mister Wok Capital Centre">
-      <span aria-hidden="true">☎</span>Call
+  <nav id="bottom-nav" aria-label="Quick actions">
+    <a class="bn-tab" href="tel:+254722248248" aria-label="Call this branch">
+      <span class="bn-icon">☎</span><span class="bn-label">CALL</span>
     </a>
-    <a href="https://www.foodbooking.com/api/fb/d_yq_g"
-       class="bn-btn bn-order"
-       target="_blank" rel="noopener"
-       data-cta="direct" data-order-btn="true" data-branch="Capital Centre"
-       aria-label="Order from Capital Centre">
-      <span aria-hidden="true">🛒</span>Order
+    <a class="bn-tab bn-cta" id="bn-order" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" aria-label="Order online">
+      <span class="bn-icon">🛒</span><span class="bn-label">ORDER NOW</span>
     </a>
-    <a href="/capital-centre/menu.html"
-       class="bn-btn bn-menu"
-       aria-label="View Capital Centre full menu">
-      <span aria-hidden="true">🍜</span><span>Menu</span>
+    <a class="bn-tab" href="/capital-centre/menu.html" aria-label="View full menu">
+      <span class="bn-icon">🍜</span><span class="bn-label">MENU</span>
     </a>
-    <a href="https://maps.app.goo.gl/e2PxCzzsZevVFWZj7"
-       class="bn-btn bn-find"
-       target="_blank" rel="noopener"
-       data-branch="Capital Centre"
-       aria-label="Open Capital Centre in Google Maps">
-      <span aria-hidden="true">🧭</span>Find
+    <a class="bn-tab" href="/locations/" aria-label="Find us">
+      <span class="bn-icon">🧭</span><span class="bn-label">FIND</span>
     </a>
   </nav>
 
   <script src="/assets/js/engine.js" defer></script>
 </body>
 </html>
+
+

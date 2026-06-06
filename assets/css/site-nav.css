@@ -77,6 +77,11 @@
 }
 .nav-dropdown {
   position: relative;
+  z-index: 900;
+}
+.nav-links > .nav-dropdown:hover,
+.nav-links > .nav-dropdown:focus-within {
+  z-index: 920;
 }
 .nav-dropdown-trigger {
   cursor: pointer;

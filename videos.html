@@ -93,7 +93,7 @@
       </ul>
     </li>
     <li class="nav-dropdown">
-      <a href="/parklands/menu.html" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
+      <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">📖 Menu ▾</a>
       <ul class="nav-dropdown-menu" role="menu">
         <li role="menuitem"><a href="/parklands/menu.html">🏮 Parklands <span>Full menu · 229 dishes</span></a></li>
         <li role="menuitem"><a href="/capital-centre/menu.html">🕌 Capital Centre <span>Curated · Halal flagship</span></a></li>
@@ -101,7 +101,7 @@
       </ul>
       </li>
       <li class="nav-dropdown">
-        <a href="/locations/" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Reserve a table">📅 Reserve ▾</a>
+        <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Reserve a table">📅 Reserve ▾</a>
       <ul class="nav-dropdown-menu" role="menu">
         <li role="menuitem"><a href="https://www.foodbooking.com/api/res/67_y_m" target="_blank" rel="noopener">🏮 Parklands <span>Reserve a table</span></a></li>
         <li role="menuitem"><a href="https://www.foodbooking.com/api/res/d_yq_g" target="_blank" rel="noopener">🕌 Capital Centre <span>Reserve · Halal-assured</span></a></li>
@@ -334,10 +334,10 @@
       <div>
         <div class="ft-col-title">The Journal</div>
         <nav class="ft-journal-strip" aria-label="The Wok Journal — featured articles">
-          <a href="/journal/wok-hei-physics">Wok Hei Physics — 300°C</a>
-          <a href="/journal/long-grain-aromatic-rice">Aromatic Long-Grain Rice</a>
-          <a href="/journal/halal-wok-nairobi">Halal-Assured · 22 Years</a>
-          <a href="/journal/spring-rolls-gold">Spring Rolls &amp; Gold Ingots</a>
+          <a href="/journal/wok-hei-physics.html">Wok Hei Physics — 300°C</a>
+          <a href="/journal/long-grain-aromatic-rice.html">Aromatic Long-Grain Rice</a>
+          <a href="/journal/halal-wok-nairobi.html">Halal-Assured · 22 Years</a>
+          <a href="/journal/spring-rolls-gold-prosperity.html">Spring Rolls &amp; Gold Ingots</a>
           <a href="/journal/ntv-am-live-mister-wok-2014.html">NTV AM Live · 2014</a>
           <a href="/journal/" class="ft-journal-all">Explore the full Journal →</a>
         </nav>
@@ -368,26 +368,10 @@
         <a href="/two-rivers/menu.html" role="menuitem">🏬 Two Rivers</a>
       </div>
     </details>
-    <a href="/#branches" class="bn-btn bn-find" aria-label="Find a Mister Wok branch"><span aria-hidden="true">🧭</span><span>Find</span></a>
+    <a href="/locations/" class="bn-btn bn-find" aria-label="Find a Mister Wok branch"><span aria-hidden="true">🧭</span><span>Find</span></a>
   </nav>
   <script>
     (function () {
-      var ham = document.getElementById('ham');
-      var drawer = document.getElementById('drawer');
-      if (ham && drawer) {
-        ham.addEventListener('click', function () {
-          var open = drawer.classList.toggle('open');
-          ham.setAttribute('aria-expanded', open ? 'true' : 'false');
-          drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
-        });
-        drawer.querySelectorAll('a').forEach(function (a) {
-          a.addEventListener('click', function () {
-            drawer.classList.remove('open');
-            ham.setAttribute('aria-expanded', 'false');
-            drawer.setAttribute('aria-hidden', 'true');
-          });
-        });
-      }
       var currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
       document.querySelectorAll('.nav-links a[href], .drawer-nav a[href], .nav-dropdown-menu a[href]').forEach(function (link) {
         var href = link.getAttribute('href');
@@ -399,4 +383,5 @@
   </script>
   <script src="/assets/js/engine.js" defer></script>
 </body>
+</html>
 </html>
