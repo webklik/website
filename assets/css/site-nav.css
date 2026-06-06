@@ -539,6 +539,7 @@ button.nav-locate {
 }
 
 /* ─── Sticky bottom chin: CALL · ORDER · MENU · FIND ─── */
+#bottom-nav,
 .bottom-nav {
   position: fixed;
   left: 0;
@@ -555,6 +556,8 @@ button.nav-locate {
   border-top: 1px solid var(--color-rim, #2a2a2a);
   z-index: 950;
 }
+#bottom-nav .bn-btn,
+#bottom-nav > a,
 .bottom-nav .bn-btn,
 .bottom-nav > a {
   display: flex;
@@ -579,36 +582,51 @@ button.nav-locate {
   cursor: pointer;
   box-sizing: border-box;
 }
+#bottom-nav .bn-btn span:first-child,
+#bottom-nav > a span:first-child,
 .bottom-nav .bn-btn span:first-child,
 .bottom-nav > a span:first-child {
   font-size: 1.2rem;
   line-height: 1;
 }
+#bottom-nav .bn-btn:active,
 .bottom-nav .bn-btn:active {
   background: rgba(212, 175, 55, 0.12);
   color: var(--color-gold, #d4af37);
 }
+#bottom-nav > a:active,
 .bottom-nav > a:active {
   background: var(--color-gold, #d4af37);
   color: #0a0a0a;
 }
+#bottom-nav .bn-order,
+#bottom-nav > a.bn-cta,
+#bottom-nav > a.bn-order,
 .bottom-nav .bn-order,
 .bottom-nav > a.bn-order {
   background: var(--color-gold, #d4af37);
   color: #0a0a0a;
 }
+#bottom-nav .bn-order:hover,
+#bottom-nav > a.bn-cta:hover,
+#bottom-nav > a.bn-order:hover,
 .bottom-nav .bn-order:hover,
 .bottom-nav > a.bn-order:hover {
   background: var(--color-gold-hot, #e5c158);
 }
+#bottom-nav .bn-order:active,
+#bottom-nav > a.bn-cta:active,
+#bottom-nav > a.bn-order:active,
 .bottom-nav .bn-order:active,
 .bottom-nav > a.bn-order:active {
   background: var(--color-gold-hot, #e5c158);
   color: #0a0a0a;
 }
+#bottom-nav .bn-menu,
 .bottom-nav .bn-menu {
   color: var(--color-gold, #d4af37);
 }
+#bottom-nav .bn-menu:active,
 .bottom-nav .bn-menu:active {
   background: rgba(212, 175, 55, 0.12);
 }
@@ -660,6 +678,7 @@ button.nav-locate {
 }
 
 @media (min-width: 1024px) {
+  #bottom-nav,
   .bottom-nav {
     display: none;
   }

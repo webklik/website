@@ -1596,6 +1596,7 @@ summary::marker               { display: none; }
 }
 
 /* ─── CANONICAL CHIN NAV SPECIFICATIONS (§2A) ─── */
+#bottom-nav,
 .bottom-nav {
   display: none;
   position: fixed;
@@ -1655,6 +1656,7 @@ summary::marker               { display: none; }
   50% { transform: rotate(8deg) scale(1.18); }
 }
 @media (max-width: 1023px) {
+  #bottom-nav,
   .bottom-nav { display: flex; }
 }
 
@@ -5506,7 +5508,7 @@ summary::marker               { display: none; }
     </div>
   <p class="menu-disclaimer" style="text-align:center;font-size:0.75rem;color:#888;padding:1rem 0;">All prices are inclusive of taxes and subject to change without notice.</p>
   </footer>
-<nav id="bottom-nav" aria-label="Quick actions">
+<nav class="bottom-nav" id="bottom-nav" aria-label="Quick actions">
   <a class="bn-tab" href="tel:+254724100100" aria-label="Call this branch">
     <span class="bn-icon">☎</span><span class="bn-label">CALL</span>
   </a>
