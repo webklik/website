@@ -216,6 +216,7 @@ button.nav-locate {
   50%        { transform: scale(0.94) rotate(-1deg); opacity: 1;    }
   75%        { transform: scale(1.08) rotate(1deg);  opacity: 0.95; }
 }
+.flame,
 .cta-flame {
   font-size: 1.1em;
   line-height: 1;

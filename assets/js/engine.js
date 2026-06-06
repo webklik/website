@@ -103,6 +103,7 @@
         directOrderCTAs.forEach(function(el) {
           if (el.closest('#bottom-nav')) return;
           if (el.classList.contains('qa-reserve')) return;
+          if (el.classList.contains('takeaway-cta')) return;
           el.style.display = 'none';
         });
       } else {
@@ -157,7 +158,9 @@
         user_first_time: !Memory.get('last_branch_selected'),
         timestamp: new Date().toISOString()
       });
-      Memory.set('last_branch_selected', branchData.name);
+      if (isBranchPage()) {
+        Memory.set('last_branch_selected', branchData.name);
+      }
     },
     trackWhatsAppOrder: function(branch) {
       this.push({
@@ -284,7 +287,6 @@
 
       // Trigger bindings (any element marked with the relevant data attribute)
       document.querySelectorAll('[data-modal-trigger]').forEach(function(btn) {
-        if (btn.id === 'bn-order' && Tracking.getPageType() === 'homepage') return;
         btn.addEventListener('click', function(e) {
           var mode = btn.getAttribute('data-modal-trigger') || 'order';
           if (isBranchPage() && mode === 'order') {
@@ -327,18 +329,12 @@
         if (e.key === 'Escape' && self.isOpen) self.close();
       });
 
-      // Track branch selection + conscious-pick memory on homepage order flow
+      // Track branch selection; persist branch memory only on branch-level pages
       options.forEach(function(opt) {
-        opt.addEventListener('click', function(e) {
+        opt.addEventListener('click', function() {
           const slug = opt.getAttribute('data-branch-slug') || opt.getAttribute('data-branch');
-          if (slug) Memory.set('last_order_branch', slug);
-          if (Tracking.getPageType() === 'homepage' && self.currentMode === 'order' && slug) {
-            e.preventDefault();
-            try { localStorage.setItem(MW_LAST_BRANCH_KEY, slug); } catch (_) {}
-            const url = MW_ORDER_URLS[slug] || opt.getAttribute('data-order-url');
-            if (url) window.open(url, '_blank', 'noopener');
-            personalizeHeroCTA();
-            self.close();
+          if (slug && isBranchPage()) {
+            Memory.set('last_order_branch', slug);
           }
           Tracking.trackBranchSelected(opt);
         });
@@ -497,17 +493,21 @@
 
   const OrderCTA = {
     updateCTAText: function() {
+      if (!isBranchPage()) return;
+
       const orderButtons = document.querySelectorAll('[data-order-btn]:not(.modal-opt)');
 
       if (Memory.hasOrderedRecently()) {
         orderButtons.forEach(function(btn) {
           if (btn.closest('[data-hero-cta]') || btn.closest('.dish-card') || btn.closest('.takeaway-banner') || btn.closest('#bottom-nav')) return;
+          if (btn.querySelector('.cta-flame, .flame')) return;
           btn.textContent = 'Re-order Your Favorites?';
           btn.setAttribute('data-repeat', 'true');
         });
       } else {
         orderButtons.forEach(function(btn) {
           if (btn.closest('[data-hero-cta]') || btn.closest('.dish-card') || btn.closest('.takeaway-banner') || btn.closest('#bottom-nav')) return;
+          if (btn.querySelector('.cta-flame, .flame')) return;
           btn.textContent = 'Order Now';
           btn.removeAttribute('data-repeat');
         });
@@ -534,12 +534,6 @@
   };
 
   const MW_LAST_BRANCH_KEY = 'mw_last_branch';
-
-  const MW_ORDER_URLS = {
-    'parklands': 'https://www.foodbooking.com/api/fb/67_y_m',
-    'capital-centre': 'https://www.foodbooking.com/api/fb/d_yq_g',
-    'two-rivers': 'https://www.foodbooking.com/api/fb/k8_d_z'
-  };
 
   function openBranchSelector() {
     Modal.open('order');
@@ -673,7 +667,7 @@
       var imgEl = document.getElementById('ql-img');
 
       orderBtn.addEventListener('click', function(e) {
-        if (Tracking.getPageType() === 'homepage') {
+        if (!isBranchPage()) {
           e.preventDefault();
           self.close();
           Modal.open('order');
@@ -724,7 +718,7 @@
       if (elDesc) elDesc.textContent = desc;
       if (elPrice) elPrice.textContent = price;
 
-      if (Tracking.getPageType() === 'homepage') {
+      if (!isBranchPage()) {
         orderBtn.setAttribute('href', '#');
         orderBtn.removeAttribute('target');
         orderBtn.removeAttribute('rel');
@@ -782,57 +776,58 @@
     }
   };
 
-  function personalizeHeroCTA() {
-    var saved = null;
-    try { saved = localStorage.getItem(MW_LAST_BRANCH_KEY); } catch (_) {}
+  function clearSavedBranchOnGlobalPage() {
+    if (isBranchPage()) return;
+    try { localStorage.removeItem(MW_LAST_BRANCH_KEY); } catch (_) {}
+  }
+
+  function ensureFlame(btn) {
+    if (!btn || btn.querySelector('.cta-flame, .flame')) return;
+    var flame = document.createElement('span');
+    flame.className = btn.classList.contains('hero-cta') ? 'flame' : 'cta-flame';
+    flame.setAttribute('aria-hidden', 'true');
+    flame.textContent = '\uD83D\uDD25';
+    btn.insertBefore(flame, btn.firstChild);
+  }
+
+  function syncHeroOrderCTA() {
     var heroBtn = document.getElementById('hero-order-cta');
     var heroText = heroBtn ? heroBtn.querySelector('.hero-cta-text') : null;
     var changeLink = document.getElementById('hero-change-branch');
-    if (!heroBtn || !heroText) return;
-
-    var labels = {
-      'parklands': 'Order from Parklands',
-      'capital-centre': 'Order from Capital Centre',
-      'two-rivers': 'Order from Two Rivers'
-    };
-
-    if (saved && labels[saved]) {
-      heroText.textContent = labels[saved];
-      if (changeLink) changeLink.style.display = 'inline';
-    } else {
-      heroText.textContent = 'Select Your Branch';
-      if (changeLink) changeLink.style.display = 'none';
-    }
+    if (heroText) heroText.textContent = 'Order Now';
+    if (changeLink) changeLink.style.display = 'none';
+    if (heroBtn) ensureFlame(heroBtn);
   }
 
-  function initHomepageOrderFlow() {
-    if (isBranchPage() || Tracking.getPageType() !== 'homepage') return;
+  function normalizeGlobalOrderButtons() {
+    if (isBranchPage()) return;
 
-    var orderBtn = document.getElementById('bn-order');
-    if (orderBtn) {
-      orderBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var saved = null;
-        try { saved = localStorage.getItem(MW_LAST_BRANCH_KEY); } catch (_) {}
-        if (saved && MW_ORDER_URLS[saved]) {
-          window.open(MW_ORDER_URLS[saved], '_blank', 'noopener');
-        } else {
-          openBranchSelector();
-        }
-      });
+    clearSavedBranchOnGlobalPage();
+    syncHeroOrderCTA();
+
+    var bnOrder = document.getElementById('bn-order');
+    if (bnOrder && !bnOrder.hasAttribute('data-modal-trigger')) {
+      bnOrder.setAttribute('data-modal-trigger', 'order');
+      if (bnOrder.tagName === 'A') {
+        bnOrder.removeAttribute('href');
+        bnOrder.setAttribute('type', 'button');
+      }
     }
 
-    var changeLink = document.getElementById('hero-change-branch');
-    if (changeLink && !changeLink.dataset.mwBound) {
-      changeLink.dataset.mwBound = 'true';
-      changeLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        try { localStorage.removeItem(MW_LAST_BRANCH_KEY); } catch (_) {}
-        personalizeHeroCTA();
-        openBranchSelector();
-      });
-    }
+    document.querySelectorAll(
+      '.nav-order, .mob-order, .drawer-order-btn, .hero-cta, .article-cta-primary, #ql-order-btn'
+    ).forEach(ensureFlame);
+
+    document.querySelectorAll('#bottom-nav .bn-cta, #bottom-nav .bn-order, .bottom-nav .bn-order').forEach(function(btn) {
+      var icon = btn.querySelector('.bn-icon') || btn.querySelector('span:first-child');
+      if (icon) {
+        icon.textContent = '\uD83D\uDD25';
+        icon.classList.add('cta-flame');
+      }
+      var label = btn.querySelector('.bn-label') || btn.querySelector('span:last-child');
+      if (label) label.textContent = 'ORDER NOW';
+      if (!btn.hasAttribute('data-modal-trigger')) btn.setAttribute('data-modal-trigger', 'order');
+    });
   }
 
   function inferBranchFromText(text) {
@@ -921,8 +916,7 @@
     EditDetails.init();
     QuickLook.init();
     bindTrackingHandlers();
-    personalizeHeroCTA();
-    initHomepageOrderFlow();
+    normalizeGlobalOrderButtons();
 
     Tracking.push({
       event: 'page_view',

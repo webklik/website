@@ -296,18 +296,26 @@
       margin-top: 0.15rem;
     }
     .branch-actions {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 0.75rem;
       margin-top: auto;
       padding-top: 1rem;
       border-top: 1px solid rgba(212, 175, 55, 0.12);
     }
+    @media (min-width: 640px) {
+      .branch-actions { grid-template-columns: repeat(2, 1fr); }
+    }
+    .branch-actions .btn {
+      width: 100%;
+      min-height: 48px;
+    }
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.7rem 1.25rem;
+      gap: 0.35rem;
+      padding: 0.7rem 1rem;
       font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.06em;
@@ -543,18 +551,13 @@
             </div>
           </div>
 
-          <div class="branch-detail">
-            <span class="emoji" aria-hidden="true">💛</span>
-            <div>
-              <strong>Perks</strong>
-              <p>Free delivery on orders over Ksh 2,000 within 3km of the branch</p>
-            </div>
-          </div>
-
-          <div class="branch-actions">
-            <a class="btn btn-primary" href="https://www.foodbooking.com/api/fb/67_y_m" target="_blank" rel="noopener">Order Now</a>
-            <a class="btn" href="/parklands/menu.html">View Menu</a>
-            <a class="btn" href="/parklands/">View More</a>
+          <div class="branch-actions" role="list" aria-label="Actions for Parklands">
+            <a class="btn btn-primary" href="https://www.foodbooking.com/api/fb/67_y_m" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Parklands" role="listitem">🔥 Order Now</a>
+            <a class="btn" href="https://www.foodbooking.com/api/res/67_y_m" target="_blank" rel="noopener" data-cta="direct" data-branch="Parklands" role="listitem">📅 Reserve</a>
+            <a class="btn" href="tel:+254724100100" role="listitem">☎ Call Branch</a>
+            <a class="btn" href="https://maps.app.goo.gl/AMwtifSUgaYoCJwZ7" target="_blank" rel="noopener" role="listitem">🧭 Open in Maps</a>
+            <a class="btn" href="/parklands/menu.html" role="listitem">🍜 View Menu</a>
+            <a class="btn" href="/parklands/" role="listitem">→ View More</a>
           </div>
         </article>
 
@@ -605,18 +608,13 @@
             </div>
           </div>
 
-          <div class="branch-detail">
-            <span class="emoji" aria-hidden="true">💛</span>
-            <div>
-              <strong>Perks</strong>
-              <p>Free delivery on orders over Ksh 2,000 within 3km of the branch</p>
-            </div>
-          </div>
-
-          <div class="branch-actions">
-            <a class="btn btn-primary" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener">Order Now</a>
-            <a class="btn" href="/capital-centre/menu.html">View Menu</a>
-            <a class="btn" href="/capital-centre/">View More</a>
+          <div class="branch-actions" role="list" aria-label="Actions for Capital Centre">
+            <a class="btn btn-primary" href="https://www.foodbooking.com/api/fb/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Capital Centre" role="listitem">🔥 Order Now</a>
+            <a class="btn" href="https://www.foodbooking.com/api/res/d_yq_g" target="_blank" rel="noopener" data-cta="direct" data-branch="Capital Centre" role="listitem">📅 Reserve</a>
+            <a class="btn" href="tel:+254722248248" role="listitem">☎ Call Branch</a>
+            <a class="btn" href="https://maps.app.goo.gl/e2PxCzzsZevVFWZj7" target="_blank" rel="noopener" role="listitem">🧭 Open in Maps</a>
+            <a class="btn" href="/capital-centre/menu.html" role="listitem">🍜 View Menu</a>
+            <a class="btn" href="/capital-centre/" role="listitem">→ View More</a>
           </div>
         </article>
 
@@ -667,18 +665,13 @@
             </div>
           </div>
 
-          <div class="branch-detail">
-            <span class="emoji" aria-hidden="true">💛</span>
-            <div>
-              <strong>Perks</strong>
-              <p>Free delivery on orders over Ksh 2,000 within 3km of the branch</p>
-            </div>
-          </div>
-
-          <div class="branch-actions">
-            <a class="btn btn-primary" href="https://www.foodbooking.com/api/fb/k8_d_z" target="_blank" rel="noopener">Order Now</a>
-            <a class="btn" href="/two-rivers/menu.html">View Menu</a>
-            <a class="btn" href="/two-rivers/">View More</a>
+          <div class="branch-actions" role="list" aria-label="Actions for Two Rivers">
+            <a class="btn btn-primary" href="https://www.foodbooking.com/api/fb/k8_d_z" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" data-branch="Two Rivers" role="listitem">🔥 Order Now</a>
+            <a class="btn" href="https://www.foodbooking.com/api/res/k8_d_z" target="_blank" rel="noopener" data-cta="direct" data-branch="Two Rivers" role="listitem">📅 Reserve</a>
+            <a class="btn" href="tel:+254753222222" role="listitem">☎ Call Branch</a>
+            <a class="btn" href="https://maps.app.goo.gl/qotbCZAnBJjPiLxU7" target="_blank" rel="noopener" role="listitem">🧭 Open in Maps</a>
+            <a class="btn" href="/two-rivers/menu.html" role="listitem">🍜 View Menu</a>
+            <a class="btn" href="/two-rivers/" role="listitem">→ View More</a>
           </div>
         </article>
 
