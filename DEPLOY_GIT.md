@@ -94,7 +94,34 @@ Work in `Mister_Wok_MNFVSS/`. Do **not** edit files directly in cPanel `public_h
 
 Dev-only files (never go live — excluded by `.cpanel.yml`):
 
-- `*.py`, `__pycache__/`, `_includes/`, `DEPLOY_GIT.md`
+- `*.py`, `__pycache__/`, `.cursor/`, `_includes/`, `_frag_sig_grid_cc.html`
+- `DEPLOY_GIT.md`, `AUDIT_PRE_DEPLOY.md`, `cpanel-sync-deploy.sh`, `serve_local.py`
+- Content pipeline output: `kula_cooler_transcripts.json`, `kula_cooler_failed.json`, `mw_mentions.json`, `mw_mentions_output.txt`, `playlist_urls.txt`
+- Review / no runtime consumer: `posts.json`, `food-images.jsonld` (optional SEO asset — safe to exclude)
+
+### Site file inventory — keep vs deploy (confirmed)
+
+**Deploy root:** everything under `Mister_Wok_MNFVSS/` that is not in the exclude list below.
+
+| Category | Paths | Repo | Deploy |
+|----------|-------|------|--------|
+| **Production HTML (20 pages)** | `index.html`, `catering.html`, `social-proof.html`, `videos.html`, `locations/index.html`, `journal/*.html` (8), branch `*/index.html` (3) | Keep | Yes |
+| **Redirect + error** | `menu.html` (301 stub), `404.html` | Keep | Yes |
+| **Branch menus** | `parklands/menu.html`, `capital-centre/menu.html`, `two-rivers/menu.html` | Keep | Yes |
+| **Shared assets** | `assets/`, `images/**/*.webp`, `favicon.ico`, `.htaccess` | Keep | Yes |
+| **Machine-readable** | `robots.txt`, `sitemap.xml`, `llms.txt`, `menu.jsonld`, `entity-map.json` | Keep | Yes |
+| **Nav/footer sync source** | `_includes/nav.html`, `_includes/footer.html` | Keep | **No** — manual copy reference only |
+| **Build fragment** | `_frag_sig_grid_cc.html` | Keep | **No** |
+| **Python / scripts** | `*.py`, `__pycache__/`, `scripts/`, `subs/` (empty placeholders) | Keep | **No** |
+| **Pipeline / audit data** | `kula_cooler_*.json`, `mw_mentions*`, `playlist_urls.txt` | Keep | **No** |
+| **Docs / deploy helpers** | `DEPLOY_GIT.md`, `AUDIT_PRE_DEPLOY.md`, `cpanel-sync-deploy.sh` | Keep | **No** |
+| **Optional / unused at runtime** | `posts.json`, `food-images.jsonld` | Keep | **No** |
+| **Empty media placeholders** | `media/reels/`, `media/videos/`, `images/social/`, `images/team/` (`.gitkeep` only) | Keep | Harmless if synced |
+| **Version control** | `.git/` | Keep | **No** |
+
+**Do not delete from repo:** `_includes/`, Python extract scripts, or pipeline JSON — they support local dev and content workflows. Exclude them from deploy only.
+
+**Parent workspace** (`Mister_Wok_Website/` alongside this folder): `old-working-files/`, `menu-audit/`, `.archive-stale/`, `_preview/` — legacy/dev only; not in the Git deploy root.
 
 ### Step 2 — Commit and push to GitHub
 
@@ -147,7 +174,7 @@ deployment:
 - Copies repo files → `public_html`
 - **Incremental:** only changed files transfer; unchanged server files keep old timestamps
 - **Includes** dotfiles (`.htaccess`, etc.)
-- **Excludes:** `.git`, `*.py`, `_includes/`, stray duplicates
+- **Excludes:** `.git`, `*.py`, `__pycache__/`, `.cursor/`, `_includes/`, `_frag_sig_grid_cc.html`, deploy docs, pipeline JSON/txt, `posts.json`, `food-images.jsonld`, `serve_local.py`, stray duplicates
 - **No `--delete` yet** — orphan files on the server that aren't in the repo are left in place
 
 ---
@@ -174,6 +201,8 @@ Then cPanel: Update from Remote → Deploy HEAD Commit → purge cache.
 **Option B — Restore from backup zip**
 
 Use your pre-deploy zip only for emergency restore of specific files — not for routine releases.
+
+If you must create a manual ZIP, use the same exclusions as `.cpanel.yml` (see **Site file inventory** above and `AUDIT_PRE_DEPLOY.md` Phase 8 manifest). At minimum omit: `.git/`, `*.py`, `__pycache__/`, `.cursor/`, `_includes/`, `_frag_sig_grid_cc.html`, deploy docs, pipeline JSON/txt, `posts.json`, `food-images.jsonld`.
 
 ---
 

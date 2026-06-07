@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/dykbsgmy/public_html/
-    - /usr/bin/rsync -av --exclude='.git' --exclude='*.py' --exclude='__pycache__/' --exclude='_includes/' --exclude='_frag_sig_grid_cc.html' --exclude='capital-centre/index - Capital.html' --exclude='DEPLOY_GIT.md' --exclude='AUDIT_PRE_DEPLOY.md' --exclude='cpanel-sync-deploy.sh' ./ $DEPLOYPATH
+    - /usr/bin/rsync -av --exclude='.git' --exclude='*.py' --exclude='__pycache__/' --exclude='.cursor/' --exclude='_includes/' --exclude='_frag_sig_grid_cc.html' --exclude='capital-centre/index - Capital.html' --exclude='DEPLOY_GIT.md' --exclude='AUDIT_PRE_DEPLOY.md' --exclude='cpanel-sync-deploy.sh' --exclude='serve_local.py' --exclude='kula_cooler_transcripts.json' --exclude='kula_cooler_failed.json' --exclude='mw_mentions.json' --exclude='mw_mentions_output.txt' --exclude='playlist_urls.txt' --exclude='posts.json' --exclude='food-images.jsonld' ./ $DEPLOYPATH

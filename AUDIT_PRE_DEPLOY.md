@@ -217,11 +217,22 @@ Single note: `ntv-am-live-mister-wok-2014.html` has OG/Twitter JPEG meta refs (a
 ```
 EXCLUDE  .git/                              # Version control — never upload
 EXCLUDE  __pycache__/                       # Python bytecode cache
+EXCLUDE  .cursor/                           # IDE metadata
 EXCLUDE  _includes/                         # Build-time HTML fragments — not served
 EXCLUDE  _frag_sig_grid_cc.html            # HTML fragment — not a routable page
 EXCLUDE  DEPLOY_GIT.md                     # Developer documentation
+EXCLUDE  AUDIT_PRE_DEPLOY.md               # Pre-deploy audit report
+EXCLUDE  cpanel-sync-deploy.sh             # Deploy helper script
+EXCLUDE  serve_local.py                    # Local dev server
 EXCLUDE  .cpanel.yml                       # cPanel Git deploy config — not needed for ZIP upload
-EXCLUDE  *.py (all 12 scripts)             # Local patch/generation/audit scripts
+EXCLUDE  *.py (all scripts)                # Local patch/generation/audit scripts
+EXCLUDE  kula_cooler_transcripts.json      # Pipeline output (~3.5 MB)
+EXCLUDE  kula_cooler_failed.json           # Pipeline output
+EXCLUDE  mw_mentions.json                  # Pipeline output
+EXCLUDE  mw_mentions_output.txt            # Pipeline output
+EXCLUDE  playlist_urls.txt                 # Pipeline output
+EXCLUDE  posts.json                        # No runtime consumer in HTML/JS
+EXCLUDE  food-images.jsonld                # Not linked from production HTML
 EXCLUDE  assets/css/.gitkeep              # Git placeholder — empty file
 EXCLUDE  assets/js/.gitkeep               # Git placeholder — empty file
 EXCLUDE  images/food/.gitkeep             # Git placeholder — empty file
@@ -230,8 +241,6 @@ EXCLUDE  images/social/.gitkeep           # Git placeholder — empty file
 EXCLUDE  images/team/.gitkeep             # Git placeholder — empty file
 EXCLUDE  media/reels/.gitkeep             # Git placeholder — empty file
 EXCLUDE  media/videos/.gitkeep            # Git placeholder — empty file
-REVIEW   posts.json                        # Verify if consumed by client JS; exclude if not
-REVIEW   food-images.jsonld                # Include if referenced from a live page; otherwise exclude
 REVIEW   media/                            # Include only if video files exist; currently empty
 ```
 

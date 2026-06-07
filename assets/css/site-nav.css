@@ -2,6 +2,18 @@
  * Unified sticky top nav — Menu + Locations dropdowns, Order CTA, drawer + burger.
  * Load after page :root; uses --color-* tokens when present, with fallbacks.
  */
+:root {
+  --mw-depth-shadow:
+    0 1px 0 rgba(255,255,255,0.08) inset,   /* top highlight */
+    0 -2px 0 rgba(0,0,0,0.35) inset,         /* bottom press line */
+    0 4px 0 rgba(0,0,0,0.5),                 /* drop shadow = raised height */
+    0 6px 12px rgba(0,0,0,0.3);              /* ambient shadow */
+  --mw-depth-shadow-gold:
+    0 1px 0 rgba(255,255,255,0.15) inset,
+    0 -2px 0 rgba(0,0,0,0.25) inset,
+    0 4px 0 rgba(150,120,10,0.8),
+    0 6px 16px rgba(212,175,55,0.3);
+}
 .nav {
   position: fixed;
   inset: 0 0 auto 0;
@@ -86,6 +98,19 @@
 .nav-dropdown-trigger {
   cursor: pointer;
 }
+/* Remove Unicode chevrons — render via CSS instead */
+.nav-dropdown-trigger::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  margin-left: 5px;
+  vertical-align: middle;
+  opacity: 0.7;
+}
 .nav-dropdown-menu {
   display: none;
   position: absolute;
@@ -144,6 +169,7 @@
   font-size: 0.68rem;
   font-weight: 500;
   margin-top: 3px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-actions {
@@ -558,8 +584,10 @@ button.nav-locate {
 }
 #bottom-nav .bn-btn,
 #bottom-nav > a,
+#bottom-nav > button.bn-tab,
 .bottom-nav .bn-btn,
-.bottom-nav > a {
+.bottom-nav > a,
+.bottom-nav > button.bn-tab {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -582,6 +610,22 @@ button.nav-locate {
   cursor: pointer;
   box-sizing: border-box;
 }
+.branch-action-btn {
+  box-shadow: var(--mw-depth-shadow);
+  transform: translateY(0);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.branch-action-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.5), 0 3px 6px rgba(0,0,0,0.2);
+}
+.branch-action-btn.is-primary {
+  box-shadow: var(--mw-depth-shadow-gold);
+}
+.branch-action-btn.is-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(150,120,10,0.8), 0 3px 10px rgba(212,175,55,0.15);
+}
 #bottom-nav .bn-btn span:first-child,
 #bottom-nav > a span:first-child,
 .bottom-nav .bn-btn span:first-child,
@@ -601,9 +645,12 @@ button.nav-locate {
 }
 #bottom-nav .bn-order,
 #bottom-nav > a.bn-cta,
+#bottom-nav > button.bn-cta,
 #bottom-nav > a.bn-order,
+#bottom-nav > button.bn-order,
 .bottom-nav .bn-order,
-.bottom-nav > a.bn-order {
+.bottom-nav > a.bn-order,
+.bottom-nav > button.bn-order {
   background: var(--color-gold, #d4af37);
   color: #0a0a0a;
 }
@@ -707,11 +754,22 @@ button.nav-locate {
   transition: color 0.15s ease;
 }
 .drawer-accordion summary::-webkit-details-marker { display: none; }
-.drawer-accordion summary::after {
-  content: '▾'; font-size: 0.7rem; color: var(--color-gold, #d4af37);
-  transition: transform 0.2s ease;
+.drawer-accordion > summary::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  margin-left: 6px;
+  vertical-align: middle;
+  opacity: 0.6;
+  transition: transform 200ms ease;
 }
-.drawer-accordion[open] summary::after { transform: rotate(-180deg); }
+.drawer-accordion[open] > summary::after {
+  transform: rotate(180deg);
+}
 .drawer-accordion summary:hover,
 .drawer-accordion[open] summary { color: var(--color-gold, #d4af37); }
 .drawer-accordion-panel {
@@ -754,4 +812,15 @@ button.nav-locate {
   transition: color 0.15s ease, background 0.15s ease;
 }
 .drawer-nav-row:hover { color: var(--color-gold, #d4af37); background: rgba(212,175,55,0.04); }
-.drawer-nav-row span { color: var(--color-gold, #d4af37); font-size: 0.9rem; flex-shrink: 0; }
+.drawer-nav-row span { display: none; }
+.drawer-nav-row::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid var(--color-gold, #d4af37);
+  border-top: 2px solid var(--color-gold, #d4af37);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  margin-left: auto;
+}
