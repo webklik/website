@@ -301,7 +301,7 @@ Served at every table, every branch. Demonstrated on NTV AM Live 2014.
 |------|-----|---------|
 | Homepage | https://misterwok.net/ | Branches, order, contacts |
 | Full Menu — Parklands | https://misterwok.net/parklands/menu.html | 229 dishes, KES prices · canonical Parklands menu (Nov 2024 parity) |
-| Full Menu — Capital Centre | https://misterwok.net/capital-centre/menu.html | 138 dishes, KES prices |
+| Full Menu — Capital Centre | https://misterwok.net/capital-centre/menu.html | 138 dishes, KES prices · Halal-Assured |
 | Full Menu — Two Rivers | https://misterwok.net/two-rivers/menu.html | 138 dishes, KES prices |
 | About | https://misterwok.net/journal/ | Founder story, 2004 origin (interim via journal) |
 | Catering | https://misterwok.net/catering.html | Events, corporate, quotes |
