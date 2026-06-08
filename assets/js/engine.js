@@ -341,7 +341,7 @@
               var phone = getBranchPhone();
               if (phone) window.location.href = 'tel:' + phone.replace(/\s+/g, '');
             } else if (mode === 'menu') {
-              var menuUrl = getBranchMenuUrl();
+              var menuUrl = isMenuPage() ? getBranchHomeUrl() : getBranchMenuUrl();
               if (menuUrl) window.location.href = menuUrl;
             } else if (mode === 'find') {
               var findUrl = getBranchFindUrl();
@@ -536,6 +536,19 @@
     return /\/(parklands|capital-centre|two-rivers)\//i.test(path);
   }
 
+  function isMenuPage() {
+    const path = window.location.pathname;
+    return /\/(parklands|capital-centre|two-rivers)\/menu\.html$/i.test(path);
+  }
+
+  function getBranchHomeUrl() {
+    const path = window.location.pathname;
+    if (/parklands/i.test(path))      return '/parklands/';
+    if (/capital-centre/i.test(path)) return '/capital-centre/';
+    if (/two-rivers/i.test(path))     return '/two-rivers/';
+    return '/';
+  }
+
   function getBranchGloriaUrl() {
     const path = window.location.pathname;
     if (/parklands/i.test(path)) return BRANCH_GLORIA_ORDER_URL['Parklands'];
@@ -682,13 +695,11 @@
       'main,.page-body,.page{animation:mw-fade .35s ease forwards}',
       '@media(max-width:1023px){section{padding:48px 24px}section+section,.card+.card{margin-bottom:40px}}',
       '@media(min-width:1024px){#bottom-nav{display:none!important;}}',
-      '@keyframes mw-flicker{0%{transform:scaleY(1) scaleX(1) rotate(-1deg);filter:brightness(1)}',
-      '15%{transform:scaleY(1.07) scaleX(0.96) rotate(1.2deg);filter:brightness(1.18)}',
-      '30%{transform:scaleY(0.96) scaleX(1.02) rotate(-0.6deg);filter:brightness(0.94)}',
-      '50%{transform:scaleY(1.09) scaleX(0.95) rotate(1.6deg);filter:brightness(1.22)}',
-      '65%{transform:scaleY(0.97) scaleX(1.01) rotate(-1.1deg);filter:brightness(0.98)}',
-      '80%{transform:scaleY(1.05) scaleX(0.97) rotate(0.6deg);filter:brightness(1.12)}',
-      '100%{transform:scaleY(1) scaleX(1) rotate(-1deg);filter:brightness(1)}}',
+      '@keyframes mw-flicker{',
+      '0%{transform:scaleY(1) rotate(-1deg);filter:brightness(1.05);opacity:1;}',
+      '30%{transform:scaleY(0.97) rotate(1deg);filter:brightness(1.15);opacity:0.95;}',
+      '60%{transform:scaleY(1.04) rotate(-0.5deg);filter:brightness(1);opacity:0.88;}',
+      '100%{transform:scaleY(1) rotate(0deg);filter:brightness(1.05);opacity:1;}}',
       '.mw-flame{display:inline-block;animation:mw-flicker 1.8s ease-in-out infinite;',
       'transform-origin:bottom center;will-change:transform,filter;vertical-align:middle;}',
       '#bottom-nav .mw-flame{vertical-align:top!important;display:flex!important;align-items:center!important;justify-content:center!important;}',
@@ -852,10 +863,10 @@
       setChinIcon(tab, 'ico-phone');
     });
     nav.querySelectorAll('[data-modal-trigger="menu"]').forEach(function(tab) {
-      setChinIcon(tab, 'ico-fork-knife');
+      setChinIcon(tab, isMenuPage() ? 'ico-home' : 'ico-fork-knife');
     });
     nav.querySelectorAll('[data-modal-trigger="find"]').forEach(function(tab) {
-      setChinIcon(tab, 'ico-compass');
+      setChinIcon(tab, 'ico-car');
     });
     nav.querySelectorAll('[data-modal-trigger="order"], #bn-order, .bn-cta').forEach(function(tab) {
       if (!tab.closest('#bottom-nav')) return;
@@ -1081,15 +1092,17 @@
       '<path d="M17 3v18" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round"/>' +
       '<path d="M17 3c2.2 2 2.2 4.8 0 6.8" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round"/>' +
       '</symbol>' +
-      '<symbol id="ico-car" viewBox="0 0 32 18">' +
-      '<path d="M1 13h3.2l1.8-3.5h7.2l2.2-3.2h7.4l3.2 3.2H31v3H1z" fill="#e53935"/>' +
-      '<path d="M5.5 9.5h7.5l1.8-2.8h6.2l2.2 2.8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>' +
-      '<circle cx="8.5" cy="13" r="2.2" fill="#1a1a1a"/>' +
-      '<circle cx="23.5" cy="13" r="2.2" fill="#1a1a1a"/>' +
-      '<circle cx="8.5" cy="13" r="1" fill="#666"/>' +
-      '<circle cx="23.5" cy="13" r="1" fill="#666"/>' +
-      '<rect x="11" y="8.2" width="5" height="2.2" rx="0.6" fill="rgba(255,255,255,0.35)"/>' +
-      '<rect x="17.5" y="8.2" width="4" height="2.2" rx="0.6" fill="rgba(255,255,255,0.25)"/>' +
+      '<symbol id="ico-car" viewBox="0 0 24 24">' +
+      '<path d="M5 11l1.5-4.5h11L19 11" stroke="currentColor" stroke-width="1.5" fill="none"/>' +
+      '<rect x="2" y="11" width="20" height="6" rx="2" fill="currentColor"/>' +
+      '<circle cx="6.5" cy="17.5" r="1.5" fill="#8b1a1a"/>' +
+      '<circle cx="17.5" cy="17.5" r="1.5" fill="#8b1a1a"/>' +
+      '<rect x="4" y="12.5" width="4" height="2.5" rx="0.5" fill="rgba(255,255,255,0.3)"/>' +
+      '<rect x="10" y="12.5" width="4" height="2.5" rx="0.5" fill="rgba(255,255,255,0.3)"/>' +
+      '</symbol>' +
+      '<symbol id="ico-home" viewBox="0 0 24 24">' +
+      '<path d="M3 12L12 3l9 9" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>' +
+      '<path d="M5 10v9a1 1 0 001 1h4v-4h4v4h4a1 1 0 001-1v-9" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>' +
       '</symbol>' +
       '<symbol id="ico-compass" viewBox="0 0 24 24">' +
       '<circle cx="12" cy="12" r="9" fill="none" stroke="rgba(80,210,180,0.8)" stroke-width="1.8"/>' +
