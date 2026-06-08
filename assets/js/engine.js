@@ -866,7 +866,7 @@
       setChinIcon(tab, isMenuPage() ? 'ico-home' : 'ico-fork-knife');
     });
     nav.querySelectorAll('[data-modal-trigger="find"]').forEach(function(tab) {
-      setChinIcon(tab, 'ico-car');
+      setChinIcon(tab, 'ico-compass');
     });
     nav.querySelectorAll('[data-modal-trigger="order"], #bn-order, .bn-cta').forEach(function(tab) {
       if (!tab.closest('#bottom-nav')) return;
