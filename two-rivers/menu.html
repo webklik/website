@@ -1688,7 +1688,7 @@ summary::marker               { display: none; }
 
 <div class="drawer" id="drawer" role="dialog" aria-label="Navigation menu" aria-hidden="true">
   <nav class="drawer-nav" aria-label="Site pages">
-    <a href="/locations/" class="drawer-nav-row">LOCATIONS <span aria-hidden="true">ÔøΩ</span></a>
+    <a href="/locations/" class="drawer-nav-row">LOCATIONS <span aria-hidden="true">ù</span></a>
     <details class="drawer-accordion">
       <summary>Branch Pages</summary>
       <div class="drawer-accordion-panel">
@@ -4250,19 +4250,19 @@ summary::marker               { display: none; }
 </div>
 </div>
 </div>
-<nav class="bottom-nav" id="bottom-nav" aria-label="Quick actions">
-  <a class="bn-tab" href="tel:+254753222222" aria-label="Call this branch">
-    <span class="bn-icon">?</span><span class="bn-label">CALL</span>
-  </a>
-  <a class="bn-tab bn-cta" id="bn-order" href="https://www.foodbooking.com/api/fb/k8_d_z" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" aria-label="Order online">
+<nav class="bottom-nav" id="bottom-nav" role="navigation" aria-label="Quick actions">
+  <button type="button" class="bn-tab" id="bn-call" data-modal-trigger="call" aria-label="Call Two Rivers">
+    <span class="bn-icon" aria-hidden="true"><svg width="18" height="18"><use href="#ico-phone"/></svg></span><span class="bn-label">CALL</span>
+  </button>
+  <button type="button" class="bn-tab bn-cta" id="bn-order" data-modal-trigger="order" data-order-btn="true" aria-label="Order from Two Rivers">
     <span class="bn-icon cta-flame mw-flame" aria-hidden="true"><svg width="18" height="18"><use href="#ico-flame"/></svg></span><span class="bn-label">ORDER NOW</span>
-  </a>
-  <a class="bn-tab" href="/two-rivers/menu.html" aria-label="View full menu">
-    <span class="bn-icon">??</span><span class="bn-label">MENU</span>
-  </a>
-  <a class="bn-tab" href="/locations/" aria-label="Find us">
-    <span class="bn-icon">??</span><span class="bn-label">FIND</span>
-  </a>
+  </button>
+  <button type="button" class="bn-tab" id="bn-menu" data-modal-trigger="menu" aria-label="Back to Two Rivers">
+    <span class="bn-icon" aria-hidden="true"><svg width="18" height="18"><use href="#ico-home"/></svg></span>    <span class="bn-label">‚Üê BRANCH</span>
+  </button>
+  <button type="button" class="bn-tab" id="bn-find" data-modal-trigger="find" aria-label="Directions to Two Rivers">
+    <span class="bn-icon" aria-hidden="true"><svg width="18" height="18"><use href="#ico-compass"/></svg></span><span class="bn-label">FIND</span>
+  </button>
 </nav>
 <script>
   (function () {

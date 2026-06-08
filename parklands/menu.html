@@ -5419,19 +5419,19 @@ summary::marker               { display: none; }
     </div>
   <p class="menu-disclaimer" style="text-align:center;font-size:0.75rem;color:#888;padding:1rem 0;">All prices are inclusive of taxes and subject to change without notice.</p>
   </footer>
-<nav class="bottom-nav" id="bottom-nav" aria-label="Quick actions">
-  <a class="bn-tab" href="tel:+254724100100" aria-label="Call this branch">
+<nav class="bottom-nav" id="bottom-nav" role="navigation" aria-label="Quick actions">
+  <button type="button" class="bn-tab" id="bn-call" data-modal-trigger="call" aria-label="Call this branch">
     <span class="bn-icon" aria-hidden="true"><svg width="18" height="18"><use href="#ico-phone"/></svg></span><span class="bn-label">CALL</span>
-  </a>
-  <a class="bn-tab bn-cta" id="bn-order" href="https://www.foodbooking.com/api/fb/67_y_m" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" aria-label="Order online">
+  </button>
+  <button type="button" class="bn-tab bn-cta" id="bn-order" data-modal-trigger="order" data-order-btn="true" aria-label="Order online">
     <span class="bn-icon cta-flame mw-flame" aria-hidden="true"><svg width="18" height="18"><use href="#ico-flame"/></svg></span><span class="bn-label">ORDER NOW</span>
-  </a>
-  <a class="bn-tab" href="/parklands/menu.html" aria-label="View full menu">
-    <span class="bn-icon" aria-hidden="true"><svg width="18" height="18"><use href="#ico-bowl"/></svg></span><span class="bn-label">MENU</span>
-  </a>
-  <a class="bn-tab" href="/locations/" aria-label="Find us">
+  </button>
+  <button type="button" class="bn-tab" id="bn-menu" data-modal-trigger="menu" aria-label="Back to branch">
+    <span class="bn-icon" aria-hidden="true"><svg width="18" height="18"><use href="#ico-home"/></svg></span>    <span class="bn-label">← BRANCH</span>
+  </button>
+  <button type="button" class="bn-tab" id="bn-find" data-modal-trigger="find" aria-label="Get directions">
     <span class="bn-icon" aria-hidden="true"><svg width="18" height="18"><use href="#ico-compass"/></svg></span><span class="bn-label">FIND</span>
-  </a>
+  </button>
 </nav>
 <!-- ═══════════════════════════════════════
      LUMINESCENCE — DISH LIGHTBOX
