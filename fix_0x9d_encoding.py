@@ -83,15 +83,20 @@ def fix_text(text: str) -> str:
 
 def fix_index_html(path: Path) -> None:
     raw = path.read_bytes()
+    try:
+        raw.decode("utf-8")
+        return
+    except UnicodeDecodeError:
+        pass
     text = raw.decode("latin-1")
     fixed = fix_text(text)
-    path.write_text(fixed, encoding="utf-8", newline="\r\n")
+    path.write_text(fixed, encoding="utf-8")
 
 
 def fix_utf8_html(path: Path) -> None:
     text = path.read_text(encoding="utf-8")
     fixed = fix_text(text)
-    path.write_text(fixed, encoding="utf-8", newline="\r\n")
+    path.write_text(fixed, encoding="utf-8")
 
 
 def fix_menu_comment(path: Path) -> None:
