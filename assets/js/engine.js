@@ -291,11 +291,18 @@
 
     focusBranchPicker: function() {
       if (!this.el) return;
+      var inner = this.el.querySelector('.modal-inner');
       var first = this.el.querySelector('.modal-options .modal-opt');
+      var scrollBefore = inner ? inner.scrollTop : null;
+      if (inner) inner.scrollTop = 0;
       if (!first) return;
       requestAnimationFrame(function() {
-        first.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         try { first.focus({ preventScroll: true }); } catch (_) { first.focus(); }
+        // #region agent log
+        requestAnimationFrame(function() {
+          var scrollAfter = inner ? inner.scrollTop : null;
+        });
+        // #endregion
       });
     },
 
@@ -443,6 +450,23 @@
 
       this.setChinActive(m);
       this.focusBranchPicker();
+
+      // #region agent log
+      var self = this;
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          var inner = self.el.querySelector('.modal-inner');
+          var opts = self.el.querySelector('.modal-options');
+          var nav = document.getElementById('bottom-nav');
+          var innerR = inner ? inner.getBoundingClientRect() : null;
+          var optsR = opts ? opts.getBoundingClientRect() : null;
+          var navR = nav ? nav.getBoundingClientRect() : null;
+          var modalZ = self.el ? getComputedStyle(self.el).zIndex : null;
+          var navZ = nav ? getComputedStyle(nav).zIndex : null;
+          var vv = window.visualViewport;
+        });
+      });
+      // #endregion
 
       // Push a history state so Android hardware-back closes the modal
       if (window.history && typeof window.history.pushState === 'function') {
@@ -659,6 +683,7 @@
       'max-width:min(320px,88vw)!important;width:min(320px,88vw)!important;z-index:9000!important;',
       'transform:translateX(100%);transition:transform .25s ease;}',
       '#drawer.open,.drawer.open{transform:translateX(0);}',
+      '#modal{z-index:8500!important;}',
       '#bottom-nav{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;',
       'position:fixed;bottom:0;left:0;right:0;background:#0a0a0a;',
       'border-top:1px solid rgba(212,175,55,0.2);padding-bottom:env(safe-area-inset-bottom,0px);',

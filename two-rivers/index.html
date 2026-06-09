@@ -81,7 +81,7 @@
       "streetAddress": "Two Rivers Mall, Limuru Road",
       "addressLocality": "Gigiri",
       "addressRegion": "Nairobi",
-      "postalCode": "00619",
+      "postalCode": "00621",
       "addressCountry": "KE"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": "-1.2025", "longitude": "36.8075" },
@@ -90,7 +90,7 @@
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "11:00", "closes": "21:00"
     }],
-    "aggregateRating": { "@type": "AggregateRating", "@id": "https://misterwok.net/two-rivers/#aggregate-rating", "ratingValue": "4.1", "reviewCount": "554", "bestRating": "5", "worstRating": "1" },
+    "aggregateRating": { "@type": "AggregateRating", "@id": "https://misterwok.net/two-rivers/#aggregate-rating", "ratingValue": "4.1", "reviewCount": "377", "bestRating": "5", "worstRating": "1" },
     "hasMenu": "https://misterwok.net/two-rivers/menu.html",
     "menu": "https://misterwok.net/two-rivers/menu.html",
     "areaServed": [
@@ -162,7 +162,7 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.1",
-      "reviewCount": "554"
+      "reviewCount": "377"
     },
     "areaServed": [
       {"@type": "City", "name": "Gigiri"},
@@ -727,7 +727,7 @@
       <p class="hero-desc">Wok cuisine at the heart of Gigiri. Made to order — from hand-cut noodles to fresh whole proteins, seared at 300°C and served straight from the wok.</p>
 
       <div class="hero-meta" aria-label="Branch quick facts">
-        <span><strong>4.1★</strong> · 554 Reviews</span>
+        <span><strong>4.1★</strong> · 377 Reviews</span>
         <span class="dot" aria-hidden="true">·</span>
         <span><strong>11am – 9pm</strong> daily</span>
         <span class="dot" aria-hidden="true">·</span>
@@ -763,7 +763,7 @@
         <div class="details-line"><span class="ic" aria-hidden="true">📍</span><span><strong>Two Rivers Mall, Limuru Road</strong><br>Gigiri, Nairobi</span></div>
         <div class="details-line"><span class="ic" aria-hidden="true">📞</span><span><strong>+254 753 222 222</strong><br>Direct line — branch manager</span></div>
         <div class="details-line"><span class="ic" aria-hidden="true">⏰</span><span><strong>Daily · 11am – 9pm</strong><br>Last orders 8:30pm · Mall hours apply</span></div>
-        <div class="details-line"><span class="ic" aria-hidden="true">⭐</span><span><strong>4.1★ · 554 verified reviews</strong><br>Independent ratings from Google Business Profile</span></div>
+        <div class="details-line"><span class="ic" aria-hidden="true">⭐</span><span><strong>4.1★ · 377 verified reviews</strong><br>Independent ratings from Google Business Profile</span></div>
         <div class="details-line"><span class="ic" aria-hidden="true">🚚</span><span class="details-zones"><strong>Delivers to:</strong> Gigiri · Runda · Muthaiga · Rosslyn · Ridgeways · UN Avenue · Nyari · Ruaka</span></div>
         <div class="details-line"><span class="ic" aria-hidden="true">🌳</span><span class="details-zones"><strong>Inside Two Rivers Mall</strong> — riverside terrace, family-friendly, mall parking on site.</span></div>
         <div class="details-line" style="margin-top:var(--s-4);padding-top:var(--s-4);border-top:1px solid var(--color-rim);">
@@ -1214,7 +1214,7 @@
         &nbsp;·&nbsp;
         <a href="/journal/">Journal</a>
         &nbsp;·&nbsp;
-        <a href="/parklands/menu.html">Full Menu</a>
+        <a href="/two-rivers/menu.html">Full Menu</a>
       </span>
     </div>
   </footer>
@@ -1240,6 +1240,8 @@
            data-branch-hours="11am-11pm"
            data-order-url="https://www.foodbooking.com/api/fb/67_y_m"
            data-reserve-url="https://www.foodbooking.com/api/res/67_y_m"
+           data-menu-url="/parklands/menu.html"
+           data-find-url="https://maps.app.goo.gl/AMwtifSUgaYoCJwZ7"
            role="listitem"
            aria-label="Order from Mister Wok Parklands">
           <div>
@@ -1261,6 +1263,8 @@
            data-branch-hours="11am-9:30pm"
            data-order-url="https://www.foodbooking.com/api/fb/d_yq_g"
            data-reserve-url="https://www.foodbooking.com/api/res/d_yq_g"
+           data-menu-url="/capital-centre/menu.html"
+           data-find-url="https://maps.app.goo.gl/e2PxCzzsZevVFWZj7"
            role="listitem"
            aria-label="Order from Mister Wok Capital Centre">
           <div>
@@ -1283,6 +1287,8 @@
            data-branch-hours="11am-9pm"
            data-order-url="https://www.foodbooking.com/api/fb/k8_d_z"
            data-reserve-url="https://www.foodbooking.com/api/res/k8_d_z"
+           data-menu-url="/two-rivers/menu.html"
+           data-find-url="https://maps.app.goo.gl/qotbCZAnBJjPiLxU7"
            role="listitem"
            aria-label="Order from Mister Wok Two Rivers">
           <div>
@@ -1319,20 +1325,20 @@
 
 
   <nav class="bottom-nav" id="bottom-nav" aria-label="Quick actions">
-    <a class="bn-tab" href="tel:+254753222222" aria-label="Call this branch">
+    <a class="bn-tab" id="bn-call" href="tel:+254753222222" aria-label="Call this branch">
       <span class="bn-icon" aria-hidden="true"><svg width="18" height="18"><use href="#ico-phone"/></svg></span><span class="bn-label">CALL</span>
     </a>
     <a class="bn-tab bn-cta" id="bn-order" href="https://www.foodbooking.com/api/fb/k8_d_z" target="_blank" rel="noopener" data-cta="direct" data-order-btn="true" aria-label="Order online">
       <span class="bn-icon cta-flame mw-flame" aria-hidden="true"><svg width="18" height="18"><use href="#ico-flame"/></svg></span><span class="bn-label">ORDER NOW</span>
     </a>
-    <a class="bn-tab" href="/two-rivers/menu.html" aria-label="View full menu">
+    <a class="bn-tab" id="bn-menu" href="/two-rivers/menu.html" aria-label="View full menu">
       <span class="bn-icon" aria-hidden="true"><svg width="18" height="18"><use href="#ico-bowl"/></svg></span><span class="bn-label">MENU</span>
     </a>
-    <a class="bn-tab" href="/locations/" aria-label="Find us">
+    <a class="bn-tab" id="bn-find" href="https://maps.app.goo.gl/qotbCZAnBJjPiLxU7" target="_blank" rel="noopener" aria-label="Find us on Google Maps">
       <span class="bn-icon" aria-hidden="true"><svg width="18" height="18"><use href="#ico-compass"/></svg></span><span class="bn-label">FIND</span>
     </a>
   </nav>
 
-  <script src="/assets/js/engine.js?v=9" defer></script>
+  <script src="/assets/js/engine.js?v=10" defer></script>
 </body>
 </html>

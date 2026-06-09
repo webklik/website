@@ -371,7 +371,7 @@ button.nav-locate {
   inset: 0;
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(4px);
-  z-index: 1000;
+  z-index: 8500;
   align-items: flex-end;
   justify-content: center;
   padding: 0;
@@ -387,9 +387,10 @@ button.nav-locate {
   border-top-right-radius: var(--r-xl, 18px);
   width: 100%;
   max-width: 480px;
-  padding: var(--s-3, 12px) var(--s-5, 24px) var(--s-6, 32px);
-  max-height: 90vh;
+  padding: var(--s-3, 12px) var(--s-5, 24px) calc(var(--s-6, 32px) + env(safe-area-inset-bottom, 0px));
+  max-height: min(92svh, calc(100dvh - var(--bar-h, 72px) - env(safe-area-inset-bottom, 0px)));
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   animation: mw-modal-slide-up 280ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 @keyframes mw-modal-slide-up {

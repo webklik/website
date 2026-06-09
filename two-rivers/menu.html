@@ -4,12 +4,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mister Wok Two Rivers Full Menu 2026 | Wok Cuisine ? Two Rivers Mall ? Gigiri Nairobi</title>
-<meta content="Full Mister Wok Two Rivers menu 2026. 145 dishes across 17 categories ? soups, wok starters, chicken, beef, lamb, seafood, vegetarian mains, hand-cut noodles, premium aromatic fried rice, combo meals, wraps, kiddie menu, and non-alcoholic drinks. Two Rivers Mall, Limuru Road, Gigiri. Open daily 11am?9pm." name="description"/>
+<title>Mister Wok Two Rivers Full Menu 2026 | 142 Dishes &middot; Wok Cuisine &middot; Two Rivers Mall Nairobi</title>
+<meta content="Full Mister Wok Two Rivers menu 2026. 142 dishes across 17 categories &middot; soups, wok starters, chicken, beef, lamb, seafood, vegetarian mains, hand-cut noodles, premium aromatic fried rice, combo meals, wraps, kiddie menu, and non-alcoholic drinks. Two Rivers Mall, Limuru Road, Gigiri. Open daily 11am &ndash; 9pm." name="description"/>
 <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
 <link href="https://misterwok.net/two-rivers/menu.html" rel="canonical"/>
-<meta content="Mister Wok Two Rivers ? Menu 2026" property="og:title"/>
-<meta content="Curated wok cuisine at Two Rivers Mall, Gigiri. Open 11am?9pm." property="og:description"/>
+<meta content="Mister Wok Two Rivers &middot; Menu 2026" property="og:title"/>
+<meta content="Curated wok cuisine at Two Rivers Mall, Gigiri. Open 11am &ndash; 9pm." property="og:description"/>
 <meta content="https://misterwok.net/two-rivers/menu.html" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="en_KE" property="og:locale"/>
@@ -83,7 +83,7 @@
     "Thai",
     "Wok Cuisine"
   ],
-  "priceRange": "KES 1,100?2,500",
+  "priceRange": "KES 1,100 &ndash; 2,500",
   "currenciesAccepted": "KES",
   "parentOrganization": {
     "@id": "https://misterwok.net/#organization"
@@ -92,7 +92,7 @@
     "@type": "AggregateRating",
     "@id": "https://misterwok.net/two-rivers/#aggregate-rating",
     "ratingValue": "4.1",
-    "reviewCount": "554",
+    "reviewCount": "377",
     "bestRating": "5",
     "worstRating": "1"
   },
@@ -101,7 +101,15 @@
       "@type": "OrderAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.foodbooking.com/api/fb/k8_d_z"
+        "urlTemplate": "https://www.foodbooking.com/api/fb/k8_d_z",
+        "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+      }
+    },
+    {
+      "@type": "ReservationAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.foodbooking.com/api/res/k8_d_z"
       }
     }
   ]
@@ -186,7 +194,7 @@
       "name": "Is there a Chinese restaurant in Two Rivers Mall?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Mister Wok at Two Rivers Mall, Limuru Road, Gigiri ? serving curated wok cuisine since 2004. Hand-cut noodles, premium aromatic rice, made-to-order at 300?C."
+        "text": "Yes. Mister Wok at Two Rivers Mall, Limuru Road, Gigiri &middot; serving curated wok cuisine since 2004. Hand-cut noodles, premium aromatic rice, made-to-order at 300&deg;C."
       }
     },
     {
@@ -202,7 +210,7 @@
       "name": "What is the best Chinese restaurant near Gigiri Nairobi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mister Wok Two Rivers at Two Rivers Mall, Limuru Road ? 22 years of wok cuisine, fresh hand-cut noodles, and made-to-order dishes."
+        "text": "Mister Wok Two Rivers at Two Rivers Mall, Limuru Road &middot; 22 years of wok cuisine, fresh hand-cut noodles, and made-to-order dishes."
       }
     }
   ]
@@ -286,7 +294,7 @@ img { display: block; max-width: 100%; }
 }
 .nav-links a:hover { color: var(--gold); }
 /**
- * Unified sticky top nav ? Menu + Locations dropdowns, Order CTA, drawer + burger.
+ * Unified sticky top nav &middot; Menu + Locations dropdowns, Order CTA, drawer + burger.
  * Load after page :root; uses --color-* tokens when present, with fallbacks.
  */
 .nav .nav-links {
@@ -511,7 +519,16 @@ button.nav-locate {
 }
 .drawer-accordion summary::-webkit-details-marker { display: none; }
 .drawer-accordion summary::after {
-  content: '?'; font-size: 0.7rem; color: var(--color-gold, #d4af37);
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  margin-left: 6px;
+  vertical-align: middle;
+  opacity: 0.6;
   transition: transform 0.2s ease;
 }
 .drawer-accordion[open] summary::after { transform: rotate(-180deg); }
@@ -570,7 +587,7 @@ button.nav-locate {
   }
 }
 
-/* Mobile / tablet: reserve space for sticky bottom ?chin? */
+/* Mobile / tablet: reserve space for sticky bottom chin */
 @media (max-width: 1023px) {
   body.has-mw-chin {
     padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom, 0px));
@@ -582,7 +599,7 @@ button.nav-locate {
   }
 }
 
-/* --- Branch modal (order / reserve / call) ? matches homepage markup --- */
+/* --- Branch modal (order / reserve / call) &middot; matches homepage markup --- */
 #modal {
   display: none;
   position: fixed;
@@ -807,7 +824,7 @@ button.nav-locate {
   transition: border-color var(--t-fast), transform var(--t-fast);
 }
 .sig-card:hover { border-color: var(--gold); transform: translateY(-2px); }
-/* BOUTIQUE SHELF FRAMING ? restored 18 May 2026 */
+/* BOUTIQUE SHELF FRAMING &middot; restored 18 May 2026 */
 .sig-card-img-wrap {
   aspect-ratio: 1 / 1;
   overflow: clip;
@@ -884,7 +901,7 @@ button.nav-locate {
   overflow: clip;
 }
 
-/* Scroll fade overlays ? signal more pills exist beyond visible edges */
+/* Scroll fade overlays &middot; signal more pills exist beyond visible edges */
 .menu-jump-nav::before,
 .menu-jump-nav::after {
   content: '';
@@ -912,7 +929,7 @@ button.nav-locate {
   -webkit-overflow-scrolling: touch;
   padding: 4px var(--s-4);
   gap: var(--s-2);
-  /* Fade edges signal horizontal scrollability ? no HTML change required */
+  /* Fade edges signal horizontal scrollability &middot; no HTML change required */
   mask-image: linear-gradient(
     to right,
     transparent 0px,
@@ -948,9 +965,9 @@ button.nav-locate {
   text-align: center;
 }
 
-/* Top line: protein/type category ? small and muted */
+/* Top line: protein/type category &middot; small and muted */
 .mjn-cat {
-  font-size: 0.68rem;  /* raised from 0.58 ? legible without dominating */
+  font-size: 0.68rem;  /* raised from 0.58 &middot; legible without dominating */
   font-weight: 700;
   letter-spacing: 0.1em;
   color: var(--text-3);
@@ -963,9 +980,9 @@ button.nav-locate {
   margin-bottom: 2px;
 }
 
-/* Bottom line: course name ? prominent */
+/* Bottom line: course name &middot; prominent */
 .mjn-course {
-  font-size: 0.8rem;  /* raised from 0.70 ? clear course identification */
+  font-size: 0.8rem;  /* raised from 0.70 &middot; clear course identification */
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--text-2);
@@ -1036,12 +1053,12 @@ button.nav-locate {
 }
 .snapper-order:hover { background: var(--gold-l); }
 
-/* --- PREMIUM BOUTIQUE ACCORDION ? EXCLUSIVE GROUP ENGINE --- */
+/* --- PREMIUM BOUTIQUE ACCORDION &middot; EXCLUSIVE GROUP ENGINE --- */
 
 /*
  * Exclusive accordion behavior is handled by the browser via
  * name="menu-groups" on <details> elements. No JavaScript required.
- * Supported: Chrome 120+ ? Firefox 130+ ? Safari 17.2+
+ * Supported: Chrome 120+ &middot; Firefox 130+ &middot; Safari 17.2+
  * Fallback: older browsers treat sections as independent toggles (acceptable).
  */
 
@@ -1078,7 +1095,7 @@ summary::marker               { display: none; }
 .accordion-trigger::-webkit-details-marker { display: none; }
 .accordion-trigger::marker                 { display: none; }
 
-/* Vertical tick ? signals content inside; grows and brightens on open */
+/* Vertical tick &middot; signals content inside; grows and brightens on open */
 .accordion-trigger::before {
   content: '';
   display: block;
@@ -1128,10 +1145,11 @@ summary::marker               { display: none; }
   margin-right: var(--s-3, 12px); /* gap before the chevron ::after */
 }
 
-/* Gold chevron pill ? scannable at rest, solid gold when open */
+/* Gold chevron pill &middot; scannable at rest, solid gold when open */
 .accordion-trigger::after {
-  content: '?';
+  content: '\25BE';
   font-size: 0.95rem;
+  line-height: 1;
   color: var(--color-gold, #d4af37);
   background: rgba(212, 175, 55, 0.10);
   border: 1px solid rgba(212, 175, 55, 0.35);
@@ -1159,7 +1177,7 @@ summary::marker               { display: none; }
   color: #0a0a0a;
 }
 
-/* Sticky header ? locks to top of viewport when scrolling inside open section */
+/* Sticky header &middot; locks to top of viewport when scrolling inside open section */
 .menu-accordion[open] > .accordion-trigger {
   position: sticky;
   top: calc(var(--nav-h, 60px) + 44px); /* top nav + jump nav */
@@ -1296,12 +1314,12 @@ summary::marker               { display: none; }
   :root { --thumb-slot: 102px; } /* 88px thumb + 14px gap */
 }
 
-/* Thumbnail slot reserved on all items ? prices and ORDER NOW always aligned */
+/* Thumbnail slot reserved on all items &middot; prices and ORDER NOW always aligned */
 .menu-item-row:not(.has-img) {
   padding-right: var(--thumb-slot);
 }
 
-/* --- LUMINESCENCE ? ITEM THUMBNAIL SYSTEM --- */
+/* --- LUMINESCENCE &middot; ITEM THUMBNAIL SYSTEM --- */
 
 /* Item row with photo: flex layout, thumb on right */
 .menu-item-row.has-img {
@@ -1340,15 +1358,17 @@ summary::marker               { display: none; }
   display: block;
 }
 
-/* Expand hint overlay ? appears on hover (desktop only) */
+/* Expand hint overlay &middot; appears on hover (desktop only) */
 .item-thumb::after {
-  content: '?';
+  content: '+';
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1;
   color: var(--color-gold, #d4af37);
   background: rgba(10, 10, 10, 0.55);
   opacity: 0;
@@ -1375,7 +1395,7 @@ summary::marker               { display: none; }
   }
 }
 
-/* --- LUMINESCENCE ? DISH LIGHTBOX --- */
+/* --- LUMINESCENCE &middot; DISH LIGHTBOX --- */
 
 #dish-lightbox {
   display: none;
@@ -1513,20 +1533,20 @@ summary::marker               { display: none; }
   .lx-handle { display: none; }
 }
 
-/* --- CHEVRON PULSE ? CLOSED STATE INTERACTIVITY SIGNAL --- */
+/* --- CHEVRON PULSE &middot; CLOSED STATE INTERACTIVITY SIGNAL --- */
 @keyframes lx-chevron-pulse {
   0%   { box-shadow: 0 0 0 0    rgba(212, 175, 55, 0.55); }
   55%  { box-shadow: 0 0 0 6px  rgba(212, 175, 55, 0.12); }
   100% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);    }
 }
 
-/* Only pulse on closed sections ? stops when open */
+/* Only pulse on closed sections &middot; stops when open */
 .menu-accordion:not([open]) .accordion-trigger::after {
   animation: lx-chevron-pulse 2.2s ease-out infinite;
 }
 
 
-/* --- SIG-SECTION HERO BANNER (Two Rivers ? Hero_Shot) --- */
+/* --- SIG-SECTION HERO BANNER (Two Rivers &middot; Hero_Shot) --- */
 .sig-hero-banner {
   width: 100%; overflow: clip; max-height: 260px; margin-bottom: 24px;
   border-radius: var(--r, 10px);
@@ -1567,7 +1587,7 @@ summary::marker               { display: none; }
 }
 .snapper-order:hover { background: var(--gold-l); }
 
-/* --- CANONICAL CHIN NAV SPECIFICATIONS (?2A) --- */
+/* --- CANONICAL CHIN NAV SPECIFICATIONS (2A) --- */
 #bottom-nav,
 .bottom-nav {
   display: none;
@@ -1641,39 +1661,39 @@ summary::marker               { display: none; }
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <a href="/" class="nav-brand" aria-label="Mister Wok Home">
     <span class="nav-brand-name">MISTER WOK</span>
-    <span class="nav-brand-tag">Handcrafted ? Since 2004</span>
+    <span class="nav-brand-tag">Handcrafted &middot; Since 2004</span>
   </a>
   <ul class="nav-links" role="list">
     <li class="nav-dropdown">
         <a href="/locations/" class="nav-dropdown-trigger" aria-haspopup="true" aria-label="Locations">LOCATIONS</a>
         <ul class="nav-dropdown-menu" role="menu">
-        <li role="menuitem"><a href="/parklands/">?? Parklands <span>Kolobot Rd ? Dine-in flagship</span></a></li>
-        <li role="menuitem"><a href="/capital-centre/">?? Capital Centre <span>Halal-assured flagship</span></a></li>
-        <li role="menuitem"><a href="/two-rivers/">?? Two Rivers <span>Two Rivers Mall ? Gigiri</span></a></li>
+        <li role="menuitem"><a href="/parklands/">Parklands <span>Kolobot Rd &middot; Dine-in flagship</span></a></li>
+        <li role="menuitem"><a href="/capital-centre/">Capital Centre <span>Halal-assured flagship</span></a></li>
+        <li role="menuitem"><a href="/two-rivers/">Two Rivers <span>Two Rivers Mall &middot; Gigiri</span></a></li>
       </ul>
     </li>
     <li class="nav-dropdown">
       <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Branch menus">MENU</a>
       <ul class="nav-dropdown-menu" role="menu">
-        <li role="menuitem"><a href="/parklands/menu.html">?? Parklands <span>Full menu ? 229 dishes</span></a></li>
-        <li role="menuitem"><a href="/capital-centre/menu.html">?? Capital Centre <span>Curated ? Halal flagship</span></a></li>
-        <li role="menuitem"><a href="/two-rivers/menu.html">?? Two Rivers <span>Curated ? Gigiri</span></a></li>
+        <li role="menuitem"><a href="/parklands/menu.html">Parklands <span>Full menu &middot; 229 dishes</span></a></li>
+        <li role="menuitem"><a href="/capital-centre/menu.html">Capital Centre <span>Curated &middot; Halal flagship</span></a></li>
+        <li role="menuitem"><a href="/two-rivers/menu.html">Two Rivers <span>Curated &middot; Gigiri</span></a></li>
       </ul>
       </li>
       <li class="nav-dropdown">
         <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Reserve a table">RESERVE</a>
       <ul class="nav-dropdown-menu" role="menu">
-        <li role="menuitem"><a href="https://www.foodbooking.com/api/res/67_y_m" target="_blank" rel="noopener">?? Parklands <span>Reserve a table</span></a></li>
-        <li role="menuitem"><a href="https://www.foodbooking.com/api/res/d_yq_g" target="_blank" rel="noopener">?? Capital Centre <span>Reserve ? Halal-assured</span></a></li>
-        <li role="menuitem"><a href="https://www.foodbooking.com/api/res/k8_d_z" target="_blank" rel="noopener">?? Two Rivers <span>Reserve a table</span></a></li>
+        <li role="menuitem"><a href="https://www.foodbooking.com/api/res/67_y_m" target="_blank" rel="noopener">Parklands <span>Reserve a table</span></a></li>
+        <li role="menuitem"><a href="https://www.foodbooking.com/api/res/d_yq_g" target="_blank" rel="noopener">Capital Centre <span>Reserve / Halal-assured</span></a></li>
+        <li role="menuitem"><a href="https://www.foodbooking.com/api/res/k8_d_z" target="_blank" rel="noopener">Two Rivers <span>Reserve a table</span></a></li>
       </ul>
     </li>
     <li class="nav-dropdown">
       <a href="/journal/" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-label="Discover Mister Wok">DISCOVER</a>
       <ul class="nav-dropdown-menu" role="menu">
-        <li role="menuitem"><a href="/journal/">? The Journal <span>Stories from the kitchen</span></a></li>
-        <li role="menuitem"><a href="/social-proof.html">? As Seen On <span>Kula Cooler ? Press ? Reviews</span></a></li>
-        <li role="menuitem"><a href="/catering.html">? Catering <span>Events ? Corporate ? Private</span></a></li>
+        <li role="menuitem"><a href="/journal/">The Journal <span>Stories from the kitchen</span></a></li>
+        <li role="menuitem"><a href="/social-proof.html">As Seen On <span>Kula Cooler / Press / Reviews</span></a></li>
+        <li role="menuitem"><a href="/catering.html">Catering <span>Events / Corporate / Private</span></a></li>
       </ul>
     </li>
   </ul>
@@ -1688,29 +1708,29 @@ summary::marker               { display: none; }
 
 <div class="drawer" id="drawer" role="dialog" aria-label="Navigation menu" aria-hidden="true">
   <nav class="drawer-nav" aria-label="Site pages">
-    <a href="/locations/" class="drawer-nav-row">LOCATIONS <span aria-hidden="true">ù</span></a>
+    <a href="/locations/" class="drawer-nav-row">LOCATIONS</a>
     <details class="drawer-accordion">
       <summary>Branch Pages</summary>
       <div class="drawer-accordion-panel">
-        <a href="/parklands/">?? Parklands <span>Kolobot Rd</span></a>
-        <a href="/capital-centre/">?? Capital Centre <span>Halal-assured</span></a>
-        <a href="/two-rivers/">?? Two Rivers <span>Gigiri</span></a>
+        <a href="/parklands/">Parklands <span>Kolobot Rd</span></a>
+        <a href="/capital-centre/">Capital Centre <span>Halal-assured</span></a>
+        <a href="/two-rivers/">Two Rivers <span>Gigiri</span></a>
       </div>
     </details>
     <details class="drawer-accordion">
-      <summary>?? Menu</summary>
+      <summary>Menu</summary>
       <div class="drawer-accordion-panel">
-        <a href="/parklands/menu.html">?? Parklands Menu</a>
-        <a href="/capital-centre/menu.html">?? Capital Centre Menu</a>
-        <a href="/two-rivers/menu.html" aria-current="page">?? Two Rivers Menu</a>
+        <a href="/parklands/menu.html">Parklands Menu</a>
+        <a href="/capital-centre/menu.html">Capital Centre Menu</a>
+        <a href="/two-rivers/menu.html" aria-current="page">Two Rivers Menu</a>
       </div>
     </details>
     <details class="drawer-accordion">
-      <summary>?? Reserve</summary>
+      <summary>Reserve</summary>
       <div class="drawer-accordion-panel">
-        <a href="https://www.foodbooking.com/api/res/67_y_m" target="_blank" rel="noopener">?? Parklands <span>?</span></a>
-        <a href="https://www.foodbooking.com/api/res/d_yq_g" target="_blank" rel="noopener">?? Capital Centre <span>?</span></a>
-        <a href="https://www.foodbooking.com/api/res/k8_d_z" target="_blank" rel="noopener">?? Two Rivers <span>?</span></a>
+        <a href="https://www.foodbooking.com/api/res/67_y_m" target="_blank" rel="noopener">Parklands <span aria-hidden="true">&rsaquo;</span></a>
+        <a href="https://www.foodbooking.com/api/res/d_yq_g" target="_blank" rel="noopener">Capital Centre <span aria-hidden="true">&rsaquo;</span></a>
+        <a href="https://www.foodbooking.com/api/res/k8_d_z" target="_blank" rel="noopener">Two Rivers <span aria-hidden="true">&rsaquo;</span></a>
       </div>
     </details>
     <div class="drawer-order-row">
@@ -1721,9 +1741,9 @@ summary::marker               { display: none; }
     <details class="drawer-accordion">
       <summary>DISCOVER</summary>
       <div class="drawer-accordion-panel">
-        <a href="/journal/">? The Journal <span>Stories from the kitchen</span></a>
-        <a href="/social-proof.html">? As Seen On <span>Kula Cooler ? Press ? Reviews</span></a>
-        <a href="/catering.html">? Catering <span>Events ? Corporate ? Private</span></a>
+        <a href="/journal/">The Journal <span>Stories from the kitchen</span></a>
+        <a href="/social-proof.html">As Seen On <span>Kula Cooler / Press / Reviews</span></a>
+        <a href="/catering.html">Catering <span>Events / Corporate / Private</span></a>
       </div>
     </details>
   </nav>
@@ -1732,30 +1752,30 @@ summary::marker               { display: none; }
 <div aria-hidden="true" aria-labelledby="modal-title" aria-modal="true" id="modal" role="dialog">
 <div class="modal-inner">
 <div aria-hidden="true" class="modal-handle"></div>
-<button aria-label="Close branch selection" class="modal-close" id="modal-close" type="button">?</button>
+<button aria-label="Close branch selection" class="modal-close" id="modal-close" type="button"><svg width="16" height="16" aria-hidden="true"><use href="#ico-close"/></svg></button>
 <h2 class="modal-title" id="modal-title">Choose Your Branch</h2>
 <p class="modal-sub">Delivery radius varies by branch. Pick the one nearest you.</p>
 <div class="modal-options" role="list">
-<a aria-label="Order from Mister Wok Parklands" class="modal-opt" data-branch="Parklands" data-branch-hours="11am-11pm" data-branch-location="Kolobot Road, Parklands" data-branch-phone="+254724100100" data-branch-rating="4.3" data-branch-slug="parklands" data-cta="direct" data-order-btn="true" data-order-url="https://www.foodbooking.com/api/fb/67_y_m" data-reserve-url="https://www.foodbooking.com/api/res/67_y_m" href="https://www.foodbooking.com/api/fb/67_y_m" rel="noopener" role="listitem" target="_blank">
+<a aria-label="Order from Mister Wok Parklands" class="modal-opt" data-branch="Parklands" data-branch-hours="11am-11pm" data-branch-location="Kolobot Road, Parklands" data-branch-phone="+254724100100" data-branch-rating="4.3" data-branch-slug="parklands" data-cta="direct" data-order-btn="true" data-order-url="https://www.foodbooking.com/api/fb/67_y_m" data-reserve-url="https://www.foodbooking.com/api/res/67_y_m" data-menu-url="/parklands/menu.html" data-find-url="https://maps.app.goo.gl/AMwtifSUgaYoCJwZ7" href="https://www.foodbooking.com/api/fb/67_y_m" rel="noopener" role="listitem" target="_blank">
 <div>
-<div class="modal-opt-name">?? Parklands</div>
-<div class="modal-opt-meta">Kolobot Rd ? 4.3? ? 11am ? 11pm</div>
+<div class="modal-opt-name">Parklands</div>
+<div class="modal-opt-meta">Kolobot Rd &middot; 4.3&starf; &middot; 11am &ndash; 11pm</div>
 </div>
-<span aria-hidden="true" class="modal-opt-arrow">?</span>
+<span aria-hidden="true" class="modal-opt-arrow"><svg width="16" height="16" aria-hidden="true"><use href="#ico-arrow-right"/></svg></span>
 </a>
-<a aria-label="Order from Mister Wok Capital Centre" class="modal-opt" data-branch="Capital Centre" data-branch-hours="11am-9:30pm" data-branch-location="Capital Centre Mall, Mombasa Road, South B" data-branch-phone="+254722248248" data-branch-rating="4.2" data-branch-slug="capital-centre" data-cta="direct" data-order-btn="true" data-order-url="https://www.foodbooking.com/api/fb/d_yq_g" data-reserve-url="https://www.foodbooking.com/api/res/d_yq_g" href="https://www.foodbooking.com/api/fb/d_yq_g" rel="noopener" role="listitem" target="_blank">
+<a aria-label="Order from Mister Wok Capital Centre" class="modal-opt" data-branch="Capital Centre" data-branch-hours="11am-9:30pm" data-branch-location="Capital Centre Mall, Mombasa Road, South B" data-branch-phone="+254722248248" data-branch-rating="4.2" data-branch-slug="capital-centre" data-cta="direct" data-order-btn="true" data-order-url="https://www.foodbooking.com/api/fb/d_yq_g" data-reserve-url="https://www.foodbooking.com/api/res/d_yq_g" data-menu-url="/capital-centre/menu.html" data-find-url="https://maps.app.goo.gl/e2PxCzzsZevVFWZj7" href="https://www.foodbooking.com/api/fb/d_yq_g" rel="noopener" role="listitem" target="_blank">
 <div>
-<div class="modal-opt-name">?? Capital Centre</div>
-<div class="modal-opt-meta">Mombasa Rd, South B ? 4.2? ? 11am ? 9:30pm</div>
+<div class="modal-opt-name">Capital Centre</div>
+<div class="modal-opt-meta">Mombasa Rd, South B &middot; 4.2&starf; &middot; 11am &ndash; 9:30pm</div>
 </div>
-<span aria-hidden="true" class="modal-opt-arrow">?</span>
+<span aria-hidden="true" class="modal-opt-arrow"><svg width="16" height="16" aria-hidden="true"><use href="#ico-arrow-right"/></svg></span>
 </a>
-<a aria-label="Order from Mister Wok Two Rivers" class="modal-opt" data-branch="Two Rivers" data-branch-hours="11am-9pm" data-branch-location="Two Rivers Mall, Limuru Road, Gigiri" data-branch-phone="+254753222222" data-branch-rating="4.1" data-branch-slug="two-rivers" data-cta="direct" data-order-btn="true" data-order-url="https://www.foodbooking.com/api/fb/k8_d_z" data-reserve-url="https://www.foodbooking.com/api/res/k8_d_z" href="https://www.foodbooking.com/api/fb/k8_d_z" rel="noopener" role="listitem" target="_blank">
+<a aria-label="Order from Mister Wok Two Rivers" class="modal-opt" data-branch="Two Rivers" data-branch-hours="11am-9pm" data-branch-location="Two Rivers Mall, Limuru Road, Gigiri" data-branch-phone="+254753222222" data-branch-rating="4.1" data-branch-slug="two-rivers" data-cta="direct" data-order-btn="true" data-order-url="https://www.foodbooking.com/api/fb/k8_d_z" data-reserve-url="https://www.foodbooking.com/api/res/k8_d_z" data-menu-url="/two-rivers/menu.html" data-find-url="https://maps.app.goo.gl/qotbCZAnBJjPiLxU7" href="https://www.foodbooking.com/api/fb/k8_d_z" rel="noopener" role="listitem" target="_blank">
 <div>
-<div class="modal-opt-name">?? Two Rivers</div>
-<div class="modal-opt-meta">Limuru Rd, Gigiri ? 4.1? ? 11am ? 9pm</div>
+<div class="modal-opt-name">Two Rivers</div>
+<div class="modal-opt-meta">Limuru Rd, Gigiri &middot; 4.1&starf; &middot; 11am &ndash; 9pm</div>
 </div>
-<span aria-hidden="true" class="modal-opt-arrow">?</span>
+<span aria-hidden="true" class="modal-opt-arrow"><svg width="16" height="16" aria-hidden="true"><use href="#ico-arrow-right"/></svg></span>
 </a>
 </div>
 
@@ -1765,35 +1785,35 @@ summary::marker               { display: none; }
 <div class="menu-page-header-inner">
 <nav aria-label="Breadcrumb" class="breadcrumb">
 <a class="bc-link" href="/">Home</a>
-<span aria-hidden="true" class="bc-sep">?</span>
+<span aria-hidden="true" class="bc-sep">&rsaquo;</span>
 <a class="bc-link" href="/two-rivers/">Two Rivers</a>
-<span aria-hidden="true" class="bc-sep">?</span>
+<span aria-hidden="true" class="bc-sep">&rsaquo;</span>
 <span aria-current="page" class="bc-current">Menu</span>
 </nav>
 <h1 class="menu-page-title">Mister Wok <em>Two Rivers</em><br/>Full Menu 2026</h1>
-<p class="menu-page-sub">145 dishes ? Hand-cut noodles ? premium aromatic rice ? Made-to-order at 300?C</p>
+<p class="menu-page-sub">142 dishes ¬∑ 17 categories &middot; Hand-cut noodles &middot; premium aromatic rice &middot; Made-to-order at 300&deg;C</p>
 <div class="branch-identity">
-<span class="branch-pill">?? Two Rivers Mall ? Limuru Road, Gigiri</span>
-<span class="branch-hours">Open daily 11:00 AM ? 9:00 PM</span>
+<span class="branch-pill">Two Rivers Mall &middot; Limuru Road, Gigiri</span>
+<span class="branch-hours">Open daily 11:00 AM &ndash; 9:00 PM</span>
 </div>
 </div>
 </header>
 <div aria-label="Switch branch menu" class="branch-switcher">
 <span class="bsw-label">Viewing:</span>
-<a class="bsw-link" href="/parklands/menu.html">?? Parklands</a>
-<a class="bsw-link" href="/capital-centre/menu.html">?? Capital Centre</a>
-<a aria-current="page" class="bsw-link bsw-active" href="/two-rivers/menu.html">?? Two Rivers</a>
+<a class="bsw-link" href="/parklands/menu.html">Parklands</a>
+<a class="bsw-link" href="/capital-centre/menu.html">Capital Centre</a>
+<a aria-current="page" class="bsw-link bsw-active" href="/two-rivers/menu.html">Two Rivers</a>
 </div>
 <section aria-label="Takeaway ordering" class="takeaway-banner">
 <div class="takeaway-inner">
 <div class="takeaway-img-wrap">
-<img alt="Mister Wok takeaway ? fresh wok cuisine sealed to order" decoding="async" height="400" loading="lazy" src="/images/food/takeaway.webp" width="600"/>
+<img alt="Mister Wok takeaway &middot; fresh wok cuisine sealed to order" decoding="async" height="400" loading="lazy" src="/images/food/takeaway.webp" width="600"/>
 </div>
 <div class="takeaway-copy">
 <span class="takeaway-eyebrow">Takeaway</span>
 <h2 class="takeaway-title">The Full Wok<br/>Experience. To Go.</h2>
-<p class="takeaway-desc">Every dish packed fresh to order. Same 300?C flame. Same Premium long-grain aromatic rice. Same hand-cut noodles. Order online ? collect in 20 minutes.</p>
-<a aria-label="Order takeaway from Mister Wok Two Rivers" class="takeaway-cta order-trigger" data-cta="direct" data-order-btn="true" href="https://www.foodbooking.com/api/fb/k8_d_z" rel="noopener" target="_blank">Order Takeaway ?</a>
+<p class="takeaway-desc">Every dish packed fresh to order. Same 300&deg;C flame. Same Premium long-grain aromatic rice. Same hand-cut noodles. Order online &middot; collect in 20 minutes.</p>
+<a aria-label="Order takeaway from Mister Wok Two Rivers" class="takeaway-cta order-trigger" data-cta="direct" data-order-btn="true" href="https://www.foodbooking.com/api/fb/k8_d_z" rel="noopener" target="_blank">Order Takeaway &rarr;</a>
 </div>
 </div>
 </section>
@@ -1835,7 +1855,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="450" itemprop="price">450</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Brown vinegar, soy, and shredded carrot in a balanced hot-sour broth. The classic entry point to Chinese medicinal flavour ? warming, sharp, and restorative.</span>
+<span class="item-mini-meta" itemprop="description">Brown vinegar, soy, and shredded carrot in a balanced hot-sour broth. The classic entry point to Chinese medicinal flavour &middot; warming, sharp, and restorative.</span>
 <div class="item-order-row">
 <button aria-label="Order Hot and Sour Vegetable Soup from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -1865,7 +1885,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="450" itemprop="price">450</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Hand-cut fresh noodles in a light vegetable broth. Simple by design ? the noodle's texture does the work.</span>
+<span class="item-mini-meta" itemprop="description">Hand-cut fresh noodles in a light vegetable broth. Simple by design &middot; the noodle's texture does the work.</span>
 <div class="item-order-row">
 <button aria-label="Order Vegetable Noodle Soup from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -1895,7 +1915,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="450" itemprop="price">450</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Silken tofu and finely diced vegetables in a pure, clear broth. Clean on the palate ? ideal as a starter or alongside a main.</span>
+<span class="item-mini-meta" itemprop="description">Silken tofu and finely diced vegetables in a pure, clear broth. Clean on the palate &middot; ideal as a starter or alongside a main.</span>
 <div class="item-order-row">
 <button aria-label="Order Vegetable &amp; Tofu Clear Soup from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -1940,7 +1960,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="500" itemprop="price">500</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Shredded chicken in a sharp vinegar-soy base with egg white ribbon. An ancient restorative ? warming, complex, and deeply satisfying.</span>
+<span class="item-mini-meta" itemprop="description">Shredded chicken in a sharp vinegar-soy base with egg white ribbon. An ancient restorative &middot; warming, complex, and deeply satisfying.</span>
 <div class="item-order-row">
 <button aria-label="Order Hot and Sour Chicken Soup from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -1955,7 +1975,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="500" itemprop="price">500</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Corn kernels, finely chopped chicken, and a drizzle of egg white. Classic Chinese comfort ? light enough to start, filling enough to remember.</span>
+<span class="item-mini-meta" itemprop="description">Corn kernels, finely chopped chicken, and a drizzle of egg white. Classic Chinese comfort &middot; light enough to start, filling enough to remember.</span>
 <div class="item-order-row">
 <button aria-label="Order Sweet Corn Chicken Soup from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2000,7 +2020,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="700" itemprop="price">700</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Chicken in a coconut-base Tom Yum ? hot, sour, and fragrant with Thai spices. The kind of heat that builds slowly and lingers.</span>
+<span class="item-mini-meta" itemprop="description">Chicken in a coconut-base Tom Yum &middot; hot, sour, and fragrant with Thai spices. The kind of heat that builds slowly and lingers.</span>
 <div class="item-order-row">
 <button aria-label="Order Tom Yum Spicy Thai Chicken Soup from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2053,7 +2073,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="600" itemprop="price">600</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Freshly rolled pastry filled with minced chicken, carrot, and cabbage ? fried until each piece resembles a gold bar. The 22-year signature starter.</span>
+<span class="item-mini-meta" itemprop="description">Freshly rolled pastry filled with minced chicken, carrot, and cabbage &middot; fried until each piece resembles a gold bar. The 22-year signature starter.</span>
 <div class="item-order-row">
 <button aria-label="Order Chicken Spring Rolls (4 pieces) from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2068,7 +2088,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Silver-foiled winglets, marinated and wok-fired at 300?C. Obinna's standing order on the Kula Cooler Show. His kids' favourite. The starter that turns first-timers into regulars.</span>
+<span class="item-mini-meta" itemprop="description">Silver-foiled winglets, marinated and wok-fired at 300&deg;C. Obinna's standing order on the Kula Cooler Show. His kids' favourite. The starter that turns first-timers into regulars.</span>
 <div class="item-order-row">
 <button aria-label="Order Mister Wok Chicken Lollipops from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2105,7 +2125,7 @@ summary::marker               { display: none; }
 </li>
 <li class="menu-item-row" data-dietary="halal" data-protein="chicken" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
-<span class="item-dish-name" itemprop="name">Saut?ed Chicken Strips</span>
+<span class="item-dish-name" itemprop="name">Saut&eacute;ed Chicken Strips</span>
 <span aria-hidden="true" class="item-leader-dots"></span>
 <div class="item-price-box" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
 <meta content="KES" itemprop="priceCurrency"/>
@@ -2115,7 +2135,7 @@ summary::marker               { display: none; }
 </div>
 <span class="item-mini-meta" itemprop="description">Wok-seared chicken with freshly pasted ginger and garlic. Clean aromatics, high heat, no fuss.</span>
 <div class="item-order-row">
-<button aria-label="Order Saut?ed Chicken Strips from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
+<button aria-label="Order Saut&eacute;ed Chicken Strips from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
 </li>
 <li class="menu-item-row" data-dietary="halal" data-protein="chicken" data-signature="false" data-spice-level="2" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
@@ -2135,7 +2155,7 @@ summary::marker               { display: none; }
 </li>
 <li class="menu-item-row" data-dietary="halal" data-protein="chicken" data-signature="true" data-spice-level="3" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
-<span class="item-dish-name" itemprop="name">Dry Chilli Chicken ? Wok Signature Dish</span>
+<span class="item-dish-name" itemprop="name">Dry Chilli Chicken &middot; Wok Signature Dish</span>
 <span aria-hidden="true" class="item-leader-dots"></span>
 <div class="item-price-box" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
 <meta content="KES" itemprop="priceCurrency"/>
@@ -2145,7 +2165,7 @@ summary::marker               { display: none; }
 </div>
 <span class="item-mini-meta" itemprop="description">Spiced chicken nuggets, deep-fried and wok-tossed dry. No sauce, all flavour. The dish that defines what a wok can do.</span>
 <div class="item-order-row">
-<button aria-label="Order Dry Chilli Chicken ? Wok Signature Dish from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
+<button aria-label="Order Dry Chilli Chicken &middot; Wok Signature Dish from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
 </li>
 </ul>
@@ -2157,10 +2177,10 @@ summary::marker               { display: none; }
 </summary>
 <ul class="accordion-panel-list" role="list">
 <div aria-hidden="true" class="accordion-section-hero">
-<img alt="Mister Wok Spring Rolls ? Nairobi's gold bars, crisp vegetarian starters symbolising Chinese prosperity and the yu?nbao gold ingot" class="accordion-section-hero-img" decoding="async" height="600" loading="lazy" src="/images/food/spring-rolls.webp" width="600"/>
+<img alt="Mister Wok Spring Rolls &middot; Nairobi's gold bars, crisp vegetarian starters symbolising Chinese prosperity and the yuanbao gold ingot" class="accordion-section-hero-img" decoding="async" height="600" loading="lazy" src="/images/food/spring-rolls.webp" width="600"/>
 </div>
-<a aria-label="Read: Spring Rolls and Gold Prosperity ? Wok Journal" class="section-journal-link" href="/journal/spring-rolls-gold-prosperity.html">
-      The story behind the spring roll ? Wok Journal
+<a aria-label="Read: Spring Rolls and Gold Prosperity &middot; Wok Journal" class="section-journal-link" href="/journal/spring-rolls-gold-prosperity.html">
+      The story behind the spring roll &middot; Wok Journal
     </a>
 <li class="menu-item-row" data-dietary="vegetarian,halal,contains-gluten,vegan" data-protein="veg" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
@@ -2172,7 +2192,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="500" itemprop="price">500</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Hand-rolled pastry filled with carrot and cabbage, fried golden until they resemble gold bars ? a Chinese wealth symbol served as Nairobi's most recognised spring roll. Made fresh, every order.</span>
+<span class="item-mini-meta" itemprop="description">Hand-rolled pastry filled with carrot and cabbage, fried golden until they resemble gold bars &middot; a Chinese wealth symbol served as Nairobi's most recognised spring roll. Made fresh, every order.</span>
 <div class="item-order-row">
 <button aria-label="Order Veg Spring Rolls (4 pieces) from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2217,7 +2237,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1100" itemprop="price">1,100</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Baby corn, okra, carrot, and string beans in a light batter ? fried crisp and finished with roasted cashew. Every bite has a different texture.</span>
+<span class="item-mini-meta" itemprop="description">Baby corn, okra, carrot, and string beans in a light batter &middot; fried crisp and finished with roasted cashew. Every bite has a different texture.</span>
 <div class="item-order-row">
 <button aria-label="Order Salt and Pepper Veg with Cashewnuts from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2262,7 +2282,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Indian cottage cheese cubed and wok-tossed with fresh garlic paste and chilli. Firm exterior, yielding centre ? a cross-cultural staple done right.</span>
+<span class="item-mini-meta" itemprop="description">Indian cottage cheese cubed and wok-tossed with fresh garlic paste and chilli. Firm exterior, yielding centre &middot; a cross-cultural staple done right.</span>
 <div class="item-order-row">
 <button aria-label="Order Chilli Garlic Paneer from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2277,7 +2297,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="850" itemprop="price">850</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Skin-on potato wedges tossed in ginger, garlic, and a tinge of tang ? finished with vermicelli. Chinese technique on a familiar base.</span>
+<span class="item-mini-meta" itemprop="description">Skin-on potato wedges tossed in ginger, garlic, and a tinge of tang &middot; finished with vermicelli. Chinese technique on a familiar base.</span>
 <div class="item-order-row">
 <button aria-label="Order Shan Tung Spicy Potato Wedges from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2322,7 +2342,7 @@ summary::marker               { display: none; }
 </li>
 <li class="menu-item-row" data-dietary="halal" data-protein="lamb" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
-<span class="item-dish-name" itemprop="name">Saut?ed Chilli Lamb Strips</span>
+<span class="item-dish-name" itemprop="name">Saut&eacute;ed Chilli Lamb Strips</span>
 <span aria-hidden="true" class="item-leader-dots"></span>
 <div class="item-price-box" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
 <meta content="KES" itemprop="priceCurrency"/>
@@ -2330,9 +2350,9 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Tender lamb strips marinated and saut?ed with chilli and aromatics. Heat that respects the meat.</span>
+<span class="item-mini-meta" itemprop="description">Tender lamb strips marinated and saut&eacute;ed with chilli and aromatics. Heat that respects the meat.</span>
 <div class="item-order-row">
-<button aria-label="Order Saut?ed Chilli Lamb Strips from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
+<button aria-label="Order Saut&eacute;ed Chilli Lamb Strips from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
 </li>
 <li class="menu-item-row" data-dietary="halal" data-protein="lamb" data-signature="true" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
@@ -2345,7 +2365,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1400" itemprop="price">1,400</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Young Dopa lamb ribs prepared in three stages to achieve fall-tender texture. The sticky-sweet sauce carries a quiet punch ? one of the most ordered starters on the menu.</span>
+<span class="item-mini-meta" itemprop="description">Young Dopa lamb ribs prepared in three stages to achieve fall-tender texture. The sticky-sweet sauce carries a quiet punch &middot; one of the most ordered starters on the menu.</span>
 <div class="item-order-row">
 <button aria-label="Order Mister Wok Lamb Ribs from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2383,7 +2403,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1400" itemprop="price">1,400</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Queen Prawns wok-tossed with colour peppers and broccoli, finished with freshly squeezed lime. Bright, clean, and built around the prawn ? not the sauce.</span>
+<span class="item-mini-meta" itemprop="description">Queen Prawns wok-tossed with colour peppers and broccoli, finished with freshly squeezed lime. Bright, clean, and built around the prawn &middot; not the sauce.</span>
 <div class="item-order-row">
 <button aria-label="Order Shanghai Lemon Prawns from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2398,7 +2418,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1400" itemprop="price">1,400</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Tailless Queen Prawns in Kenyan red chilli, served dry. No gravy, no distraction ? just heat and prawn.</span>
+<span class="item-mini-meta" itemprop="description">Tailless Queen Prawns in Kenyan red chilli, served dry. No gravy, no distraction &middot; just heat and prawn.</span>
 <div class="item-order-row">
 <button aria-label="Order Prawns Pili-Pili (Dry) from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2443,7 +2463,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1100" itemprop="price">1,100</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Fresh Tilapia sliced to bite-size winglets, lightly battered and fried. Known on the menu as Mister Wok's Chilli Fish ? order accordingly.</span>
+<span class="item-mini-meta" itemprop="description">Fresh Tilapia sliced to bite-size winglets, lightly battered and fried. Known on the menu as Mister Wok's Chilli Fish &middot; order accordingly.</span>
 <div class="item-order-row">
 <button aria-label="Order Winglets of Tilapia from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2496,7 +2516,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="800" itemprop="price">800</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Tender chicken filling, hand-wrapped and steamed. The dough is made here ? the texture shows it.</span>
+<span class="item-mini-meta" itemprop="description">Tender chicken filling, hand-wrapped and steamed. The dough is made here &middot; the texture shows it.</span>
 <div class="item-order-row">
 <button aria-label="Order Chicken Dumpling (4 pieces) from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2511,7 +2531,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Finely chopped Queen Prawns in steamed dough. The filling justifies the price ? everything else steps back.</span>
+<span class="item-mini-meta" itemprop="description">Finely chopped Queen Prawns in steamed dough. The filling justifies the price &middot; everything else steps back.</span>
 <div class="item-order-row">
 <button aria-label="Order Prawn Dumpling (4 pieces) from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2525,7 +2545,7 @@ summary::marker               { display: none; }
 </summary>
 <ul class="accordion-panel-list" role="list">
 <div aria-hidden="true" class="accordion-section-hero">
-<img alt="Wok Hei ? high-heat wok-toss at 300?C, the breath of the wok firing chicken at Mister Wok Two Rivers" class="accordion-section-hero-img" decoding="async" height="600" loading="lazy" src="/images/food/wok-toss-rice.webp" width="600"/>
+<img alt="Wok Hei &middot; high-heat wok-toss at 300&deg;C, the breath of the wok firing chicken at Mister Wok Two Rivers" class="accordion-section-hero-img" decoding="async" height="600" loading="lazy" src="/images/food/wok-toss-rice.webp" width="600"/>
 </div>
 <li class="menu-item-row" data-dietary="halal,contains-nuts" data-protein="chicken" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
@@ -2537,7 +2557,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Chicken chunks, roasted cashews, and vegetables tossed in a light sauce. The nut adds crunch where the sauce adds depth ? a balance the wok achieves in seconds.</span>
+<span class="item-mini-meta" itemprop="description">Chicken chunks, roasted cashews, and vegetables tossed in a light sauce. The nut adds crunch where the sauce adds depth &middot; a balance the wok achieves in seconds.</span>
 <div class="item-order-row">
 <button aria-label="Order Chicken with Cashewnuts from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2582,7 +2602,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1100" itemprop="price">1,100</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Sharp, pungent, salty, and faintly sweet ? black bean sauce on chicken is a flavour architecture that has been working for centuries.</span>
+<span class="item-mini-meta" itemprop="description">Sharp, pungent, salty, and faintly sweet &middot; black bean sauce on chicken is a flavour architecture that has been working for centuries.</span>
 <div class="item-order-row">
 <button aria-label="Order Chicken in Black Bean Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2612,7 +2632,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Diced chicken and fresh mushrooms in an aromatic sauce. Earthy and restrained ? the dish that lets the wok speak.</span>
+<span class="item-mini-meta" itemprop="description">Diced chicken and fresh mushrooms in an aromatic sauce. Earthy and restrained &middot; the dish that lets the wok speak.</span>
 <div class="item-order-row">
 <button aria-label="Order Chicken with Mushrooms from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2627,7 +2647,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1100" itemprop="price">1,100</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Tender chicken in a sweet-sour lemon sauce. The citrus is present without being aggressive ? a crowd dish that earns its place.</span>
+<span class="item-mini-meta" itemprop="description">Tender chicken in a sweet-sour lemon sauce. The citrus is present without being aggressive &middot; a crowd dish that earns its place.</span>
 <div class="item-order-row">
 <button aria-label="Order Lemon Chicken from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2642,7 +2662,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1100" itemprop="price">1,100</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Crispy chicken nuggets in classic Chinese sweet and sour. The batter stays crisp in the sauce ? technique, not luck.</span>
+<span class="item-mini-meta" itemprop="description">Crispy chicken nuggets in classic Chinese sweet and sour. The batter stays crisp in the sauce &middot; technique, not luck.</span>
 <div class="item-order-row">
 <button aria-label="Order Sweet and Sour Chicken from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2672,7 +2692,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1300" itemprop="price">1,300</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Chicken in a Thai red curry ? fragrant, spiced, and built around a sauce that takes time to make and seconds to finish.</span>
+<span class="item-mini-meta" itemprop="description">Chicken in a Thai red curry &middot; fragrant, spiced, and built around a sauce that takes time to make and seconds to finish.</span>
 <div class="item-order-row">
 <button aria-label="Order Spicy Thai Chicken in Red Curry from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2725,7 +2745,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Tender beef saut?ed with delicate mushrooms. The all-time classic ? every Chinese restaurant has a version, this is Mister Wok's.</span>
+<span class="item-mini-meta" itemprop="description">Tender beef saut&eacute;ed with delicate mushrooms. The all-time classic &middot; every Chinese restaurant has a version, this is Mister Wok's.</span>
 <div class="item-order-row">
 <button aria-label="Order Beef with Mushroom from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2740,7 +2760,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1100" itemprop="price">1,100</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Prime beef in black bean ? pungent, salty, spicy, and faintly sweet. The sauce is centuries old for a reason.</span>
+<span class="item-mini-meta" itemprop="description">Prime beef in black bean &middot; pungent, salty, spicy, and faintly sweet. The sauce is centuries old for a reason.</span>
 <div class="item-order-row">
 <button aria-label="Order Beef in Black Bean Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2770,7 +2790,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Aromatic beef with soy and ginger notes, garnished with saut?ed cashews. The nut earns its place ? it is not decoration.</span>
+<span class="item-mini-meta" itemprop="description">Aromatic beef with soy and ginger notes, garnished with saut&eacute;ed cashews. The nut earns its place &middot; it is not decoration.</span>
 <div class="item-order-row">
 <button aria-label="Order Beef with Cashewnuts from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2785,7 +2805,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1100" itemprop="price">1,100</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Perfectly seared beef and fresh broccoli florets. Light in body, intense in flavour ? the Maillard reaction on every surface of the beef.</span>
+<span class="item-mini-meta" itemprop="description">Perfectly seared beef and fresh broccoli florets. Light in body, intense in flavour &middot; the Maillard reaction on every surface of the beef.</span>
 <div class="item-order-row">
 <button aria-label="Order Beef Broccoli from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2815,7 +2835,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Beef with fragrant, spicy dry chilli ? served without sauce. The kind of dish that demands premium aromatic rice alongside it.</span>
+<span class="item-mini-meta" itemprop="description">Beef with fragrant, spicy dry chilli &middot; served without sauce. The kind of dish that demands premium aromatic rice alongside it.</span>
 <div class="item-order-row">
 <button aria-label="Order Dry Chilli Beef from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2830,7 +2850,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1100" itemprop="price">1,100</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Beef stir-fry with contrasting pineapple, ginger, and soy. The fruit is a counterpoint ? not the lead.</span>
+<span class="item-mini-meta" itemprop="description">Beef stir-fry with contrasting pineapple, ginger, and soy. The fruit is a counterpoint &middot; not the lead.</span>
 <div class="item-order-row">
 <button aria-label="Order Pineapple and Ginger Beef from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2898,7 +2918,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Lamb packed with spice and fresh garlic. Direct heat, direct flavour ? for the table that doesn't want subtlety.</span>
+<span class="item-mini-meta" itemprop="description">Lamb packed with spice and fresh garlic. Direct heat, direct flavour &middot; for the table that doesn't want subtlety.</span>
 <div class="item-order-row">
 <button aria-label="Order Lamb Hot Garlic from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2913,7 +2933,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Molo lamb in black bean ? the sauce's sharp, savoury depth finds its match in the lamb's natural richness.</span>
+<span class="item-mini-meta" itemprop="description">Molo lamb in black bean &middot; the sauce's sharp, savoury depth finds its match in the lamb's natural richness.</span>
 <div class="item-order-row">
 <button aria-label="Order Lamb in Black Bean Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2942,14 +2962,14 @@ summary::marker               { display: none; }
 </summary>
 <ul class="accordion-panel-list" role="list">
 <div class="snapper-feature" itemscope="" itemtype="https://schema.org/MenuItem">
-<div class="snapper-badge">? Showpiece</div>
-<span class="snapper-name" itemprop="name">Tilapia ? Whole Fish 300?C Seared</span>
-<span class="snapper-desc" itemprop="description">Whole Tilapia, scaled and gutted, seared at 300?C wok temperature. Crispy skin, moist flesh. Served with white onion vinegar and bullet sauce. The showpiece ? for the table that came for something worth talking about.</span>
+<div class="snapper-badge">Showpiece</div>
+<span class="snapper-name" itemprop="name">Tilapia &middot; Whole Fish 300&deg;C Seared</span>
+<span class="snapper-desc" itemprop="description">Whole Tilapia, scaled and gutted, seared at 300&deg;C wok temperature. Crispy skin, moist flesh. Served with white onion vinegar and bullet sauce. The showpiece &middot; for the table that came for something worth talking about.</span>
 <span class="snapper-price" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
 <span content="KES" itemprop="priceCurrency">KES</span>
 <span content="2800" itemprop="price">2,800</span>
 </span>
-<button aria-label="Order Tilapia whole fish from Mister Wok Two Rivers" class="snapper-order order-trigger" data-order-btn="true" type="button">Order This Dish ?</button>
+<button aria-label="Order Tilapia whole fish from Mister Wok Two Rivers" class="snapper-order order-trigger" data-order-btn="true" type="button">Order This Dish &rarr;</button>
 </div>
 <li class="menu-item-row" data-dietary="halal,contains-fish" data-protein="fish" data-signature="false" data-spice-level="2" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
@@ -2961,7 +2981,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Fresh Kenyan Tilapia in a spicy, tangy, faintly sweet Schezuan sauce. The fish stays tender ? the sauce does not hold back.</span>
+<span class="item-mini-meta" itemprop="description">Fresh Kenyan Tilapia in a spicy, tangy, faintly sweet Schezuan sauce. The fish stays tender &middot; the sauce does not hold back.</span>
 <div class="item-order-row">
 <button aria-label="Order Tilapia Fish in Schezuan Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2976,7 +2996,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Fresh water Tilapia in a soy base ? earthy, umami-forward, and quietly precise. The sauce elevates without overwhelming.</span>
+<span class="item-mini-meta" itemprop="description">Fresh water Tilapia in a soy base &middot; earthy, umami-forward, and quietly precise. The sauce elevates without overwhelming.</span>
 <div class="item-order-row">
 <button aria-label="Order Tilapia Fish in Soya Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -2991,7 +3011,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Tilapia in black bean ? sharp, pungent, and a combination that has been working in Chinese kitchens for generations.</span>
+<span class="item-mini-meta" itemprop="description">Tilapia in black bean &middot; sharp, pungent, and a combination that has been working in Chinese kitchens for generations.</span>
 <div class="item-order-row">
 <button aria-label="Order Tilapia Fish in Black Bean Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3006,7 +3026,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Fresh Tilapia prepared in a bold garlic paste sauce. Clean fish, assertive garlic ? each one stays itself.</span>
+<span class="item-mini-meta" itemprop="description">Fresh Tilapia prepared in a bold garlic paste sauce. Clean fish, assertive garlic &middot; each one stays itself.</span>
 <div class="item-order-row">
 <button aria-label="Order Tilapia Fish in Garlic Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3021,7 +3041,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1200" itemprop="price">1,200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Fresh Tilapia in a sweet-sour balance ? the sauce clings without masking. The fish finishes clean.</span>
+<span class="item-mini-meta" itemprop="description">Fresh Tilapia in a sweet-sour balance &middot; the sauce clings without masking. The fish finishes clean.</span>
 <div class="item-order-row">
 <button aria-label="Order Sweet and Sour Fish from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3036,7 +3056,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1600" itemprop="price">1,600</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Freshly sourced Queen Prawns in a bold Schezuan preparation ? spicy, pungent, and built for the prawn to lead.</span>
+<span class="item-mini-meta" itemprop="description">Freshly sourced Queen Prawns in a bold Schezuan preparation &middot; spicy, pungent, and built for the prawn to lead.</span>
 <div class="item-order-row">
 <button aria-label="Order Queen Prawns in Schezuan Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3066,7 +3086,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1600" itemprop="price">1,600</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Queen Prawns in black bean ? sharp, pungent, salty, and the flavour that lingers after the last prawn is gone.</span>
+<span class="item-mini-meta" itemprop="description">Queen Prawns in black bean &middot; sharp, pungent, salty, and the flavour that lingers after the last prawn is gone.</span>
 <div class="item-order-row">
 <button aria-label="Order Queen Prawns in Black Bean Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3096,7 +3116,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1600" itemprop="price">1,600</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Queen Prawns in a well-balanced Chinese sweet and sour ? acidity calibrated to lift the prawn, not compete with it.</span>
+<span class="item-mini-meta" itemprop="description">Queen Prawns in a well-balanced Chinese sweet and sour &middot; acidity calibrated to lift the prawn, not compete with it.</span>
 <div class="item-order-row">
 <button aria-label="Order Sweet and Sour Prawns from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3111,7 +3131,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1800" itemprop="price">1,800</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Queen Prawns, seasoned and tossed, served on a sizzling platter with garnish. The platter arrives at temperature ? the prawns stay that way.</span>
+<span class="item-mini-meta" itemprop="description">Queen Prawns, seasoned and tossed, served on a sizzling platter with garnish. The platter arrives at temperature &middot; the prawns stay that way.</span>
 <div class="item-order-row">
 <button aria-label="Order Prawns Sizzler from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3134,7 +3154,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Pan-fried tofu in black bean ? the sauce's sharp, pungent depth finds an unlikely match in the tofu's clean, neutral body.</span>
+<span class="item-mini-meta" itemprop="description">Pan-fried tofu in black bean &middot; the sauce's sharp, pungent depth finds an unlikely match in the tofu's clean, neutral body.</span>
 <div class="item-order-row">
 <button aria-label="Order Tofu in Black Bean Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3164,7 +3184,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Baby corn, French beans, Chinese cabbage, and mushrooms in soy. Four vegetables, one sauce ? the wok does the editing.</span>
+<span class="item-mini-meta" itemprop="description">Baby corn, French beans, Chinese cabbage, and mushrooms in soy. Four vegetables, one sauce &middot; the wok does the editing.</span>
 <div class="item-order-row">
 <button aria-label="Order Veg 4 Treasures in Soya Sauce from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3224,7 +3244,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1100" itemprop="price">1,100</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Fresh garden vegetables in a bold, spicy Schezuan sauce, completed with roasted cashews. The nuts are the final layer ? not an afterthought.</span>
+<span class="item-mini-meta" itemprop="description">Fresh garden vegetables in a bold, spicy Schezuan sauce, completed with roasted cashews. The nuts are the final layer &middot; not an afterthought.</span>
 <div class="item-order-row">
 <button aria-label="Order Schezuan Vegetables with Cashewnuts from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3329,7 +3349,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Tofu, broccoli, bean sprouts, and mushrooms ? delicately cut and stir-fried at high heat. The Shanghai approach: let the vegetable be the dish.</span>
+<span class="item-mini-meta" itemprop="description">Tofu, broccoli, bean sprouts, and mushrooms &middot; delicately cut and stir-fried at high heat. The Shanghai approach: let the vegetable be the dish.</span>
 <div class="item-order-row">
 <button aria-label="Order Shanghai Vegetables Stir Fry from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3389,14 +3409,14 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Stir-fried vegetables in a Chinese sweet and sour balance. The acidity is calibrated ? sharp enough to notice, restrained enough to let the vegetables speak.</span>
+<span class="item-mini-meta" itemprop="description">Stir-fried vegetables in a Chinese sweet and sour balance. The acidity is calibrated &middot; sharp enough to notice, restrained enough to let the vegetables speak.</span>
 <div class="item-order-row">
 <button aria-label="Order Sweet &amp; Sour Vegetables from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
 </li>
 <li class="menu-item-row" data-dietary="vegetarian,halal,vegan" data-protein="veg" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
-<span class="item-dish-name" itemprop="name">Yangtze Mixed Vegetables ? Dry</span>
+<span class="item-dish-name" itemprop="name">Yangtze Mixed Vegetables &middot; Dry</span>
 <span aria-hidden="true" class="item-leader-dots"></span>
 <div class="item-price-box" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
 <meta content="KES" itemprop="priceCurrency"/>
@@ -3404,9 +3424,9 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">A variety of fresh vegetables wok-tossed with Chinese seasoning, served dry. No sauce ? just heat, technique, and the vegetable itself.</span>
+<span class="item-mini-meta" itemprop="description">A variety of fresh vegetables wok-tossed with Chinese seasoning, served dry. No sauce &middot; just heat, technique, and the vegetable itself.</span>
 <div class="item-order-row">
-<button aria-label="Order Yangtze Mixed Vegetables ? Dry from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
+<button aria-label="Order Yangtze Mixed Vegetables &middot; Dry from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
 </li>
 <li class="menu-item-row" data-dietary="vegetarian,halal,vegan" data-protein="veg" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
@@ -3419,7 +3439,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Fresh broccoli and bean sprout, seasoned and stir-fried. Two textures, one heat source ? done in the time it takes to be seated.</span>
+<span class="item-mini-meta" itemprop="description">Fresh broccoli and bean sprout, seasoned and stir-fried. Two textures, one heat source &middot; done in the time it takes to be seated.</span>
 <div class="item-order-row">
 <button aria-label="Order Stir Fried Broccoli &amp; Bean Sprout from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3434,7 +3454,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Chinese pakchoy tossed in your choice of garlic or soy base. One of the most nutritious vegetables in Chinese cuisine ? treated simply, by design.</span>
+<span class="item-mini-meta" itemprop="description">Chinese pakchoy tossed in your choice of garlic or soy base. One of the most nutritious vegetables in Chinese cuisine &middot; treated simply, by design.</span>
 <div class="item-order-row">
 <button aria-label="Order Pakchoy in Garlic or Soya from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3487,7 +3507,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="600" itemprop="price">600</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Premium long-grain aromatic rice, wok-fried with Chinese seasoning. The plainness is the point ? grain integrity first, flavour second.</span>
+<span class="item-mini-meta" itemprop="description">Premium long-grain aromatic rice, wok-fried with Chinese seasoning. The plainness is the point &middot; grain integrity first, flavour second.</span>
 <div class="item-order-row">
 <button aria-label="Order Plain Fried Rice from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3517,7 +3537,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="650" itemprop="price">650</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Fresh garden vegetables wok-tossed with premium aromatic rice. Full of colour, full of flavour ? a complete dish that doesn't need a main.</span>
+<span class="item-mini-meta" itemprop="description">Fresh garden vegetables wok-tossed with premium aromatic rice. Full of colour, full of flavour &middot; a complete dish that doesn't need a main.</span>
 <div class="item-order-row">
 <button aria-label="Order Vegetable Fried Rice from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3532,7 +3552,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="650" itemprop="price">650</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">premium aromatic rice stir-fried in a wok with egg and Chinese seasoning. The wok temperature is what makes an egg fried rice ? and this one has it.</span>
+<span class="item-mini-meta" itemprop="description">premium aromatic rice stir-fried in a wok with egg and Chinese seasoning. The wok temperature is what makes an egg fried rice &middot; and this one has it.</span>
 <div class="item-order-row">
 <button aria-label="Order Egg Fried Rice from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3577,7 +3597,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Wok-fried premium aromatic rice with fresh shrimp, egg, and tender chicken ? the Yong Chow method. Three proteins, one coherent plate.</span>
+<span class="item-mini-meta" itemprop="description">Wok-fried premium aromatic rice with fresh shrimp, egg, and tender chicken &middot; the Yong Chow method. Three proteins, one coherent plate.</span>
 <div class="item-order-row">
 <button aria-label="Order Shrimp Egg &amp; Chicken Yong Chow Rice from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3645,7 +3665,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="700" itemprop="price">700</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Fresh hand-cut noodles with garlic paste and chilli. Three ingredients with a clear hierarchy ? noodle, garlic, heat.</span>
+<span class="item-mini-meta" itemprop="description">Fresh hand-cut noodles with garlic paste and chilli. Three ingredients with a clear hierarchy &middot; noodle, garlic, heat.</span>
 <div class="item-order-row">
 <button aria-label="Order Chilli Garlic Noodles from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3660,7 +3680,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="750" itemprop="price">750</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Hand-cut Mister Wok noodles wok-tossed with tender chicken and seasoning. The noodle cut is 2mm ? texture is not an accident.</span>
+<span class="item-mini-meta" itemprop="description">Hand-cut Mister Wok noodles wok-tossed with tender chicken and seasoning. The noodle cut is 2mm &middot; texture is not an accident.</span>
 <div class="item-order-row">
 <button aria-label="Order Chicken Noodles from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3690,7 +3710,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1000" itemprop="price">1,000</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Hand-cut noodles with fresh shrimp and a surprise crunch from roasted peanuts. The name is accurate ? the flavour lands fast.</span>
+<span class="item-mini-meta" itemprop="description">Hand-cut noodles with fresh shrimp and a surprise crunch from roasted peanuts. The name is accurate &middot; the flavour lands fast.</span>
 <div class="item-order-row">
 <button aria-label="Order Shrimp Bang-Bang Noodles from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3705,7 +3725,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1250" itemprop="price">1,250</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Fresh water fish in a bold garlic sauce, served with hand-cut noodles and a vegetable spring roll. A complete plate ? nothing is missing.</span>
+<span class="item-mini-meta" itemprop="description">Fresh water fish in a bold garlic sauce, served with hand-cut noodles and a vegetable spring roll. A complete plate &middot; nothing is missing.</span>
 <div class="item-order-row">
 <button aria-label="Order Fish in Garlic Sauce with Noodles from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3728,7 +3748,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1250" itemprop="price">1,250</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Mister Wok's Schezuan chicken with premium long-grain aromatic rice and a crunchy vegetable spring roll. The complete version of the dish ? nothing needs to be added.</span>
+<span class="item-mini-meta" itemprop="description">Mister Wok's Schezuan chicken with premium long-grain aromatic rice and a crunchy vegetable spring roll. The complete version of the dish &middot; nothing needs to be added.</span>
 <div class="item-order-row">
 <button aria-label="Order Chicken Schezuan with Rice from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3773,7 +3793,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1250" itemprop="price">1,250</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Wok-tossed beef green pepper with hand-made noodles and a freshly rolled vegetable spring roll. The same dish ? different base, different experience.</span>
+<span class="item-mini-meta" itemprop="description">Wok-tossed beef green pepper with hand-made noodles and a freshly rolled vegetable spring roll. The same dish &middot; different base, different experience.</span>
 <div class="item-order-row">
 <button aria-label="Order Beef Green Pepper with Noodles from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3818,7 +3838,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1100" itemprop="price">1,100</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Diced vegetables in a bold garlic sauce, with premium aromatic rice and a spring roll. The garlic is the backbone ? everything else supports it.</span>
+<span class="item-mini-meta" itemprop="description">Diced vegetables in a bold garlic sauce, with premium aromatic rice and a spring roll. The garlic is the backbone &middot; everything else supports it.</span>
 <div class="item-order-row">
 <button aria-label="Order Stir Fried Mixed Veg in Garlic Sauce with Rice from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3878,7 +3898,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="1500" itemprop="price">1,500</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Queen Prawns with hand-cut noodles and a deep-fried vegetable spring roll. The noodle holds the garlic sauce ? the prawn provides the occasion.</span>
+<span class="item-mini-meta" itemprop="description">Queen Prawns with hand-cut noodles and a deep-fried vegetable spring roll. The noodle holds the garlic sauce &middot; the prawn provides the occasion.</span>
 <div class="item-order-row">
 <button aria-label="Order Prawns in Garlic Sauce with Noodles from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -3960,7 +3980,7 @@ summary::marker               { display: none; }
 </summary>
 <ul class="accordion-panel-list" role="list">
 <div aria-hidden="true" class="accordion-section-hero">
-<img alt="Obinna's table ? Mister Wok Chicken Lollipops at Two Rivers Mall, the dish that made the table quiet" class="accordion-section-hero-img" decoding="async" height="600" loading="lazy" src="/images/food/lollipop-kiddie.webp" width="600"/>
+<img alt="Obinna's table &middot; Mister Wok Chicken Lollipops at Two Rivers Mall, the dish that made the table quiet" class="accordion-section-hero-img" decoding="async" height="600" loading="lazy" src="/images/food/lollipop-kiddie.webp" width="600"/>
 </div>
 <li class="menu-item-row" data-dietary="halal,contains-gluten" data-protein="chicken" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
@@ -4017,7 +4037,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="800" itemprop="price">800</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Tender deep-fried chicken nuggets with chips or noodles. The all-time favourite ? ordered confidently, eaten completely.</span>
+<span class="item-mini-meta" itemprop="description">Tender deep-fried chicken nuggets with chips or noodles. The all-time favourite &middot; ordered confidently, eaten completely.</span>
 <div class="item-order-row">
 <button aria-label="Order Chicken Nuggets with Chips / Noodles from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -4055,7 +4075,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="200" itemprop="price">200</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Coke, Sprite, Fanta ? ask the team for today's selection.</span>
+<span class="item-mini-meta" itemprop="description">Coke, Sprite, Fanta &middot; ask the team for today's selection.</span>
 <div class="item-order-row">
 <button aria-label="Order Sodas from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -4077,7 +4097,7 @@ summary::marker               { display: none; }
 </li>
 <li class="menu-item-row" data-dietary="halal" data-protein="none" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
-<span class="item-dish-name" itemprop="name">Mineral Water ? Small</span>
+<span class="item-dish-name" itemprop="name">Mineral Water &middot; Small</span>
 <span aria-hidden="true" class="item-leader-dots"></span>
 <div class="item-price-box" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
 <meta content="KES" itemprop="priceCurrency"/>
@@ -4087,12 +4107,12 @@ summary::marker               { display: none; }
 </div>
 <span class="item-mini-meta" itemprop="description">500ml still mineral water.</span>
 <div class="item-order-row">
-<button aria-label="Order Mineral Water ? Small from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
+<button aria-label="Order Mineral Water &middot; Small from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
 </li>
 <li class="menu-item-row" data-dietary="halal" data-protein="none" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
-<span class="item-dish-name" itemprop="name">Mineral Water ? Large</span>
+<span class="item-dish-name" itemprop="name">Mineral Water &middot; Large</span>
 <span aria-hidden="true" class="item-leader-dots"></span>
 <div class="item-price-box" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
 <meta content="KES" itemprop="priceCurrency"/>
@@ -4102,12 +4122,12 @@ summary::marker               { display: none; }
 </div>
 <span class="item-mini-meta" itemprop="description">750ml still mineral water.</span>
 <div class="item-order-row">
-<button aria-label="Order Mineral Water ? Large from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
+<button aria-label="Order Mineral Water &middot; Large from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
 </li>
 <li class="menu-item-row" data-dietary="halal" data-protein="none" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
 <div class="item-lead-wrapper">
-<span class="item-dish-name" itemprop="name">Sparkling Water ? Large</span>
+<span class="item-dish-name" itemprop="name">Sparkling Water &middot; Large</span>
 <span aria-hidden="true" class="item-leader-dots"></span>
 <div class="item-price-box" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
 <meta content="KES" itemprop="priceCurrency"/>
@@ -4117,7 +4137,7 @@ summary::marker               { display: none; }
 </div>
 <span class="item-mini-meta" itemprop="description">Large sparkling water. The pairing choice for dim sum and seafood.</span>
 <div class="item-order-row">
-<button aria-label="Order Sparkling Water ? Large from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
+<button aria-label="Order Sparkling Water &middot; Large from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
 </li>
 <li class="menu-item-row" data-dietary="halal" data-protein="none" data-signature="false" data-spice-level="0" itemscope="" itemtype="https://schema.org/MenuItem" role="listitem">
@@ -4130,7 +4150,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="350" itemprop="price">350</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Lime &amp; Ginger, Mango, Passion, Pineapple &amp; Mint, or Tree Tomato ? pressed to order.</span>
+<span class="item-mini-meta" itemprop="description">Lime &amp; Ginger, Mango, Passion, Pineapple &amp; Mint, or Tree Tomato &middot; pressed to order.</span>
 <div class="item-order-row">
 <button aria-label="Order Fresh Juice from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -4145,7 +4165,7 @@ summary::marker               { display: none; }
 <span class="price-amount" content="400" itemprop="price">400</span>
 </div>
 </div>
-<span class="item-mini-meta" itemprop="description">Mango, Passion or Tree Tomato ? blended to order.</span>
+<span class="item-mini-meta" itemprop="description">Mango, Passion or Tree Tomato &middot; blended to order.</span>
 <div class="item-order-row">
 <button aria-label="Order Fruit Cocktail from Mister Wok Two Rivers" class="menu-item-order order-trigger" data-order-btn="true" type="button">Order</button>
 </div>
@@ -4159,7 +4179,7 @@ summary::marker               { display: none; }
       <!-- Col 1: Brand -->
       <div>
         <div class="ft-brand-name">MISTER WOK</div>
-        <div class="ft-brand-tag">Handcrafted ? Since 2004</div>
+        <div class="ft-brand-tag">Handcrafted &middot; Since 2004</div>
         <p class="ft-desc">Nairobi's wok authority since Valentine's Day 2004. Three locations. One uncompromising standard. Made-to-order every time.</p>
         <div class="ft-social">
           <a href="https://www.instagram.com/mister.wok/" target="_blank" rel="noopener">Instagram</a>
@@ -4205,38 +4225,38 @@ summary::marker               { display: none; }
       <!-- Col 4: The Journal -->
       <div>
         <div class="ft-col-title">The Journal</div>
-        <nav class="ft-journal-strip" aria-label="The Wok Journal ? featured articles">
-          <a href="/journal/wok-hei-physics.html">Wok Hei Physics ? 300?C</a>
+        <nav class="ft-journal-strip" aria-label="The Wok Journal &middot; featured articles">
+          <a href="/journal/wok-hei-physics.html">Wok Hei Physics &middot; 300&deg;C</a>
           <a href="/journal/long-grain-aromatic-rice.html">Aromatic Long-Grain Rice</a>
           <a href="/journal/spring-rolls-gold-prosperity.html">Spring Rolls &amp; Gold Ingots</a>
-          <a href="/journal/ntv-am-live-mister-wok-2014.html">NTV AM Live ? 2014</a>
-          <a href="/journal/" class="ft-journal-all">Explore the full Journal ?</a>
+          <a href="/journal/ntv-am-live-mister-wok-2014.html">NTV AM Live &middot; 2014</a>
+          <a href="/journal/" class="ft-journal-all">Explore the full Journal &rarr;</a>
         </nav>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <span>? 2004?2026 Mister Wok ? Nairobi</span>
+      <span>&copy; 2004 &ndash; 2026 Mister Wok &middot; Nairobi</span>
       <span>
         <a href="/catering.html">Catering</a>
         &nbsp;?&nbsp;
         <a href="/journal/">Journal</a>
         &nbsp;?&nbsp;
-        <a href="/parklands/menu.html">Full Menu</a>
+        <a href="/two-rivers/menu.html">Full Menu</a>
       </span>
     </div>
   <p class="menu-disclaimer" style="text-align:center;font-size:0.75rem;color:#888;padding:1rem 0;">All prices are inclusive of taxes and subject to change without notice.</p>
   </footer>
 <!-- ---------------------------------------
-     LUMINESCENCE ? DISH LIGHTBOX
+     LUMINESCENCE &middot; DISH LIGHTBOX
      Single element; JS populates + opens it.
      Closes on backdrop click or ESC.
 --------------------------------------- -->
 <div aria-hidden="true" aria-label="Dish detail" aria-modal="true" id="dish-lightbox" role="dialog">
 <div class="lx-sheet" id="lx-sheet">
 <div aria-hidden="true" class="lx-handle"></div>
-<button aria-label="Close dish detail" class="lx-close" id="lx-close">?</button>
+<button aria-label="Close dish detail" class="lx-close" id="lx-close">&times;</button>
 <div class="lx-img-wrap">
 <img alt="" decoding="async" id="lx-img" loading="lazy" src=""/>
 </div>
@@ -4266,6 +4286,7 @@ summary::marker               { display: none; }
 </nav>
 <script>
   (function () {
+  window.__MW_MENU_NAV_INIT__ = true;
   var fab = document.getElementById('btt-fab');
   if (fab) {
     window.addEventListener('scroll', function () {
@@ -4273,7 +4294,7 @@ summary::marker               { display: none; }
     }, { passive: true });
   }
 
-  /* --- JUMP NAV ACTIVE PILL ? TOGGLE-DRIVEN --- */
+  /* --- JUMP NAV ACTIVE PILL &middot; TOGGLE-DRIVEN --- */
   (function () {
     var pills = document.querySelectorAll('.mjn-link');
 
@@ -4292,7 +4313,7 @@ summary::marker               { display: none; }
     });
   }());
 
-  /* --- JUMP NAV + SIG CARD CLICK ? ACCORDION OPEN / COLLAPSE ALL --- */
+  /* --- JUMP NAV + SIG CARD CLICK &middot; ACCORDION OPEN / COLLAPSE ALL --- */
   function handleSectionLinkClick(e, link) {
     var hash = (link.getAttribute('href') || '').replace('#', '');
     if (!hash) return;
@@ -4383,7 +4404,7 @@ summary::marker               { display: none; }
         thumb.className = 'item-thumb';
         var img = document.createElement('img');
         img.src = baseUrl + filename;
-        img.alt = dishName + ' ? Mister Wok Two Rivers';
+        img.alt = dishName + ' &middot; Mister Wok Two Rivers';
         img.loading = 'lazy';
         img.decoding = 'async';
         img.width = 88;
@@ -4467,5 +4488,5 @@ summary::marker               { display: none; }
   }());
   </script>
 <script defer="" src="/assets/js/menu-photos.js"></script>
-<script defer="" src="/assets/js/engine.js?v=9"></script>
+<script defer="" src="/assets/js/engine.js?v=10"></script>
 </body></html>
