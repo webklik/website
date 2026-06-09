@@ -31,11 +31,12 @@ DEGREE  = '°'.encode('utf-8')   # C2 B0
 ENDASH  = '–'.encode('utf-8')   # E2 80 93
 STAR    = '★'.encode('utf-8')   # E2 98 85
 
-# Also catch double-encoding variant (Ã¯Â¿Â½) in case some files have that
+# Double-encoding variant (Ã¯Â¿Â½) — 12 bytes
 CORRUPT_DOUBLE = 'Ã¯Â¿Â½'.encode('utf-8')
-
-# Quadruple-encoding variant (24 bytes) — same browser glyph, longer file sequence
-CORRUPT_QUAD = 'ÃÂ¯ÃÂ¿ÃÂ½'.encode('utf-8')
+# Quad-encoding variant A — 24 bytes (double re-encoded via latin-1)
+CORRUPT_QUAD_A = bytes.fromhex('c383c283c382c2afc383c282c382c2bfc383c282c382c2bd')
+# Quad-encoding variant B — 36 bytes (triple re-encoded via latin-1)
+CORRUPT_QUAD_B = bytes.fromhex('c383c283c383c282c382c2afc383c283c383c382c382c2bfc383c283c383c382c382c2bd')
 
 HTML_FILES = [
     'capital-centre/index.html',
@@ -60,43 +61,54 @@ HTML_FILES = [
     'journal/index.html',
 ]
 
-def _apply_fixes(data, corrupt):
-    """Replace corrupt byte runs: digit+CORRUPT+C → °C, else → ·."""
-    data = re.sub(
-        rb'(\d+)' + re.escape(corrupt) + rb'C',
-        lambda m: m.group(1) + DEGREE + b'C',
-        data
-    )
-    return data.replace(corrupt, MIDDOT)
-
-
 def fix_file(path):
     if not os.path.exists(path):
-        return 0, 0, 0
+        return 0, 0, 0, 0
 
     data = open(path, 'rb').read()
     original = data
 
-    quad_count = data.count(CORRUPT_QUAD)
+    quad_b_count = data.count(CORRUPT_QUAD_B)
+    quad_a_count = data.count(CORRUPT_QUAD_A)
     triple_count = data.count(CORRUPT)
     double_count = data.count(CORRUPT_DOUBLE)
 
-    if quad_count == 0 and triple_count == 0 and double_count == 0:
-        return 0, 0, 0
+    if quad_b_count == 0 and quad_a_count == 0 and triple_count == 0 and double_count == 0:
+        return 0, 0, 0, 0
 
-    # Longest pattern first to avoid partial matches
-    if quad_count:
-        data = _apply_fixes(data, CORRUPT_QUAD)
-    if triple_count:
-        data = _apply_fixes(data, CORRUPT)
-    if double_count:
-        data = _apply_fixes(data, CORRUPT_DOUBLE)
+    data = re.sub(
+        rb'(\d+)' + re.escape(CORRUPT) + rb'C',
+        lambda m: m.group(1) + DEGREE + b'C',
+        data
+    )
+    data = data.replace(CORRUPT, MIDDOT)
+
+    data = re.sub(
+        rb'(\d+)' + re.escape(CORRUPT_DOUBLE) + rb'C',
+        lambda m: m.group(1) + DEGREE + b'C',
+        data
+    )
+    data = data.replace(CORRUPT_DOUBLE, MIDDOT)
+
+    # Quad encoding variants
+    data = re.sub(
+        rb'(\d+)' + re.escape(CORRUPT_QUAD_A) + rb'C',
+        lambda m: m.group(1) + DEGREE + b'C',
+        data
+    )
+    data = data.replace(CORRUPT_QUAD_A, MIDDOT)
+    data = re.sub(
+        rb'(\d+)' + re.escape(CORRUPT_QUAD_B) + rb'C',
+        lambda m: m.group(1) + DEGREE + b'C',
+        data
+    )
+    data = data.replace(CORRUPT_QUAD_B, MIDDOT)
 
     if data != original:
         with open(path, 'wb') as f:
             f.write(data)
 
-    return triple_count, double_count, quad_count
+    return triple_count, double_count, quad_a_count, quad_b_count
 
 
 def main():
@@ -105,10 +117,10 @@ def main():
     total_fixed = 0
 
     for path in HTML_FILES:
-        triple, double, quad = fix_file(path)
-        if triple > 0 or double > 0 or quad > 0:
-            print(f'FIXED  {path}: {quad} quad + {triple} triple + {double} double instances')
-            total_fixed += quad + triple + double
+        triple, double, quad_a, quad_b = fix_file(path)
+        if triple > 0 or double > 0 or quad_a > 0 or quad_b > 0:
+            print(f'FIXED  {path}: {quad_b} quad-B + {quad_a} quad-A + {triple} triple + {double} double')
+            total_fixed += quad_b + quad_a + triple + double
         else:
             if os.path.exists(path):
                 print(f'clean  {path}')
