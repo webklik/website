@@ -90,32 +90,6 @@
     },
     isDesktop: function() {
       return !this.isMobile();
-    },
-    initCTAVisibility: function() {
-      const whatsappCTAs = document.querySelectorAll('[data-cta="whatsapp"]');
-      const directOrderCTAs = document.querySelectorAll('[data-cta="direct"]');
-
-      if (this.isMobile()) {
-        whatsappCTAs.forEach(function(el) {
-          if (el.closest('#bottom-nav')) return;
-          el.style.display = '';
-        });
-        directOrderCTAs.forEach(function(el) {
-          if (el.closest('#bottom-nav')) return;
-          if (el.classList.contains('qa-reserve')) return;
-          if (el.classList.contains('takeaway-cta')) return;
-          el.style.display = 'none';
-        });
-      } else {
-        whatsappCTAs.forEach(function(el) {
-          if (el.closest('#bottom-nav')) return;
-          el.style.display = 'none';
-        });
-        directOrderCTAs.forEach(function(el) {
-          if (el.closest('#bottom-nav')) return;
-          el.style.display = '';
-        });
-      }
     }
   };
 
@@ -1162,7 +1136,6 @@
     sanitizePageText();
     initNavDropdownTriggers();
     NavDrawer.init();
-    Platform.initCTAVisibility();
     OrderCTA.updateCTAText();
     AbandonCart.init();
     Modal.init();
