@@ -1,2 +1,27 @@
 __pycache__/
 *.pyc
+
+# Python tooling
+*.py
+
+# Sprint docs and session files
+*.md
+!README.md
+
+# Pipeline outputs
+*.txt
+!robots.txt
+!llms.txt
+
+# Dev fragments
+_frag_*.html
+_includes/
+
+# Test directory
+test/
+
+# Archive blobs
+*.zip
+
+# Image originals
+images/**/originals/

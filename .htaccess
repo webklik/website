@@ -39,6 +39,14 @@ RewriteRule ^(.*)$ https://misterwok.net/$1 [R=301,L]
 RewriteRule ^menu\.html$ /parklands/menu.html [R=301,L]
 
 # ================================================================
+# LEGACY URL REDIRECTS
+# ================================================================
+RewriteRule ^journal/falcon-rice\.html$ /journal/long-grain-aromatic-rice.html [R=301,L]
+RewriteRule ^grid-view-menu/?$ /parklands/menu.html [R=301,L]
+RewriteRule ^03-two-rivers/?$ /two-rivers/ [R=301,L]
+RewriteRule ^mister-wok-capital-centre-mombasa-road/?$ /capital-centre/ [R=301,L]
+
+# ================================================================
 # CLEAN URL REWRITES
 # These map clean slugs -> actual .html files
 # Format: /journal/slug - /journal/actual-filename.html

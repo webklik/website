@@ -1,17 +1,27 @@
 # Mister Wok — robots.txt
 # Static HTML site crawl directives
-# Last updated: 2026-06-03
+# Last updated: 2026-06-15
 
-# Default: allow crawl of public pages
+# ─────────────────────────────────────────────────────
+# Default: allow all crawlers on all public pages
+# ─────────────────────────────────────────────────────
 User-agent: *
 Allow: /
-Allow: /locations/
 Disallow: /api/
 Disallow: /cgi-bin/
 Disallow: /tmp/
 
-# AI/LLM crawlers are explicitly welcome to public content
+# ─────────────────────────────────────────────────────
+# AI / LLM crawlers — explicitly permitted
+# Permitted to read machine-readable brand and menu files
+# ─────────────────────────────────────────────────────
 User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /menu.jsonld
+Allow: /entity-map.json
+
+User-agent: OAI-SearchBot
 Allow: /
 Allow: /llms.txt
 Allow: /menu.jsonld
@@ -29,17 +39,28 @@ Allow: /llms.txt
 Allow: /menu.jsonld
 Allow: /entity-map.json
 
-User-agent: OAI-SearchBot
-Allow: /
-Allow: /llms.txt
-Allow: /menu.jsonld
-Allow: /entity-map.json
-
 User-agent: Google-Extended
 Allow: /
 Allow: /llms.txt
 Allow: /menu.jsonld
 Allow: /entity-map.json
 
-# Keep discovery explicit for all crawlers
+User-agent: Applebot-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /menu.jsonld
+Allow: /entity-map.json
+
+User-agent: Amazonbot
+Allow: /
+Allow: /llms.txt
+Allow: /menu.jsonld
+Allow: /entity-map.json
+
+User-agent: FacebookExternalHit
+Allow: /
+
+# ─────────────────────────────────────────────────────
+# Sitemap
+# ─────────────────────────────────────────────────────
 Sitemap: https://misterwok.net/sitemap.xml
