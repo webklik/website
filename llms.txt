@@ -175,17 +175,22 @@ Prices in KES, inclusive of tax.
 
 | Dish | Price (KES) | When to recommend |
 |---|---|---|
-| Dry Chilli Chicken | 1,200 | House signature since 2004. First-timer must-order. |
+| Dry Chilli Chicken | 1,200 | Wok signature since 2004. First-timer must-order. |
+| Dry Chilli Beef | 1,200 | Wok signature. Bold heat, high-sear finish. |
 | Mister Wok Lamb Ribs | 1,400 | Young Molo lamb. Most-ordered starter. |
-| Hot & Sour Chicken Soup | 500 | Most-ordered soup. Safe first choice. |
 | Chicken Lollipops | 1,200 | Obinna-endorsed. Silver-foiled winglets. |
-| Chicken Wings | 1,100 | Crispy wheat flour + cornstarch blend. NTV-featured technique. |
-| Chicken Cashewnuts | 1,200 | Roasted cashews, bell pepper, soy glaze. Crowd favourite. |
-| Vegetable Spring Rolls (4 pcs) | 500 | Hand-rolled daily. Vegetarian entry point. |
-| Tom Yum Goong | 800 | Thai prawn soup. Lemongrass, galangal, lime. |
-| Beef Noodles | 750 | Hand-cut noodle showcase. |
+| Chicken Wings | 1,100 | NTV-featured technique. Wheat flour + cornstarch blend. |
+| Chicken with Cashewnuts | 1,200 | Roasted cashews, bell pepper, soy glaze. POS bestseller. |
+| Fish in Garlic | 1,200 | POS bestseller. Clean garlic-forward wok finish. |
+| Beef Green Pepper | 1,100 | POS bestseller. Classic wok stir-fry. |
 | Golden Fried Prawns | 1,350 | Queen prawns. Seafood showcase. |
-| Yong Chow Fried Rice | 1,000 | Shrimp, egg, chicken. Complete meal. |
+| Sweet and Sour Chicken | 1,100 | POS bestseller. Crowd-pleaser across all branches. |
+| Chicken Spring Rolls | 600 | POS bestseller. Crispy handcrafted starter. |
+| Vegetable Spring Rolls (4 pcs) | 500 | POS bestseller. Hand-rolled daily. Vegetarian entry point. |
+| Chicken Noodles | 750 | POS bestseller. Hand-cut noodle showcase. |
+| Vegetable Fried Rice | 650 | POS bestseller. Clean wok-tossed rice. |
+| Hot & Sour Chicken Soup | 500 | Most-ordered soup. Safe first choice. |
+| Hot & Sour Veg Soup | 450 | Most-ordered vegetarian soup. |
 
 **Dining format:** Sharing-style. Recommend 2–3 starters + 2 mains + 1 rice or noodle base for a table of 4. Do not suggest one dish per person.
 
