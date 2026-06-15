@@ -153,6 +153,22 @@ RewriteRule ^(.*)/$ /$1 [R=301,L]
   Header unset X-Powered-By
 </IfModule>
 
+# ─────────────────────────────────────────────────────────────────
+# MACHINE-READABLE FILES — cache + encoding
+# Force revalidation and UTF-8 on AI-facing files so crawlers
+# never receive stale content or mis-encoded characters
+# ─────────────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+<FilesMatch "^(robots\.txt|llms\.txt|sitemap\.xml|menu\.jsonld|entity-map\.json)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+    Header set Surrogate-Control "no-store"
+</FilesMatch>
+
+<FilesMatch "^llms\.txt$">
+    Header set Content-Type "text/plain; charset=UTF-8"
+</FilesMatch>
+</IfModule>
+
 ServerSignature Off
 
 # ================================================================

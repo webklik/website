@@ -267,16 +267,10 @@
       if (!this.el) return;
       var inner = this.el.querySelector('.modal-inner');
       var first = this.el.querySelector('.modal-options .modal-opt');
-      var scrollBefore = inner ? inner.scrollTop : null;
       if (inner) inner.scrollTop = 0;
       if (!first) return;
       requestAnimationFrame(function() {
         try { first.focus({ preventScroll: true }); } catch (_) { first.focus(); }
-        // #region agent log
-        requestAnimationFrame(function() {
-          var scrollAfter = inner ? inner.scrollTop : null;
-        });
-        // #endregion
       });
     },
 
@@ -424,23 +418,6 @@
 
       this.setChinActive(m);
       this.focusBranchPicker();
-
-      // #region agent log
-      var self = this;
-      requestAnimationFrame(function() {
-        requestAnimationFrame(function() {
-          var inner = self.el.querySelector('.modal-inner');
-          var opts = self.el.querySelector('.modal-options');
-          var nav = document.getElementById('bottom-nav');
-          var innerR = inner ? inner.getBoundingClientRect() : null;
-          var optsR = opts ? opts.getBoundingClientRect() : null;
-          var navR = nav ? nav.getBoundingClientRect() : null;
-          var modalZ = self.el ? getComputedStyle(self.el).zIndex : null;
-          var navZ = nav ? getComputedStyle(nav).zIndex : null;
-          var vv = window.visualViewport;
-        });
-      });
-      // #endregion
 
       // Push a history state so Android hardware-back closes the modal
       if (window.history && typeof window.history.pushState === 'function') {

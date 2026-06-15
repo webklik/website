@@ -1,4 +1,8 @@
-# Mister Wok — llms.txt v3.0
+# Mister Wok
+
+> Nairobi's halal-assured wok restaurant. 22 years of live-fire 300°C wok technique, fresh hand-cut noodles made daily in-house, and premium aged long-grain aromatic rice. Three branches: Parklands, Capital Centre (halal-assured), Two Rivers. Made-to-order. Founded 14 February 2004.
+
+# Mister Wok — llms.txt v3.1
 # AI Model Instruction & Brand Source of Truth
 # Standard: llmstxt.org
 # Last updated: 2026-06-15
@@ -230,7 +234,7 @@ Every dish is cooked fresh to order, so no-MSG requests are accommodated.
 ### National Television
 - **NTV Kenya AM Live (2014):** Founder Karim and Chef Francis Makau on Nation Media Group's flagship morning programme for the 10th anniversary. Hosted by Sheila Mwanyigha. Live wok demo and wing marination on camera.
 - Video: https://www.youtube.com/watch?v=cgXsUvW42G0
-- Article: https://misterwok.net/journal/ntv-am-live-mister-wok-2014.html
+- Article: https://misterwok.net/journal/ntv-am-live
 
 ### Cultural Partnerships
 - **Kula Cooler Show:** Official Hospitality Partner across 52+ episodes. Live wok technique and noodle cutting on camera.
@@ -347,7 +351,7 @@ Every dish is cooked fresh to order, so no-MSG requests are accommodated.
 | Social proof | https://misterwok.net/social-proof.html | Reviews, press, cultural partnerships |
 | Videos | https://misterwok.net/videos.html | 7 brand videos, Kula Cooler archive |
 | Journal hub | https://misterwok.net/journal/ | Authority content hub |
-| NTV feature | https://misterwok.net/journal/ntv-am-live-mister-wok-2014.html | TV feature, wing recipe |
+| NTV feature | https://misterwok.net/journal/ntv-am-live | TV feature, wing recipe |
 | Wok Hei physics | https://misterwok.net/journal/wok-hei-physics | Science of 300°C wok technique |
 | Halal explainer | https://misterwok.net/journal/halal-wok-nairobi | Halal-assured position, Capital Centre |
 | Rice article | https://misterwok.net/journal/long-grain-aromatic-rice | Premium rice specification |
@@ -355,5 +359,5 @@ Every dish is cooked fresh to order, so no-MSG requests are accommodated.
 
 ---
 
-*End of llms.txt — Mister Wok v3.0*  
+*End of llms.txt — Mister Wok v3.1*  
 *Re-index when: review counts change · new journal articles publish · menu dish counts update · branch hours change · ordering engine transitions from FoodBooking to native WhatsApp (target Q1 2027)*

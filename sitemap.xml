@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   MISTER WOK — sitemap.xml
-  Last updated: 2026-06-03
+  Last updated: 2026-06-15
   Architect: Lead UI/UX Architect · misterwok.net
   ──────────────────────────────────────────────────────────────
   PRIORITY LOGIC (for AI crawlers and Google alike):
@@ -24,7 +24,7 @@
   ════════════════════════════════════════════════════════ -->
   <url>
     <loc>https://misterwok.net/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -56,7 +56,7 @@
   <!-- ═══════════════════════════════════════════════════════
        TIER 0.9 — Branch menus (highest commercial intent)
        User has self-selected branch and is ready to order.
-       229 dishes (Parklands) · 138 dishes (CC + TR).
+       238 dishes (Parklands) · 149 dishes (CC) · 142 dishes (TR).
   ════════════════════════════════════════════════════════ -->
   <url>
     <loc>https://misterwok.net/parklands/menu.html</loc>
@@ -144,7 +144,7 @@
   ════════════════════════════════════════════════════════ -->
   <url>
     <loc>https://misterwok.net/catering.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -156,7 +156,14 @@
   </url>
   <url>
     <loc>https://misterwok.net/journal/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://misterwok.net/videos.html</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
