@@ -21,7 +21,7 @@
     {
       "@type": "PropertyValue",
       "name": "halalAssurance",
-      "value": "Capital Centre is the halal-assured flagship. Parklands and Two Rivers are not halal-certified."
+      "value": "Capital Centre is the halal-assured flagship. Parklands and Two Rivers are not halal-assured."
     },
     {
       "@type": "PropertyValue",
@@ -3091,7 +3091,7 @@
         },
         {
           "@type": "MenuItem",
-          "name": "Chicken Cashewnuts",
+          "name": "Chicken with Cashewnuts",
           "offers": {
             "@type": "Offer",
             "price": "1200",
