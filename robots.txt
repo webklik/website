@@ -60,6 +60,15 @@ Allow: /entity-map.json
 User-agent: FacebookExternalHit
 Allow: /
 
+User-agent: bingbot
+Allow: /
+Allow: /llms.txt
+Allow: /menu.jsonld
+Allow: /entity-map.json
+
+User-agent: BingPreview
+Allow: /
+
 # ─────────────────────────────────────────────────────
 # Sitemap
 # ─────────────────────────────────────────────────────

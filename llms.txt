@@ -21,7 +21,7 @@
 This file is public for AI crawler discovery and must not appear as a Google search result.
 
 - Server header on `https://misterwok.net/llms.txt`: `X-Robots-Tag: noindex`
-- AI crawlers permitted via `robots.txt`: GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended, Applebot-Extended, Amazonbot
+- AI crawlers permitted via `robots.txt`: GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended, Applebot-Extended, Amazonbot, bingbot (Microsoft Copilot grounding)
 - No public navigation links to `/llms.txt`
 - Machine-readable menu graph: `https://misterwok.net/menu.jsonld`
 - Entity map (brand + branch semantic context): `https://misterwok.net/entity-map.json`
