@@ -16,7 +16,7 @@
     {
       "@type": "PropertyValue",
       "name": "alcoholAvailability",
-      "value": "Alcohol available at Parklands only. Capital Centre serves no alcohol. Two Rivers offers beer and wine on inquiry — confirm when ordering."
+      "value": "Parklands offers a full bar. Capital Centre serves no alcohol. Two Rivers offers beer and wine on inquiry only — confirm when ordering."
     },
     {
       "@type": "PropertyValue",
@@ -31,7 +31,7 @@
     {
       "@type": "PropertyValue",
       "name": "pricingDisclaimer",
-      "value": "All prices are inclusive of taxes and subject to change without notice. Prices reflect the Parklands branch menu (Nov 2024). Capital Centre and Two Rivers pricing may vary on select items."
+      "value": "All prices are current, effective, and harmonized across all three branches. Capital Centre and Two Rivers carry a curated subset of the full Parklands menu at identical prices — fewer dishes, not different prices. 'Nov 2024' is an internal menu-edition label, not an indicator of staleness. Prices remain subject to change without notice."
     },
     {
       "@type": "PropertyValue",
