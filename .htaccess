@@ -41,7 +41,7 @@ RewriteRule ^menu\.html$ /parklands/menu.html [R=301,L]
 # ================================================================
 # LEGACY URL REDIRECTS
 # ================================================================
-RewriteRule ^journal/falcon-rice\.html$ /journal/long-grain-aromatic-rice.html [R=301,L]
+RewriteRule ^journal/falcon-rice\.html$ /journal/long-grain-aromatic-rice [R=301,L]
 RewriteRule ^grid-view-menu/?$ /parklands/menu.html [R=301,L]
 RewriteRule ^03-two-rivers/?$ /two-rivers/ [R=301,L]
 RewriteRule ^mister-wok-capital-centre-mombasa-road/?$ /capital-centre/ [R=301,L]
@@ -59,8 +59,10 @@ RewriteRule ^journal/ntv-am-live/?$           /journal/ntv-am-live-mister-wok-20
 RewriteRule ^journal/spring-rolls-gold/?$     /journal/spring-rolls-gold-prosperity.html [L]
 RewriteRule ^journal/wok-hei-physics/?$       /journal/wok-hei-physics.html [L]
 RewriteRule ^journal/birthday-catering-guide/?$     /journal/birthday-catering-guide.html [L]
-RewriteRule ^journal/falcon-rice/?$           /journal/long-grain-aromatic-rice.html [R=301,L]
+RewriteRule ^journal/falcon-rice/?$           /journal/long-grain-aromatic-rice [R=301,L]
 RewriteRule ^journal/long-grain-aromatic-rice/?$  /journal/long-grain-aromatic-rice.html [L]
+RewriteCond %{THE_REQUEST} \s/+journal/long-grain-aromatic-rice\.html[\s?] [NC]
+RewriteRule ^journal/long-grain-aromatic-rice\.html$ /journal/long-grain-aromatic-rice [R=301,L]
 RewriteRule ^journal/halal-wok-nairobi/?$     /journal/halal-wok-nairobi.html [L]
 RewriteRule ^journal/decade-at-the-flame/?$   /journal/decade-at-the-flame.html [L]
 RewriteRule ^journal/lamb-ribs/?$             /journal/ [R=302,L]
