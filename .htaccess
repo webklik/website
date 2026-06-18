@@ -68,6 +68,17 @@ RewriteRule ^journal/decade-at-the-flame/?$   /journal/decade-at-the-flame.html 
 RewriteRule ^journal/lamb-ribs/?$             /journal/ [R=302,L]
 RewriteRule ^journal/fresh-noodles/?$         /journal/ [R=302,L]
 
+# -- Reverse-redirect: any direct .html journal request -> clean
+# slug, to prevent duplicate-URL indexing. THE_REQUEST guard is
+# required — it reflects only the client's original request line,
+# never an internal rewrite target, which is what prevents this
+# from looping against the fallback rule below. Excludes
+# journal/index.html, which should stay reachable directly as the
+# hub page rather than redirect to an unused "/journal/index" path.
+RewriteCond %{THE_REQUEST} \s/+journal/([a-z0-9-]+)\.html[\s?] [NC]
+RewriteCond %{REQUEST_URI} !^/journal/index\.html$ [NC]
+RewriteRule ^journal/([a-z0-9-]+)\.html$ /journal/$1 [R=301,L]
+
 # -- Fallback: generic slug -> .html (for future posts) --------
 # Only if no explicit rule matched AND file doesn't exist
 RewriteCond %{REQUEST_FILENAME} !-f
